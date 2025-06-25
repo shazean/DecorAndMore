@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:warped_stem"
+    }
+  },
+  "result": {
+    "item": "decorandmore:warped_bench",
+    "count": 6
+  }
+}

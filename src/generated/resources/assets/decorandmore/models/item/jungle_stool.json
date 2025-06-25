@@ -1,0 +1,101 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:color": 0.0
+      },
+      "model": "decorandmore:item/white_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 1.0
+      },
+      "model": "decorandmore:item/orange_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 2.0
+      },
+      "model": "decorandmore:item/magenta_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 3.0
+      },
+      "model": "decorandmore:item/light_blue_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 4.0
+      },
+      "model": "decorandmore:item/yellow_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 5.0
+      },
+      "model": "decorandmore:item/lime_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 6.0
+      },
+      "model": "decorandmore:item/pink_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 7.0
+      },
+      "model": "decorandmore:item/gray_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 8.0
+      },
+      "model": "decorandmore:item/light_gray_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 9.0
+      },
+      "model": "decorandmore:item/cyan_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 10.0
+      },
+      "model": "decorandmore:item/purple_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 11.0
+      },
+      "model": "decorandmore:item/blue_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 12.0
+      },
+      "model": "decorandmore:item/brown_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 13.0
+      },
+      "model": "decorandmore:item/green_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 14.0
+      },
+      "model": "decorandmore:item/red_jungle_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 15.0
+      },
+      "model": "decorandmore:item/black_jungle_stool"
+    }
+  ]
+}

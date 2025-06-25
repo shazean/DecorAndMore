@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:white_acacia_planks_slab_stool"
+    ]
+  },
+  "criteria": {
+    "acacia_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:acacia_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:white_acacia_planks_slab_stool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "acacia_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

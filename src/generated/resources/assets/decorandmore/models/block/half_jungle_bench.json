@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/half_bench",
+  "textures": {
+    "side": "minecraft:block/jungle_log",
+    "top": "minecraft:block/stripped_jungle_log",
+    "end": "minecraft:block/stripped_jungle_log_top",
+    "bottom": "minecraft:block/jungle_log"
+  }
+}

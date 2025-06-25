@@ -1,0 +1,20 @@
+{
+  "type": "decorandmore:dyed_crafting",
+  "pattern": [
+    "WW",
+    "XX"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:red_wool"
+    },
+    "X": {
+      "item": "minecraft:oak_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:oak_log_stool",
+    "count": 2
+  },
+  "color": "red"
+}

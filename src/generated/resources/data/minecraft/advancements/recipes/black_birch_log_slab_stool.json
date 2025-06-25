@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:black_birch_log_slab_stool"
+    ]
+  },
+  "criteria": {
+    "birch_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:birch_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:black_birch_log_slab_stool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "birch_log",
+      "has_the_recipe"
+    ]
+  ]
+}

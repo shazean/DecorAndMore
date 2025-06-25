@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/log_bench_outer",
+  "textures": {
+    "side": "minecraft:block/acacia_log",
+    "diagonal": "decorandmore:block/stripped_diagonal_acacia_log",
+    "end": "minecraft:block/stripped_acacia_log_top",
+    "top": "decorandmore:block/diagonal_acacia_log"
+  }
+}

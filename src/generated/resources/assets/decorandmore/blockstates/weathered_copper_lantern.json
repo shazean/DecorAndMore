@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "decorandmore:block/weathered_copper_lantern"
+    },
+    "hanging=true": {
+      "model": "decorandmore:block/weathered_copper_lantern_hanging"
+    }
+  }
+}

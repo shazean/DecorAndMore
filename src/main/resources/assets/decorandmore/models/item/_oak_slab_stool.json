@@ -1,0 +1,24 @@
+{
+  "parent": "decorandmore:block/white_oak_slab_stool",
+  "textures": {},
+  "overrides": [
+    {
+      "predicate": {
+        "color": 0
+      },
+      "model": "decorandmore:item/white_oak_slab_stool"
+    },
+    {
+      "predicate": {
+        "color": 1
+      },
+      "model": "decorandmore:item/orange_oak_slab_stool"
+    },
+    {
+      "predicate": {
+        "color": 2
+      },
+      "model": "decorandmore:item/magenta_oak_slab_stool"
+    }
+  ]
+}

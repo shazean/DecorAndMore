@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_hanging_lantern",
+  "textures": {
+    "lantern": "decorandmore:block/oxidized_copper_redstone_lantern"
+  }
+}

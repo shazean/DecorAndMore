@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:purple_crimson_stem_slab_stool"
+    ]
+  },
+  "criteria": {
+    "crimson_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:purple_crimson_stem_slab_stool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crimson_stem",
+      "has_the_recipe"
+    ]
+  ]
+}

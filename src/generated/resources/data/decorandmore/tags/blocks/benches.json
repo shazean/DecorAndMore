@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "decorandmore:acacia_bench",
+    "decorandmore:birch_bench",
+    "decorandmore:crimson_bench",
+    "decorandmore:dark_oak_bench",
+    "decorandmore:oak_bench",
+    "decorandmore:spruce_bench",
+    "decorandmore:jungle_bench",
+    "decorandmore:warped_bench"
+  ]
+}

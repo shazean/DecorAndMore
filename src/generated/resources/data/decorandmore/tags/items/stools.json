@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "decorandmore:acacia_stool",
+    "decorandmore:birch_stool",
+    "decorandmore:crimson_stool",
+    "decorandmore:dark_oak_stool",
+    "decorandmore:oak_stool",
+    "decorandmore:spruce_stool",
+    "decorandmore:jungle_stool",
+    "decorandmore:warped_stool",
+    "decorandmore:acacia_log_stool",
+    "decorandmore:birch_log_stool",
+    "decorandmore:crimson_stem_stool",
+    "decorandmore:dark_oak_log_stool",
+    "decorandmore:oak_log_stool",
+    "decorandmore:spruce_log_stool",
+    "decorandmore:jungle_log_stool",
+    "decorandmore:warped_stem_stool",
+    "decorandmore:stripped_acacia_log_stool",
+    "decorandmore:stripped_birch_log_stool",
+    "decorandmore:stripped_crimson_stem_stool",
+    "decorandmore:stripped_dark_oak_log_stool",
+    "decorandmore:stripped_oak_log_stool",
+    "decorandmore:stripped_spruce_log_stool",
+    "decorandmore:stripped_jungle_log_stool",
+    "decorandmore:stripped_warped_stem_stool"
+  ]
+}

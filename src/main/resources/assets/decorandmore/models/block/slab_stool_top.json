@@ -1,0 +1,42 @@
+{
+   "parent": "block/block",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "#wool_side"
+	},
+	"elements": [
+		{
+			"name": "upper",
+			"from": [0, 12, 0],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 12, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 4], "texture": "#wool_side", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 4], "texture": "#wool_side", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 4], "texture": "#wool_side", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#wool_side", "cullface": "west"},
+				"up": {"uv": [16, 16, 0, 0], "texture": "#top"}
+			}
+		},
+		{
+			"name": "lower",
+			"from": [0, 8, 0],
+			"to": [16, 12, 16],
+			"faces": {
+				"north": {"uv": [0, 12, 16, 16], "texture": "#plank_side", "cullface": "north"},
+				"east": {"uv": [0, 12, 16, 16], "texture": "#plank_side", "cullface": "east"},
+				"south": {"uv": [0, 12, 16, 16], "texture": "#plank_side", "cullface": "south"},
+				"west": {"uv": [0, 12, 16, 16], "texture": "#plank_side", "cullface": "west"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#bottom", "cullface": "up"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "root",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

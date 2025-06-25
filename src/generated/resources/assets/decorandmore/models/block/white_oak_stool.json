@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/slab_stool",
+  "textures": {
+    "wool_side": "decorandmore:block/white_slab_stool_side",
+    "plank_side": "decorandmore:block/oak_slab_stool_side",
+    "bottom": "minecraft:block/oak_planks",
+    "top": "decorandmore:block/white_slab_stool_top"
+  }
+}

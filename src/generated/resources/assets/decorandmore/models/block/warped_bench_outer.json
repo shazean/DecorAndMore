@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/log_bench_outer",
+  "textures": {
+    "side": "minecraft:block/warped_stem",
+    "diagonal": "decorandmore:block/stripped_diagonal_warped_stem",
+    "end": "minecraft:block/stripped_warped_stem_top",
+    "top": "decorandmore:block/diagonal_warped_stem"
+  }
+}

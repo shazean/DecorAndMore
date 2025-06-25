@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "decorandmore:block/exposed_copper_soul_lantern"
+    },
+    "hanging=true": {
+      "model": "decorandmore:block/exposed_copper_soul_lantern_hanging"
+    }
+  }
+}

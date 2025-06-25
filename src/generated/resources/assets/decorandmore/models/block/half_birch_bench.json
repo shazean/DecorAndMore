@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/half_bench",
+  "textures": {
+    "side": "minecraft:block/birch_log",
+    "top": "minecraft:block/stripped_birch_log",
+    "end": "minecraft:block/stripped_birch_log_top",
+    "bottom": "minecraft:block/birch_log"
+  }
+}

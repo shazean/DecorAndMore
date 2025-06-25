@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:birch_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:birch_bench",
+    "count": 6
+  }
+}

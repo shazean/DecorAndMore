@@ -1,0 +1,20 @@
+{
+  "type": "decorandmore:dyed_crafting",
+  "pattern": [
+    "WW",
+    "XX"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:cyan_wool"
+    },
+    "X": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "result": {
+    "item": "decorandmore:crimson_stem_stool",
+    "count": 2
+  },
+  "color": "cyan"
+}

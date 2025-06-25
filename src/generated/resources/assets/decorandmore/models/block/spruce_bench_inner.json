@@ -1,0 +1,10 @@
+{
+  "parent": "decorandmore:block/log_bench_inner",
+  "textures": {
+    "side": "minecraft:block/spruce_log",
+    "inside": "minecraft:block/stripped_spruce_log",
+    "diagonal": "decorandmore:block/stripped_diagonal_spruce_log",
+    "end": "minecraft:block/stripped_spruce_log_top",
+    "top": "decorandmore:block/diagonal_spruce_log"
+  }
+}

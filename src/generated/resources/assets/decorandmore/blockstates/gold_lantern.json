@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "decorandmore:block/gold_lantern"
+    },
+    "hanging=true": {
+      "model": "decorandmore:block/gold_lantern_hanging"
+    }
+  }
+}

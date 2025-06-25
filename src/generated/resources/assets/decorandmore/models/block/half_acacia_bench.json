@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/half_bench",
+  "textures": {
+    "side": "minecraft:block/acacia_log",
+    "top": "minecraft:block/stripped_acacia_log",
+    "end": "minecraft:block/stripped_acacia_log_top",
+    "bottom": "minecraft:block/acacia_log"
+  }
+}

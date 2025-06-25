@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:white_crimson_planks_slab_stool"
+    ]
+  },
+  "criteria": {
+    "crimson_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:white_crimson_planks_slab_stool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crimson_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

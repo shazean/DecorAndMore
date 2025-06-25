@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:half_spruce_bench",
+    "count": 6
+  }
+}

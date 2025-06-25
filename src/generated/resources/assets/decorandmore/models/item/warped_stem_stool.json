@@ -1,0 +1,101 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:color": 0.0
+      },
+      "model": "decorandmore:item/white_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 1.0
+      },
+      "model": "decorandmore:item/orange_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 2.0
+      },
+      "model": "decorandmore:item/magenta_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 3.0
+      },
+      "model": "decorandmore:item/light_blue_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 4.0
+      },
+      "model": "decorandmore:item/yellow_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 5.0
+      },
+      "model": "decorandmore:item/lime_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 6.0
+      },
+      "model": "decorandmore:item/pink_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 7.0
+      },
+      "model": "decorandmore:item/gray_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 8.0
+      },
+      "model": "decorandmore:item/light_gray_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 9.0
+      },
+      "model": "decorandmore:item/cyan_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 10.0
+      },
+      "model": "decorandmore:item/purple_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 11.0
+      },
+      "model": "decorandmore:item/blue_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 12.0
+      },
+      "model": "decorandmore:item/brown_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 13.0
+      },
+      "model": "decorandmore:item/green_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 14.0
+      },
+      "model": "decorandmore:item/red_warped_stem_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 15.0
+      },
+      "model": "decorandmore:item/black_warped_stem_stool"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:acacia_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:acacia_bench",
+    "count": 6
+  }
+}

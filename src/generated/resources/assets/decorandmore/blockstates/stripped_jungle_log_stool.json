@@ -1,0 +1,148 @@
+{
+  "variants": {
+    "color=white,type=top": {
+      "model": "decorandmore:block/white_stripped_jungle_log_stool_top"
+    },
+    "color=orange,type=top": {
+      "model": "decorandmore:block/orange_stripped_jungle_log_stool_top"
+    },
+    "color=magenta,type=top": {
+      "model": "decorandmore:block/magenta_stripped_jungle_log_stool_top"
+    },
+    "color=light_blue,type=top": {
+      "model": "decorandmore:block/light_blue_stripped_jungle_log_stool_top"
+    },
+    "color=yellow,type=top": {
+      "model": "decorandmore:block/yellow_stripped_jungle_log_stool_top"
+    },
+    "color=lime,type=top": {
+      "model": "decorandmore:block/lime_stripped_jungle_log_stool_top"
+    },
+    "color=pink,type=top": {
+      "model": "decorandmore:block/pink_stripped_jungle_log_stool_top"
+    },
+    "color=gray,type=top": {
+      "model": "decorandmore:block/gray_stripped_jungle_log_stool_top"
+    },
+    "color=light_gray,type=top": {
+      "model": "decorandmore:block/light_gray_stripped_jungle_log_stool_top"
+    },
+    "color=cyan,type=top": {
+      "model": "decorandmore:block/cyan_stripped_jungle_log_stool_top"
+    },
+    "color=purple,type=top": {
+      "model": "decorandmore:block/purple_stripped_jungle_log_stool_top"
+    },
+    "color=blue,type=top": {
+      "model": "decorandmore:block/blue_stripped_jungle_log_stool_top"
+    },
+    "color=brown,type=top": {
+      "model": "decorandmore:block/brown_stripped_jungle_log_stool_top"
+    },
+    "color=green,type=top": {
+      "model": "decorandmore:block/green_stripped_jungle_log_stool_top"
+    },
+    "color=red,type=top": {
+      "model": "decorandmore:block/red_stripped_jungle_log_stool_top"
+    },
+    "color=black,type=top": {
+      "model": "decorandmore:block/black_stripped_jungle_log_stool_top"
+    },
+    "color=white,type=bottom": {
+      "model": "decorandmore:block/white_stripped_jungle_log_stool"
+    },
+    "color=orange,type=bottom": {
+      "model": "decorandmore:block/orange_stripped_jungle_log_stool"
+    },
+    "color=magenta,type=bottom": {
+      "model": "decorandmore:block/magenta_stripped_jungle_log_stool"
+    },
+    "color=light_blue,type=bottom": {
+      "model": "decorandmore:block/light_blue_stripped_jungle_log_stool"
+    },
+    "color=yellow,type=bottom": {
+      "model": "decorandmore:block/yellow_stripped_jungle_log_stool"
+    },
+    "color=lime,type=bottom": {
+      "model": "decorandmore:block/lime_stripped_jungle_log_stool"
+    },
+    "color=pink,type=bottom": {
+      "model": "decorandmore:block/pink_stripped_jungle_log_stool"
+    },
+    "color=gray,type=bottom": {
+      "model": "decorandmore:block/gray_stripped_jungle_log_stool"
+    },
+    "color=light_gray,type=bottom": {
+      "model": "decorandmore:block/light_gray_stripped_jungle_log_stool"
+    },
+    "color=cyan,type=bottom": {
+      "model": "decorandmore:block/cyan_stripped_jungle_log_stool"
+    },
+    "color=purple,type=bottom": {
+      "model": "decorandmore:block/purple_stripped_jungle_log_stool"
+    },
+    "color=blue,type=bottom": {
+      "model": "decorandmore:block/blue_stripped_jungle_log_stool"
+    },
+    "color=brown,type=bottom": {
+      "model": "decorandmore:block/brown_stripped_jungle_log_stool"
+    },
+    "color=green,type=bottom": {
+      "model": "decorandmore:block/green_stripped_jungle_log_stool"
+    },
+    "color=red,type=bottom": {
+      "model": "decorandmore:block/red_stripped_jungle_log_stool"
+    },
+    "color=black,type=bottom": {
+      "model": "decorandmore:block/black_stripped_jungle_log_stool"
+    },
+    "color=white,type=double": {
+      "model": "decorandmore:block/white_stripped_jungle_log_stool_double"
+    },
+    "color=orange,type=double": {
+      "model": "decorandmore:block/orange_stripped_jungle_log_stool_double"
+    },
+    "color=magenta,type=double": {
+      "model": "decorandmore:block/magenta_stripped_jungle_log_stool_double"
+    },
+    "color=light_blue,type=double": {
+      "model": "decorandmore:block/light_blue_stripped_jungle_log_stool_double"
+    },
+    "color=yellow,type=double": {
+      "model": "decorandmore:block/yellow_stripped_jungle_log_stool_double"
+    },
+    "color=lime,type=double": {
+      "model": "decorandmore:block/lime_stripped_jungle_log_stool_double"
+    },
+    "color=pink,type=double": {
+      "model": "decorandmore:block/pink_stripped_jungle_log_stool_double"
+    },
+    "color=gray,type=double": {
+      "model": "decorandmore:block/gray_stripped_jungle_log_stool_double"
+    },
+    "color=light_gray,type=double": {
+      "model": "decorandmore:block/light_gray_stripped_jungle_log_stool_double"
+    },
+    "color=cyan,type=double": {
+      "model": "decorandmore:block/cyan_stripped_jungle_log_stool_double"
+    },
+    "color=purple,type=double": {
+      "model": "decorandmore:block/purple_stripped_jungle_log_stool_double"
+    },
+    "color=blue,type=double": {
+      "model": "decorandmore:block/blue_stripped_jungle_log_stool_double"
+    },
+    "color=brown,type=double": {
+      "model": "decorandmore:block/brown_stripped_jungle_log_stool_double"
+    },
+    "color=green,type=double": {
+      "model": "decorandmore:block/green_stripped_jungle_log_stool_double"
+    },
+    "color=red,type=double": {
+      "model": "decorandmore:block/red_stripped_jungle_log_stool_double"
+    },
+    "color=black,type=double": {
+      "model": "decorandmore:block/black_stripped_jungle_log_stool_double"
+    }
+  }
+}

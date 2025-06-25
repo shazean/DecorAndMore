@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/log_bench_outer",
+  "textures": {
+    "side": "minecraft:block/crimson_stem",
+    "diagonal": "decorandmore:block/stripped_diagonal_crimson_stem",
+    "end": "minecraft:block/stripped_crimson_stem_top",
+    "top": "decorandmore:block/diagonal_crimson_stem"
+  }
+}

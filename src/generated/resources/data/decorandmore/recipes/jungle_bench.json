@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:jungle_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:jungle_bench",
+    "count": 6
+  }
+}

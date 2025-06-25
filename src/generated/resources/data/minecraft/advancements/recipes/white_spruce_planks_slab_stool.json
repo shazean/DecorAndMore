@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:white_spruce_planks_slab_stool"
+    ]
+  },
+  "criteria": {
+    "spruce_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spruce_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:white_spruce_planks_slab_stool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "spruce_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

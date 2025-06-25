@@ -1,0 +1,9 @@
+{
+  "parent": "decorandmore:block/half_bench",
+  "textures": {
+    "side": "minecraft:block/warped_stem",
+    "top": "minecraft:block/stripped_warped_stem",
+    "end": "minecraft:block/stripped_warped_stem_top",
+    "bottom": "minecraft:block/warped_stem"
+  }
+}

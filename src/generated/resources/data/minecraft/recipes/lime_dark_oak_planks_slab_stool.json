@@ -1,0 +1,20 @@
+{
+  "type": "decorandmore:dyed_crafting",
+  "pattern": [
+    "WW",
+    "XX"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:lime_wool"
+    },
+    "X": {
+      "item": "minecraft:dark_oak_planks"
+    }
+  },
+  "result": {
+    "item": "decorandmore:dark_oak_stool",
+    "count": 2
+  },
+  "color": "lime"
+}

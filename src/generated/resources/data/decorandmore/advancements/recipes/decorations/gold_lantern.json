@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:gold_lantern"
+    ]
+  },
+  "criteria": {
+    "gold_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gold_nugget"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:gold_lantern"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gold_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:color": 0.0
+      },
+      "model": "decorandmore:item/white_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 1.0
+      },
+      "model": "decorandmore:item/orange_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 2.0
+      },
+      "model": "decorandmore:item/magenta_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 3.0
+      },
+      "model": "decorandmore:item/light_blue_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 4.0
+      },
+      "model": "decorandmore:item/yellow_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 5.0
+      },
+      "model": "decorandmore:item/lime_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 6.0
+      },
+      "model": "decorandmore:item/pink_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 7.0
+      },
+      "model": "decorandmore:item/gray_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 8.0
+      },
+      "model": "decorandmore:item/light_gray_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 9.0
+      },
+      "model": "decorandmore:item/cyan_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 10.0
+      },
+      "model": "decorandmore:item/purple_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 11.0
+      },
+      "model": "decorandmore:item/blue_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 12.0
+      },
+      "model": "decorandmore:item/brown_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 13.0
+      },
+      "model": "decorandmore:item/green_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 14.0
+      },
+      "model": "decorandmore:item/red_spruce_log_stool"
+    },
+    {
+      "predicate": {
+        "minecraft:color": 15.0
+      },
+      "model": "decorandmore:item/black_spruce_log_stool"
+    }
+  ]
+}
