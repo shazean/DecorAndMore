@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
 public class DecorItemModels extends ItemModelProvider {
 
@@ -19,6 +20,10 @@ public class DecorItemModels extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        for (RegistryObject<? extends Block> block : DecorBlocks.BLOCKS_ITEM_MODELS)
+            self(block.get());
+
 
         slabStool(DecorBlocks.OAK_STOOL.get());
         slabStool(DecorBlocks.DARK_OAK_STOOL.get());
@@ -47,23 +52,23 @@ public class DecorItemModels extends ItemModelProvider {
         slabStool(DecorBlocks.STRIPPED_CRIMSON_STEM_STOOL.get());
         slabStool(DecorBlocks.STRIPPED_WARPED_STEM_STOOL.get());
 
-        self(DecorBlocks.OAK_BENCH.get());
-        self(DecorBlocks.DARK_OAK_BENCH.get());
-        self(DecorBlocks.SPRUCE_BENCH.get());
-        self(DecorBlocks.JUNGLE_BENCH.get());
-        self(DecorBlocks.ACACIA_BENCH.get());
-        self(DecorBlocks.BIRCH_BENCH.get());
-        self(DecorBlocks.WARPED_BENCH.get());
-        self(DecorBlocks.CRIMSON_BENCH.get());
-
-        self(DecorBlocks.HALF_OAK_BENCH.get());
-        self(DecorBlocks.HALF_DARK_OAK_BENCH.get());
-        self(DecorBlocks.HALF_SPRUCE_BENCH.get());
-        self(DecorBlocks.HALF_JUNGLE_BENCH.get());
-        self(DecorBlocks.HALF_ACACIA_BENCH.get());
-        self(DecorBlocks.HALF_BIRCH_BENCH.get());
-        self(DecorBlocks.HALF_WARPED_BENCH.get());
-        self(DecorBlocks.HALF_CRIMSON_BENCH.get());
+//        self(DecorBlocks.OAK_BENCH.get());
+//        self(DecorBlocks.DARK_OAK_BENCH.get());
+//        self(DecorBlocks.SPRUCE_BENCH.get());
+//        self(DecorBlocks.JUNGLE_BENCH.get());
+//        self(DecorBlocks.ACACIA_BENCH.get());
+//        self(DecorBlocks.BIRCH_BENCH.get());
+//        self(DecorBlocks.WARPED_BENCH.get());
+//        self(DecorBlocks.CRIMSON_BENCH.get());
+//
+//        self(DecorBlocks.HALF_OAK_BENCH.get());
+//        self(DecorBlocks.HALF_DARK_OAK_BENCH.get());
+//        self(DecorBlocks.HALF_SPRUCE_BENCH.get());
+//        self(DecorBlocks.HALF_JUNGLE_BENCH.get());
+//        self(DecorBlocks.HALF_ACACIA_BENCH.get());
+//        self(DecorBlocks.HALF_BIRCH_BENCH.get());
+//        self(DecorBlocks.HALF_WARPED_BENCH.get());
+//        self(DecorBlocks.HALF_CRIMSON_BENCH.get());
 
         generatedItem(DecorBlocks.GOLD_LANTERN.get());
         generatedItem(DecorBlocks.GOLD_SOUL_LANTERN.get());
@@ -100,6 +105,61 @@ public class DecorItemModels extends ItemModelProvider {
         generatedItem(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_LANTERN.get(), "weathered_copper_redstone_lantern");
         generatedItem(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get(), "oxidized_copper_redstone_lantern");
 
+//        self(DecorBlocks.OAK_TABLE_PLANKS.get());
+//        self(DecorBlocks.OAK_TABLE_LOGS.get());
+//        self(DecorBlocks.OAK_TABLE_STRIPPED_LOGS.get());
+//        self(DecorBlocks.OAK_TABLE_PLANKS_LOGS.get());
+//        self(DecorBlocks.OAK_TABLE_PLANKS_STRIPPED_LOGS.get());
+//        self(DecorBlocks.OAK_TABLE_STRIPPED_LOGS_LOGS.get());
+//
+//        self(DecorBlocks.DARK_OAK_TABLE_PLANKS.get());
+//        self(DecorBlocks.DARK_OAK_TABLE_LOGS.get());
+//        self(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS.get());
+//        self(DecorBlocks.DARK_OAK_TABLE_PLANKS_LOGS.get());
+//        self(DecorBlocks.DARK_OAK_TABLE_PLANKS_STRIPPED_LOGS.get());
+//        self(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS_LOGS.get());
+//
+//        self(DecorBlocks.SPRUCE_TABLE_PLANKS.get());
+//        self(DecorBlocks.SPRUCE_TABLE_LOGS.get());
+//        self(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS.get());
+//        self(DecorBlocks.SPRUCE_TABLE_PLANKS_LOGS.get());
+//        self(DecorBlocks.SPRUCE_TABLE_PLANKS_STRIPPED_LOGS.get());
+//        self(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS_LOGS.get());
+//
+//        self(DecorBlocks.JUNGLE_TABLE_PLANKS.get());
+//        self(DecorBlocks.JUNGLE_TABLE_LOGS.get());
+//        self(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS.get());
+//        self(DecorBlocks.JUNGLE_TABLE_PLANKS_LOGS.get());
+//        self(DecorBlocks.JUNGLE_TABLE_PLANKS_STRIPPED_LOGS.get());
+//        self(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS_LOGS.get());
+//
+//        self(DecorBlocks.ACACIA_TABLE_PLANKS.get());
+//        self(DecorBlocks.ACACIA_TABLE_LOGS.get());
+//        self(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS.get());
+//        self(DecorBlocks.ACACIA_TABLE_PLANKS_LOGS.get());
+//        self(DecorBlocks.ACACIA_TABLE_PLANKS_STRIPPED_LOGS.get());
+//        self(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS_LOGS.get());
+//
+//        self(DecorBlocks.BIRCH_TABLE_PLANKS.get());
+//        self(DecorBlocks.BIRCH_TABLE_LOGS.get());
+//        self(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS.get());
+//        self(DecorBlocks.BIRCH_TABLE_PLANKS_LOGS.get());
+//        self(DecorBlocks.BIRCH_TABLE_PLANKS_STRIPPED_LOGS.get());
+//        self(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS_LOGS.get());
+//
+//        self(DecorBlocks.WARPED_TABLE_PLANKS.get());
+//        self(DecorBlocks.WARPED_TABLE_STEMS.get());
+//        self(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS.get());
+//        self(DecorBlocks.WARPED_TABLE_PLANKS_STEMS.get());
+//        self(DecorBlocks.WARPED_TABLE_PLANKS_STRIPPED_STEMS.get());
+//        self(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS_STEMS.get());
+//
+//        self(DecorBlocks.CRIMSON_TABLE_PLANKS.get());
+//        self(DecorBlocks.CRIMSON_TABLE_STEMS.get());
+//        self(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS.get());
+//        self(DecorBlocks.CRIMSON_TABLE_PLANKS_STEMS.get());
+//        self(DecorBlocks.CRIMSON_TABLE_PLANKS_STRIPPED_STEMS.get());
+//        self(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS_STEMS.get());
 
     }
 

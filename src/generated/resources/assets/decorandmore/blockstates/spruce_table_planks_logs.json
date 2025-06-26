@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/spruce_table_planks_logs"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/spruce_table_planks_logs"
+    }
+  }
+}

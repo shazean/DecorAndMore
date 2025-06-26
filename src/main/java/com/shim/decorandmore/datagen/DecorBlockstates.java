@@ -1,10 +1,7 @@
 package com.shim.decorandmore.datagen;
 
 import com.shim.decorandmore.DecorAndMore;
-import com.shim.decorandmore.blocks.CopperLanternBlock;
-import com.shim.decorandmore.blocks.HalfBlock;
-import com.shim.decorandmore.blocks.RedstoneLanternBlock;
-import com.shim.decorandmore.blocks.SlabStoolBlock;
+import com.shim.decorandmore.blocks.*;
 import com.shim.decorandmore.registry.DecorBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
@@ -113,9 +110,110 @@ public class DecorBlockstates extends BlockStateProvider {
 
         redstoneLantern(DecorBlocks.NETHERITE_REDSTONE_LANTERN.get());
 
+        simpleTable(DecorBlocks.OAK_TABLE_PLANKS.get(), Blocks.OAK_PLANKS);
+        logTable(DecorBlocks.OAK_TABLE_LOGS.get(), Blocks.OAK_LOG, Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG);
+        logTable(DecorBlocks.OAK_TABLE_STRIPPED_LOGS.get(), Blocks.STRIPPED_OAK_LOG, Blocks.STRIPPED_OAK_LOG, Blocks.STRIPPED_OAK_LOG);
+        twoBlockTable(DecorBlocks.OAK_TABLE_PLANKS_LOGS.get(), Blocks.OAK_PLANKS, Blocks.OAK_LOG);
+        twoBlockTable(DecorBlocks.OAK_TABLE_PLANKS_STRIPPED_LOGS.get(), Blocks.OAK_PLANKS, Blocks.STRIPPED_OAK_LOG);
+        logTable(DecorBlocks.OAK_TABLE_STRIPPED_LOGS_LOGS.get(), Blocks.STRIPPED_OAK_LOG, Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG);
+
+        simpleTable(DecorBlocks.DARK_OAK_TABLE_PLANKS.get(), Blocks.DARK_OAK_PLANKS);
+        logTable(DecorBlocks.DARK_OAK_TABLE_LOGS.get(), Blocks.DARK_OAK_LOG, Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG);
+        logTable(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS.get(), Blocks.STRIPPED_DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG);
+        twoBlockTable(DecorBlocks.DARK_OAK_TABLE_PLANKS_LOGS.get(), Blocks.DARK_OAK_PLANKS, Blocks.DARK_OAK_LOG);
+        twoBlockTable(DecorBlocks.DARK_OAK_TABLE_PLANKS_STRIPPED_LOGS.get(), Blocks.DARK_OAK_PLANKS, Blocks.STRIPPED_DARK_OAK_LOG);
+        logTable(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS_LOGS.get(), Blocks.STRIPPED_DARK_OAK_LOG, Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG);
+
+        simpleTable(DecorBlocks.SPRUCE_TABLE_PLANKS.get(), Blocks.SPRUCE_PLANKS);
+        logTable(DecorBlocks.SPRUCE_TABLE_LOGS.get(), Blocks.SPRUCE_LOG, Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG);
+        logTable(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS.get(), Blocks.STRIPPED_SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG);
+        twoBlockTable(DecorBlocks.SPRUCE_TABLE_PLANKS_LOGS.get(), Blocks.SPRUCE_PLANKS, Blocks.SPRUCE_LOG);
+        twoBlockTable(DecorBlocks.SPRUCE_TABLE_PLANKS_STRIPPED_LOGS.get(), Blocks.SPRUCE_PLANKS, Blocks.STRIPPED_SPRUCE_LOG);
+        logTable(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS_LOGS.get(), Blocks.STRIPPED_SPRUCE_LOG, Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG);
+
+        simpleTable(DecorBlocks.JUNGLE_TABLE_PLANKS.get(), Blocks.JUNGLE_PLANKS);
+        logTable(DecorBlocks.JUNGLE_TABLE_LOGS.get(), Blocks.JUNGLE_LOG, Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG);
+        logTable(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS.get(), Blocks.STRIPPED_JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG);
+        twoBlockTable(DecorBlocks.JUNGLE_TABLE_PLANKS_LOGS.get(), Blocks.JUNGLE_PLANKS, Blocks.JUNGLE_LOG);
+        twoBlockTable(DecorBlocks.JUNGLE_TABLE_PLANKS_STRIPPED_LOGS.get(), Blocks.JUNGLE_PLANKS, Blocks.STRIPPED_JUNGLE_LOG);
+        logTable(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS_LOGS.get(), Blocks.STRIPPED_JUNGLE_LOG, Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG);
+
+        simpleTable(DecorBlocks.ACACIA_TABLE_PLANKS.get(), Blocks.ACACIA_PLANKS);
+        logTable(DecorBlocks.ACACIA_TABLE_LOGS.get(), Blocks.ACACIA_LOG, Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG);
+        logTable(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS.get(), Blocks.STRIPPED_ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG);
+        twoBlockTable(DecorBlocks.ACACIA_TABLE_PLANKS_LOGS.get(), Blocks.ACACIA_PLANKS, Blocks.ACACIA_LOG);
+        twoBlockTable(DecorBlocks.ACACIA_TABLE_PLANKS_STRIPPED_LOGS.get(), Blocks.ACACIA_PLANKS, Blocks.STRIPPED_ACACIA_LOG);
+        logTable(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS_LOGS.get(), Blocks.STRIPPED_ACACIA_LOG, Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG);
+
+        simpleTable(DecorBlocks.BIRCH_TABLE_PLANKS.get(), Blocks.BIRCH_PLANKS);
+        logTable(DecorBlocks.BIRCH_TABLE_LOGS.get(), Blocks.BIRCH_LOG, Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG);
+        logTable(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS.get(), Blocks.STRIPPED_BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG);
+        twoBlockTable(DecorBlocks.BIRCH_TABLE_PLANKS_LOGS.get(), Blocks.BIRCH_PLANKS, Blocks.BIRCH_LOG);
+        twoBlockTable(DecorBlocks.BIRCH_TABLE_PLANKS_STRIPPED_LOGS.get(), Blocks.BIRCH_PLANKS, Blocks.STRIPPED_BIRCH_LOG);
+        logTable(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS_LOGS.get(), Blocks.STRIPPED_BIRCH_LOG, Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG);
+
+        simpleTable(DecorBlocks.WARPED_TABLE_PLANKS.get(), Blocks.WARPED_PLANKS);
+        logTable(DecorBlocks.WARPED_TABLE_STEMS.get(), Blocks.WARPED_STEM, Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM);
+        logTable(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS.get(), Blocks.STRIPPED_WARPED_STEM, Blocks.STRIPPED_WARPED_STEM, Blocks.STRIPPED_WARPED_STEM);
+        twoBlockTable(DecorBlocks.WARPED_TABLE_PLANKS_STEMS.get(), Blocks.WARPED_PLANKS, Blocks.WARPED_STEM);
+        twoBlockTable(DecorBlocks.WARPED_TABLE_PLANKS_STRIPPED_STEMS.get(), Blocks.WARPED_PLANKS, Blocks.STRIPPED_WARPED_STEM);
+        logTable(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS_STEMS.get(), Blocks.STRIPPED_WARPED_STEM, Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM);
+
+        simpleTable(DecorBlocks.CRIMSON_TABLE_PLANKS.get(), Blocks.CRIMSON_PLANKS);
+        logTable(DecorBlocks.CRIMSON_TABLE_STEMS.get(), Blocks.CRIMSON_STEM, Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM);
+        logTable(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS.get(), Blocks.STRIPPED_CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM);
+        twoBlockTable(DecorBlocks.CRIMSON_TABLE_PLANKS_STEMS.get(), Blocks.CRIMSON_PLANKS, Blocks.CRIMSON_STEM);
+        twoBlockTable(DecorBlocks.CRIMSON_TABLE_PLANKS_STRIPPED_STEMS.get(), Blocks.CRIMSON_PLANKS, Blocks.STRIPPED_CRIMSON_STEM);
+        logTable(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS_STEMS.get(), Blocks.STRIPPED_CRIMSON_STEM, Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM);
+
 
     }
 
+    public void simpleTable(TableBlock table, Block block) {
+        table(table, getTextureFromBlock(block), getTextureFromBlock(block), getTextureFromBlock(block));
+    }
+
+    public void twoBlockTable(TableBlock table, Block top, Block post) {
+        table(table, getTextureFromBlock(top), getTextureFromBlock(post), getTextureFromBlock(post, "_top"));
+    }
+
+    public void logTable(LogTableBlock table, Block top, Block post, Block stripped) {
+        logTable(table, getTextureFromBlock(top), getTextureFromBlock(post), getTextureFromBlock(post, "_top"), getTextureFromBlock(top, "_top"), getTextureFromBlock(stripped));
+    }
+
+    public void logTable(LogTableBlock table, ResourceLocation top, ResourceLocation post_side, ResourceLocation post_bottom, ResourceLocation top_end, ResourceLocation top_underside) {
+
+        ModelFile model = models().withExistingParent(name(table), modLoc("block/log_table")).texture("top", top)
+                .texture("post_side", post_side).texture("post_bottom", post_bottom).texture("top_end", top_end)
+                .texture("top_underside", top_underside);
+
+        logTable(table, model);
+    }
+
+    public void logTable(LogTableBlock table, ModelFile model) {
+        getVariantBuilder(table).forAllStatesExcept(state -> {
+
+            Direction facing = state.getValue(HalfBlock.FACING);
+
+            return ConfiguredModel.builder()
+                    .modelFile(model)
+                    .rotationY((int) (facing.getOpposite()).toYRot())
+                    .build();
+        });
+    }
+
+    public void table(TableBlock table, ResourceLocation top, ResourceLocation post_side, ResourceLocation post_bottom) {
+
+        ModelFile model = models().withExistingParent(name(table), modLoc("block/table")).texture("top", top)
+                .texture("post_side", post_side).texture("post_bottom", post_bottom);
+
+        table(table, model);
+    }
+
+    public void table(TableBlock table, ModelFile model) {
+        getVariantBuilder(table).forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(model).build());
+    }
 
     public void waxedlantern(LanternBlock waxed, LanternBlock nonWaxedToCopy) {
         ModelFile model = models().withExistingParent(name(waxed), mcLoc("block/template_lantern"))
@@ -296,6 +394,11 @@ public class DecorBlockstates extends BlockStateProvider {
     public ResourceLocation getTextureFromBlock(Block block) {
         return new ResourceLocation(block.getRegistryName().getNamespace(), "block/" + name(block));
     }
+
+    public ResourceLocation getTextureFromBlock(String prefix, Block block) {
+        return new ResourceLocation(block.getRegistryName().getNamespace(), "block/" + prefix + name(block));
+    }
+
 
     public ResourceLocation getTextureFromBlock(Block block, String suffix) {
         return new ResourceLocation(block.getRegistryName().getNamespace(), "block/" + name(block) + suffix);

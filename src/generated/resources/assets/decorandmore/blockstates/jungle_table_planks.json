@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/jungle_table_planks"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/jungle_table_planks"
+    }
+  }
+}

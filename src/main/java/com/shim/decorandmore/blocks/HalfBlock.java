@@ -47,16 +47,15 @@ public class HalfBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext p_56361_) {
-        BlockPos blockpos = p_56361_.getClickedPos();
-        BlockState blockstate = p_56361_.getLevel().getBlockState(blockpos);
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockPos blockpos = context.getClickedPos();
+        BlockState blockstate = context.getLevel().getBlockState(blockpos);
         if (blockstate.is(this)) {
             return blockstate.setValue(WATERLOGGED, Boolean.FALSE);
         } else {
-            FluidState fluidstate = p_56361_.getLevel().getFluidState(blockpos);
-            BlockState blockstate1 = this.defaultBlockState().setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
-            Direction direction = p_56361_.getClickedFace();
-            return blockstate1;
+            FluidState fluidstate = context.getLevel().getFluidState(blockpos);
+            //            Direction direction = context.getClickedFace();
+            return this.defaultBlockState().setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER).setValue(FACING, context.getHorizontalDirection());
         }
     }
 

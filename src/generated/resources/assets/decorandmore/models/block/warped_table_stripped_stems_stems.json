@@ -1,0 +1,10 @@
+{
+  "parent": "decorandmore:block/log_table",
+  "textures": {
+    "top": "minecraft:block/stripped_warped_stem",
+    "post_side": "minecraft:block/warped_stem",
+    "post_bottom": "minecraft:block/warped_stem_top",
+    "top_end": "minecraft:block/stripped_warped_stem_top",
+    "top_underside": "minecraft:block/stripped_warped_stem"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "decorandmore:block/log_table",
+  "textures": {
+    "top": "minecraft:block/stripped_oak_log",
+    "post_side": "minecraft:block/stripped_oak_log",
+    "post_bottom": "minecraft:block/stripped_oak_log_top",
+    "top_end": "minecraft:block/stripped_oak_log_top",
+    "top_underside": "minecraft:block/stripped_oak_log"
+  }
+}

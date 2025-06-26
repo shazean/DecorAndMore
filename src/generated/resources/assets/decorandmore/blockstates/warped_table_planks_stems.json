@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/warped_table_planks_stems"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/warped_table_planks_stems"
+    }
+  }
+}

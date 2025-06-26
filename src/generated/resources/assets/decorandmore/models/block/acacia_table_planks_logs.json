@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/acacia_planks",
+    "post_side": "minecraft:block/acacia_log",
+    "post_bottom": "minecraft:block/acacia_log_top"
+  }
+}
