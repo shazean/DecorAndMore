@@ -5,6 +5,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -72,10 +73,32 @@ public class DecorRecipeGen extends RecipeProvider {
         lanterns(DecorBlocks.COPPER_LANTERN.get(), DecorBlocks.COPPER_SOUL_LANTERN.get(), DecorBlocks.COPPER_REDSTONE_LANTERN.get(), false, Items.COPPER_INGOT, consumer);
         lanterns(DecorBlocks.NETHERITE_LANTERN.get(), DecorBlocks.NETHERITE_SOUL_LANTERN.get(), DecorBlocks.NETHERITE_REDSTONE_LANTERN.get(), false, Items.NETHERITE_INGOT, consumer);
         ShapedRecipeBuilder.shaped(DecorBlocks.REDSTONE_LANTERN.get()).pattern("XXX").pattern("XTX").pattern("XXX").define('X', Items.IRON_NUGGET).define('T', Items.REDSTONE_TORCH).unlockedBy(name( Items.IRON_NUGGET), has( Items.IRON_NUGGET)).save(consumer);
+
+        redstoneLamp(DecorBlocks.RED_REDSTONE_LAMP.get(), Items.RED_DYE, consumer);
+        redstoneLamp(DecorBlocks.ORANGE_REDSTONE_LAMP.get(), Items.ORANGE_DYE, consumer);
+        redstoneLamp(DecorBlocks.YELLOW_REDSTONE_LAMP.get(), Items.YELLOW_DYE, consumer);
+        redstoneLamp(DecorBlocks.LIME_REDSTONE_LAMP.get(), Items.LIME_DYE, consumer);
+        redstoneLamp(DecorBlocks.GREEN_REDSTONE_LAMP.get(), Items.GREEN_DYE, consumer);
+        redstoneLamp(DecorBlocks.CYAN_REDSTONE_LAMP.get(), Items.CYAN_DYE, consumer);
+        redstoneLamp(DecorBlocks.BLUE_REDSTONE_LAMP.get(), Items.BLUE_DYE, consumer);
+        redstoneLamp(DecorBlocks.LIGHT_BLUE_REDSTONE_LAMP.get(), Items.LIGHT_BLUE_DYE, consumer);
+        redstoneLamp(DecorBlocks.PURPLE_REDSTONE_LAMP.get(), Items.PURPLE_DYE, consumer);
+        redstoneLamp(DecorBlocks.MAGENTA_REDSTONE_LAMP.get(), Items.MAGENTA_DYE, consumer);
+        redstoneLamp(DecorBlocks.PINK_REDSTONE_LAMP.get(), Items.PINK_DYE, consumer);
+        redstoneLamp(DecorBlocks.BROWN_REDSTONE_LAMP.get(), Items.BROWN_DYE, consumer);
+        redstoneLamp(DecorBlocks.BLACK_REDSTONE_LAMP.get(), Items.BLACK_DYE, consumer);
+        redstoneLamp(DecorBlocks.GRAY_REDSTONE_LAMP.get(), Items.GRAY_DYE, consumer);
+        redstoneLamp(DecorBlocks.LIGHT_GRAY_REDSTONE_LAMP.get(), Items.LIGHT_GRAY_DYE, consumer);
+        redstoneLamp(DecorBlocks.WHITE_REDSTONE_LAMP.get(), Items.WHITE_DYE, consumer);
+
     }
 
     private String name(ItemLike block) {
         return block.asItem().getRegistryName().getPath();
+    }
+
+    public void redstoneLamp(ItemLike lamp, Item dye, Consumer<FinishedRecipe> consumer) {
+        ShapelessRecipeBuilder.shapeless(lamp).requires(dye).requires(Items.REDSTONE_LAMP).unlockedBy("has_dye", has(dye)).save(consumer, name(lamp) + "_shapeless_dyed_lamp");
     }
 
     public void lanterns(ItemLike lantern, ItemLike soulLantern, ItemLike redstoneLantern, Boolean useNugget, Item nuggetOrIngot, Consumer<FinishedRecipe> consumer) {

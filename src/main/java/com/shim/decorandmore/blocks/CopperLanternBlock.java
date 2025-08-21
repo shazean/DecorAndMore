@@ -36,6 +36,7 @@ public class CopperLanternBlock extends LanternBlock implements IWeatheringCoppe
     }
 
     public boolean isRedstonePowered() {
+
         return redstonePowered;
     }
 

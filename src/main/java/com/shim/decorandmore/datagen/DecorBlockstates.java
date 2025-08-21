@@ -166,8 +166,51 @@ public class DecorBlockstates extends BlockStateProvider {
         twoBlockTable(DecorBlocks.CRIMSON_TABLE_PLANKS_STRIPPED_STEMS.get(), Blocks.CRIMSON_PLANKS, Blocks.STRIPPED_CRIMSON_STEM);
         logTable(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS_STEMS.get(), Blocks.STRIPPED_CRIMSON_STEM, Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM);
 
+        redstoneLamp(DecorBlocks.RED_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.ORANGE_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.YELLOW_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.LIME_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.GREEN_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.CYAN_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.BLUE_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.LIGHT_BLUE_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.PURPLE_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.MAGENTA_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.PINK_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.BROWN_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.BLACK_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.GRAY_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.LIGHT_GRAY_REDSTONE_LAMP.get());
+        redstoneLamp(DecorBlocks.WHITE_REDSTONE_LAMP.get());
 
     }
+
+
+    public void redstoneLamp(RedstoneLampBlock lamp) {
+        redstoneLamp(lamp, getTextureFromBlock(lamp, "_lit"), getTextureFromBlock(lamp));
+    }
+
+    public void redstoneLamp(RedstoneLampBlock lamp, ResourceLocation lit, ResourceLocation unlit) {
+
+        ModelFile litModel = models().withExistingParent(name(lamp), mcLoc("block/cube_all")).texture("all", lit);
+
+        ModelFile unlitModel = models().withExistingParent(name(lamp), mcLoc("block/cube_all")).texture("all", unlit);
+
+
+        redstoneLamp(lamp, litModel, unlitModel);
+    }
+
+    public void redstoneLamp(RedstoneLampBlock lamp, ModelFile litModel, ModelFile unlitModel) {
+        getVariantBuilder(lamp).forAllStatesExcept(state -> {
+
+            Boolean lit = state.getValue(RedstoneLampBlock.LIT);
+
+            return ConfiguredModel.builder()
+                    .modelFile(lit ? litModel : unlitModel)
+                    .build();
+        }, LanternBlock.WATERLOGGED);
+    }
+
 
     public void simpleTable(TableBlock table, Block block) {
         table(table, getTextureFromBlock(block), getTextureFromBlock(block), getTextureFromBlock(block));
@@ -199,7 +242,7 @@ public class DecorBlockstates extends BlockStateProvider {
                     .modelFile(model)
                     .rotationY((int) (facing.getOpposite()).toYRot())
                     .build();
-        });
+        }, LanternBlock.WATERLOGGED);
     }
 
     public void table(TableBlock table, ResourceLocation top, ResourceLocation post_side, ResourceLocation post_bottom) {

@@ -3,9 +3,12 @@ package com.shim.decorandmore.registry;
 import com.shim.decorandmore.DecorAndMore;
 import com.shim.decorandmore.blocks.*;
 import com.shim.decorandmore.items.SlabStoolItem;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -202,8 +205,28 @@ public class DecorBlocks {
     public static final RegistryObject<TableBlock> CRIMSON_TABLE_PLANKS_STRIPPED_STEMS = registerBlock("crimson_table_planks_stripped_stems", "Crimson Table (Planks & Stripped Stems)", () -> new TableBlock(CRIMSON.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<LogTableBlock> CRIMSON_TABLE_STRIPPED_STEMS_STEMS = registerBlock("crimson_table_stripped_stems_stems", "Crimson Table (Stripped Stems & Stems)", () -> new LogTableBlock(CRIMSON.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
 
+    public static final RegistryObject<RedstoneLampBlock> RED_REDSTONE_LAMP = registerBlock("red_redstone_lamp", "Red Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> ORANGE_REDSTONE_LAMP = registerBlock("orange_redstone_lamp", "Orange Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> YELLOW_REDSTONE_LAMP = registerBlock("yellow_redstone_lamp", "Yellow Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> LIME_REDSTONE_LAMP = registerBlock("lime_redstone_lamp", "Lime Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> GREEN_REDSTONE_LAMP = registerBlock("green_redstone_lamp", "Green Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> CYAN_REDSTONE_LAMP = registerBlock("cyan_redstone_lamp", "Cyan Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> BLUE_REDSTONE_LAMP = registerBlock("blue_redstone_lamp", "Blue Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> LIGHT_BLUE_REDSTONE_LAMP = registerBlock("light_blue_redstone_lamp", "Light Blue Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> PURPLE_REDSTONE_LAMP = registerBlock("purple_redstone_lamp", "Purple Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> MAGENTA_REDSTONE_LAMP = registerBlock("magenta_redstone_lamp", "Magenta Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> PINK_REDSTONE_LAMP = registerBlock("pink_redstone_lamp", "Pink Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> BROWN_REDSTONE_LAMP = registerBlock("brown_redstone_lamp", "Brown Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> BLACK_REDSTONE_LAMP = registerBlock("black_redstone_lamp", "Black Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> GRAY_REDSTONE_LAMP = registerBlock("gray_redstone_lamp", "Gray Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> LIGHT_GRAY_REDSTONE_LAMP = registerBlock("light_gray_redstone_lamp", "Light Gray Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<RedstoneLampBlock> WHITE_REDSTONE_LAMP = registerBlock("white_redstone_lamp", "White Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
 
 
+
+    private static Boolean always(BlockState p_50810_, BlockGetter p_50811_, BlockPos p_50812_, EntityType<?> p_50813_) {
+        return (boolean)true;
+    }
 
     private static ToIntFunction<BlockState> litBlockEmission(int lightValue) {
         return (p_50763_) -> p_50763_.getValue(BlockStateProperties.LIT) ? lightValue : 0;
