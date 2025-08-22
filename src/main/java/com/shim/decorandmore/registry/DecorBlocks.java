@@ -64,6 +64,15 @@ public class DecorBlocks {
     private static final BlockBehaviour.Properties WARPED = BlockBehaviour.Properties.of(Material.NETHER_WOOD, MaterialColor.WARPED_HYPHAE).strength(2.0F).sound(SoundType.STEM);
     private static final BlockBehaviour.Properties CRIMSON = BlockBehaviour.Properties.of(Material.NETHER_WOOD, MaterialColor.CRIMSON_HYPHAE).strength(2.0F).sound(SoundType.STEM);
     private static final BlockBehaviour.Properties LANTERN = BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(3.5F).sound(SoundType.LANTERN).noOcclusion();
+    private static final BlockBehaviour.Properties DIORITE = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.QUARTZ).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
+    private static final BlockBehaviour.Properties GRANITE = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
+    private static final BlockBehaviour.Properties ANDESITE = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DIRT).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
+
+    private static final BlockBehaviour.Properties OXIDIZED_COPPER = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER);
+    private static final BlockBehaviour.Properties WEATHERED_COPPER = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_STEM).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER);
+    private static final BlockBehaviour.Properties EXPOSED_COPPER = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER);
+    private static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER);
+
 
     public static final RegistryObject<SlabBlock> OAK_STOOL = registerSlabStool("oak_stool", "Oak Stool", () -> new SlabStoolBlock(OAK), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<SlabBlock> DARK_OAK_STOOL = registerSlabStool("dark_oak_stool", "Dark Oak Stool", () -> new SlabStoolBlock(DARK_OAK), CreativeModeTab.TAB_DECORATIONS);
@@ -205,6 +214,56 @@ public class DecorBlocks {
     public static final RegistryObject<TableBlock> CRIMSON_TABLE_PLANKS_STRIPPED_STEMS = registerBlock("crimson_table_planks_stripped_stems", "Crimson Table (Planks & Stripped Stems)", () -> new TableBlock(CRIMSON.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<LogTableBlock> CRIMSON_TABLE_STRIPPED_STEMS_STEMS = registerBlock("crimson_table_stripped_stems_stems", "Crimson Table (Stripped Stems & Stems)", () -> new LogTableBlock(CRIMSON.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
 
+    public static final RegistryObject<TableBlock> DIORITE_TABLE = registerBlock("diorite_table", "Diorite Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> DIORITE_TABLE_POLISHED = registerBlock("diorite_table_polished", "Diorite Table (Polished)", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+//    public static final RegistryObject<TableBlock> DIORITE_TABLE_TOP_POLISHED = registerBlock("diorite_table_top_polished", "Diorite Table (Top Polished)", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+//    public static final RegistryObject<TableBlock> DIORITE_TABLE_BOTTOM_POLISHED = registerBlock("diorite_table_bottom_polished", "Diorite Table (Bottom Polished)", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> GRANITE_TABLE = registerBlock("granite_table", "Granite Table", () -> new TableBlock(GRANITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> GRANITE_TABLE_POLISHED = registerBlock("granite_table_polished", "Granite Table (Polished)", () -> new TableBlock(GRANITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> ANDESITE_TABLE = registerBlock("andesite_table", "ndesite Table", () -> new TableBlock(ANDESITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> ANDESITE_TABLE_POLISHED = registerBlock("andesite_table_polished", "ndesite Table (Polished)", () -> new TableBlock(ANDESITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> STONE_BRICKS_TABLE = registerBlock("stone_bricks_table", "Stone Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> SMOOTH_STONE_TABLE = registerBlock("smooth_stone_table", "Smooth Stone Table (Polished)", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> QUARTZ_BRICK_TABLE = registerBlock("quartz_brick_table", "Quartz Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> SMOOTH_QUARTZ_TABLE = registerBlock("smooth_quartz_table", "Smooth Quartz Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> NETHER_BRICK_TABLE = registerBlock("nether_brick_table", "Nether Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> RED_NETHER_BRICK_TABLE = registerBlock("red_nether_brick_table", "Red Nether Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> POLISHED_BLACKSTONE_BRICKS_TABLE = registerBlock("polished_blackstone_brick_table", "Polished Blackstone Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> POLISHED_BLACKSTONE_TABLE = registerBlock("polished_blackstone_table", "Polished Blackstone Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> BRICK_TABLE = registerBlock("brick_table", "Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> PURPUR_TABLE = registerBlock("purpur_table", "Purpur Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> END_STONE_BRICKS_TABLE = registerBlock("end_stone_brick_table", "End Stone Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> CUT_COPPER_TABLE = registerBlock("cut_copper_table", "Cut Copper Table", () -> new CopperTableBlock(WeatheringCopper.WeatherState.UNAFFECTED, COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> WEATHERED_CUT_COPPER_TABLE = registerBlock("weathered_cut_copper_table", "Weathered Cut Copper Table", () -> new CopperTableBlock(WeatheringCopper.WeatherState.UNAFFECTED, WEATHERED_COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> EXPOSED_CUT_COPPER_TABLE = registerBlock("exposed_cut_copper_table", "Exposed Cut Copper Table", () -> new CopperTableBlock(WeatheringCopper.WeatherState.UNAFFECTED, EXPOSED_COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> OXIDIZED_CUT_COPPER_TABLE = registerBlock("oxidized_cut_copper_table", "Oxidized Cut Copper Table", () -> new CopperTableBlock(WeatheringCopper.WeatherState.UNAFFECTED, OXIDIZED_COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> WAXED_CUT_COPPER_TABLE = registerBlock("waxed_cut_copper_table", "Waxed Cut Copper Table", () -> new TableBlock(COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> WAXED_WEATHERED_CUT_COPPER_TABLE = registerBlock("waxed_weathered_cut_copper_table", "Waxed Weathered Cut Copper Table", () -> new TableBlock(WEATHERED_COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> WAXED_EXPOSED_CUT_COPPER_TABLE = registerBlock("waxed_exposed_cut_copper_table", "Waxed Exposed Cut Copper Table", () -> new TableBlock(EXPOSED_COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> WAXED_OXIDIZED_CUT_COPPER_TABLE = registerBlock("waxed_oxidized_cut_copper_table", "Waxed Oxidized Cut Copper Table", () -> new TableBlock(OXIDIZED_COPPER.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+
+    public static final RegistryObject<TableBlock> CUT_SANDSTONE_TABLE = registerBlock("cut_sandstone_table", "Cut Sandstone Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> SMOOTH_SANDSTONE_TABLE = registerBlock("smooth_sandstone_table", "Smooth Sandstone Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> RED_CUT_SANDSTONE_TABLE = registerBlock("red_cut_sandstone_table", "Red Cut Sandstone Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> SMOOTH_RED_SANDSTONE_TABLE = registerBlock("smooth_red_sandstone_table", "Smooth Red Sandstone Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> POLISHED_DEEPSLATE_TABLE = registerBlock("polished_deepslate_table", "Polished Deepslate Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> DEEPSLATE_BRICK_TABLE = registerBlock("deepslate_brick_table", "Deepslate Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> DEEPSLATE_TILE_TABLE = registerBlock("deepslate_tile_table", "Deepslate Tile Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+    public static final RegistryObject<TableBlock> PRISMARINE_BRICK_TABLE = registerBlock("prismarine_brick_table", "Prismarine Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> DARK_PRISMARINE_TABLE = registerBlock("dark_prismarine_table", "Dark Prismarine Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+
+
+
     public static final RegistryObject<RedstoneLampBlock> RED_REDSTONE_LAMP = registerBlock("red_redstone_lamp", "Red Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<RedstoneLampBlock> ORANGE_REDSTONE_LAMP = registerBlock("orange_redstone_lamp", "Orange Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<RedstoneLampBlock> YELLOW_REDSTONE_LAMP = registerBlock("yellow_redstone_lamp", "Yellow Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
@@ -222,6 +281,10 @@ public class DecorBlocks {
     public static final RegistryObject<RedstoneLampBlock> LIGHT_GRAY_REDSTONE_LAMP = registerBlock("light_gray_redstone_lamp", "Light Gray Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<RedstoneLampBlock> WHITE_REDSTONE_LAMP = registerBlock("white_redstone_lamp", "White Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
 
+
+    public static final RegistryObject<Block> RED_PAINTED_WOOD = registerBlock("red_painted_wood", "Red Painted Wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(0.3F).sound(SoundType.WOOD)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<Block> WORN_RED_PAINTED_WOOD = registerBlock("worn_red_painted_wood", "Worn Red Painted Wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(0.3F).sound(SoundType.WOOD)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<Block> WEATHERED_RED_PAINTED_WOOD = registerBlock("weathered_red_painted_wood", "Weathered Red Painted Wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(0.3F).sound(SoundType.WOOD)), CreativeModeTab.TAB_DECORATIONS, true, true);
 
 
     private static Boolean always(BlockState p_50810_, BlockGetter p_50811_, BlockPos p_50812_, EntityType<?> p_50813_) {

@@ -2,7 +2,7 @@ package com.shim.decorandmore.events;
 
 import com.shim.decorandmore.DecorAndMore;
 import com.shim.decorandmore.blocks.CopperLanternBlock;
-import com.shim.decorandmore.util.CopperUtil;
+import com.shim.decorandmore.util.WeatheringUtil;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -10,7 +10,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.HoneycombItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,7 +29,7 @@ public class DecorForgeEventBus {
             BlockState state = level.getBlockState(pos);
 
             if (state.getBlock() instanceof CopperLanternBlock lanternBlock) {
-                CopperUtil.CopperStage stage = CopperUtil.COPPER_STAGES.get(lanternBlock);
+                WeatheringUtil.WeatherableStage stage = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(lanternBlock);
                 if (stage != null) {
                     BlockState waxedState = stage.waxedCounterpart().defaultBlockState();
 

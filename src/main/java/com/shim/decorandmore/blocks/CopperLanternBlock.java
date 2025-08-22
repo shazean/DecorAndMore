@@ -15,7 +15,7 @@ import net.minecraft.world.level.material.Fluids;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CopperLanternBlock extends LanternBlock implements IWeatheringCopper {
+public class CopperLanternBlock extends LanternBlock implements IWeatheringBlock {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
     private final WeatheringCopper.WeatherState weatherState;
     private final boolean redstonePowered;
@@ -41,7 +41,7 @@ public class CopperLanternBlock extends LanternBlock implements IWeatheringCoppe
     }
 
     public boolean isRandomlyTicking(BlockState p_154935_) {
-        return IWeatheringCopper.getNext(p_154935_.getBlock()).isPresent();
+        return IWeatheringBlock.getNext(p_154935_.getBlock()).isPresent();
     }
 
     @Override

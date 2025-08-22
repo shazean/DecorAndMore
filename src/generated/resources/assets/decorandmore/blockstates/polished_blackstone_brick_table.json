@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/polished_blackstone_brick_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/polished_blackstone_brick_table"
+    }
+  }
+}

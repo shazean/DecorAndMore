@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/exposed_cut_copper",
+    "post_side": "minecraft:block/exposed_cut_copper",
+    "post_bottom": "minecraft:block/exposed_cut_copper"
+  }
+}

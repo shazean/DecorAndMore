@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/diorite_table_polished"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/diorite_table_polished"
+    }
+  }
+}

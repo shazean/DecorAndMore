@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/polished_deepslate",
+    "post_side": "minecraft:block/polished_deepslate",
+    "post_bottom": "minecraft:block/polished_deepslate"
+  }
+}

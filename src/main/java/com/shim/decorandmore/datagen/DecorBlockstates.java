@@ -6,6 +6,7 @@ import com.shim.decorandmore.registry.DecorBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
@@ -17,6 +18,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
 public class DecorBlockstates extends BlockStateProvider {
 
@@ -166,6 +168,56 @@ public class DecorBlockstates extends BlockStateProvider {
         twoBlockTable(DecorBlocks.CRIMSON_TABLE_PLANKS_STRIPPED_STEMS.get(), Blocks.CRIMSON_PLANKS, Blocks.STRIPPED_CRIMSON_STEM);
         logTable(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS_STEMS.get(), Blocks.STRIPPED_CRIMSON_STEM, Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM);
 
+        simpleTable(DecorBlocks.DIORITE_TABLE.get(), Blocks.DIORITE);
+        simpleTable(DecorBlocks.DIORITE_TABLE_POLISHED.get(), Blocks.POLISHED_DIORITE);
+//        simpleTwoBlockTable(DecorBlocks.DIORITE_TABLE_TOP_POLISHED.get(), Blocks.POLISHED_DIORITE, Blocks.DIORITE);
+//        simpleTwoBlockTable(DecorBlocks.DIORITE_TABLE_BOTTOM_POLISHED.get(), Blocks.DIORITE, Blocks.POLISHED_DIORITE);
+
+       simpleTable(DecorBlocks.GRANITE_TABLE.get(), Blocks.GRANITE);
+       simpleTable(DecorBlocks.GRANITE_TABLE_POLISHED.get(), Blocks.POLISHED_GRANITE);
+       simpleTable(DecorBlocks.ANDESITE_TABLE.get(), Blocks.ANDESITE);
+       simpleTable(DecorBlocks.ANDESITE_TABLE_POLISHED.get(), Blocks.POLISHED_ANDESITE);
+
+       simpleTable(DecorBlocks.STONE_BRICKS_TABLE.get(), Blocks.STONE_BRICKS);
+       simpleTable(DecorBlocks.SMOOTH_STONE_TABLE.get(), Blocks.SMOOTH_STONE);
+
+       simpleTable(DecorBlocks.QUARTZ_BRICK_TABLE.get(), Blocks.QUARTZ_BRICKS);
+        table(DecorBlocks.SMOOTH_QUARTZ_TABLE.get(), getTextureFromBlock(Blocks.QUARTZ_BLOCK, "_bottom"), getTextureFromBlock(Blocks.QUARTZ_BLOCK, "_bottom"), getTextureFromBlock(Blocks.QUARTZ_BLOCK, "_bottom"));
+
+       simpleTable(DecorBlocks.NETHER_BRICK_TABLE.get(), Blocks.NETHER_BRICKS);
+       simpleTable(DecorBlocks.RED_NETHER_BRICK_TABLE.get(), Blocks.RED_NETHER_BRICKS);
+
+       simpleTable(DecorBlocks.POLISHED_BLACKSTONE_BRICKS_TABLE.get(), Blocks.POLISHED_BLACKSTONE_BRICKS);
+       simpleTable(DecorBlocks.POLISHED_BLACKSTONE_TABLE.get(), Blocks.POLISHED_BLACKSTONE);
+
+       simpleTable(DecorBlocks.BRICK_TABLE.get(), Blocks.BRICKS);
+       simpleTable(DecorBlocks.PURPUR_TABLE.get(), Blocks.PURPUR_BLOCK);
+       simpleTable(DecorBlocks.END_STONE_BRICKS_TABLE.get(), Blocks.END_STONE_BRICKS);
+
+       simpleTable(DecorBlocks.CUT_COPPER_TABLE.get(), Blocks.CUT_COPPER);
+        simpleTable(DecorBlocks.EXPOSED_CUT_COPPER_TABLE.get(), Blocks.EXPOSED_CUT_COPPER);
+        simpleTable(DecorBlocks.WEATHERED_CUT_COPPER_TABLE.get(), Blocks.WEATHERED_CUT_COPPER);
+        simpleTable(DecorBlocks.OXIDIZED_CUT_COPPER_TABLE.get(), Blocks.OXIDIZED_CUT_COPPER);
+
+        simpleTable(DecorBlocks.WAXED_CUT_COPPER_TABLE.get(), Blocks.CUT_COPPER);
+        simpleTable(DecorBlocks.WAXED_EXPOSED_CUT_COPPER_TABLE.get(), Blocks.EXPOSED_CUT_COPPER);
+        simpleTable(DecorBlocks.WAXED_WEATHERED_CUT_COPPER_TABLE.get(), Blocks.WEATHERED_CUT_COPPER);
+        simpleTable(DecorBlocks.WAXED_OXIDIZED_CUT_COPPER_TABLE.get(), Blocks.OXIDIZED_CUT_COPPER);
+
+        simpleTable(DecorBlocks.CUT_SANDSTONE_TABLE.get(), Blocks.CUT_SANDSTONE);
+       table(DecorBlocks.SMOOTH_SANDSTONE_TABLE.get(), getTextureFromBlock(Blocks.SANDSTONE, "_top"), getTextureFromBlock(Blocks.SANDSTONE, "_top"), getTextureFromBlock(Blocks.SANDSTONE, "_top"));
+       simpleTable(DecorBlocks.RED_CUT_SANDSTONE_TABLE.get(), Blocks.CUT_RED_SANDSTONE);
+        table(DecorBlocks.SMOOTH_RED_SANDSTONE_TABLE.get(), getTextureFromBlock(Blocks.RED_SANDSTONE, "_top"), getTextureFromBlock(Blocks.RED_SANDSTONE, "_top"), getTextureFromBlock(Blocks.RED_SANDSTONE, "_top"));
+
+       simpleTable(DecorBlocks.POLISHED_DEEPSLATE_TABLE.get(), Blocks.POLISHED_DEEPSLATE);
+       simpleTable(DecorBlocks.DEEPSLATE_BRICK_TABLE.get(), Blocks.DEEPSLATE_BRICKS);
+       simpleTable(DecorBlocks.DEEPSLATE_TILE_TABLE.get(), Blocks.DEEPSLATE_TILES);
+
+       simpleTable(DecorBlocks.PRISMARINE_BRICK_TABLE.get(), Blocks.PRISMARINE_BRICKS);
+       simpleTable(DecorBlocks.DARK_PRISMARINE_TABLE.get(), Blocks.DARK_PRISMARINE);
+
+
+
         redstoneLamp(DecorBlocks.RED_REDSTONE_LAMP.get());
         redstoneLamp(DecorBlocks.ORANGE_REDSTONE_LAMP.get());
         redstoneLamp(DecorBlocks.YELLOW_REDSTONE_LAMP.get());
@@ -183,16 +235,20 @@ public class DecorBlockstates extends BlockStateProvider {
         redstoneLamp(DecorBlocks.LIGHT_GRAY_REDSTONE_LAMP.get());
         redstoneLamp(DecorBlocks.WHITE_REDSTONE_LAMP.get());
 
+        simpleBlock(DecorBlocks.RED_PAINTED_WOOD.get());
+        simpleBlock(DecorBlocks.WORN_RED_PAINTED_WOOD.get());
+        simpleBlock(DecorBlocks.WEATHERED_RED_PAINTED_WOOD.get());
+
     }
 
 
     public void redstoneLamp(RedstoneLampBlock lamp) {
-        redstoneLamp(lamp, getTextureFromBlock(lamp, "_lit"), getTextureFromBlock(lamp));
+        redstoneLamp(lamp, getTextureFromBlock(lamp, "_on"), getTextureFromBlock(lamp));
     }
 
     public void redstoneLamp(RedstoneLampBlock lamp, ResourceLocation lit, ResourceLocation unlit) {
 
-        ModelFile litModel = models().withExistingParent(name(lamp), mcLoc("block/cube_all")).texture("all", lit);
+        ModelFile litModel = models().withExistingParent(name(lamp) + "_lit", mcLoc("block/cube_all")).texture("all", lit);
 
         ModelFile unlitModel = models().withExistingParent(name(lamp), mcLoc("block/cube_all")).texture("all", unlit);
 
@@ -214,6 +270,10 @@ public class DecorBlockstates extends BlockStateProvider {
 
     public void simpleTable(TableBlock table, Block block) {
         table(table, getTextureFromBlock(block), getTextureFromBlock(block), getTextureFromBlock(block));
+    }
+
+    public void simpleTwoBlockTable(TableBlock table, Block top, Block post) {
+        table(table, getTextureFromBlock(top), getTextureFromBlock(post), getTextureFromBlock(post));
     }
 
     public void twoBlockTable(TableBlock table, Block top, Block post) {

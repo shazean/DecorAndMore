@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/dark_prismarine",
+    "post_side": "minecraft:block/dark_prismarine",
+    "post_bottom": "minecraft:block/dark_prismarine"
+  }
+}

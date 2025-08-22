@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/smooth_sandstone_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/smooth_sandstone_table"
+    }
+  }
+}

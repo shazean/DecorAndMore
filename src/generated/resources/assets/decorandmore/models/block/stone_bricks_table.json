@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/stone_bricks",
+    "post_side": "minecraft:block/stone_bricks",
+    "post_bottom": "minecraft:block/stone_bricks"
+  }
+}

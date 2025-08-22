@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/granite_table_polished"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/granite_table_polished"
+    }
+  }
+}

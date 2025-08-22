@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/red_cut_sandstone_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/red_cut_sandstone_table"
+    }
+  }
+}

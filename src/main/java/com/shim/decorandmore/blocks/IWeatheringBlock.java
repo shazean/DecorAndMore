@@ -1,23 +1,15 @@
 package com.shim.decorandmore.blocks;
 
-import com.google.common.base.Suppliers;
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
-import com.shim.decorandmore.registry.DecorBlocks;
-import com.shim.decorandmore.util.CopperUtil;
-import it.unimi.dsi.fastutil.objects.Object2ObjectArrayMap;
-import net.minecraft.Util;
+import com.shim.decorandmore.util.WeatheringUtil;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChangeOverTimeBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Optional;
-import java.util.function.Supplier;
 
 
-public interface IWeatheringCopper extends ChangeOverTimeBlock<WeatheringCopper.WeatherState> {
+public interface IWeatheringBlock extends ChangeOverTimeBlock<WeatheringCopper.WeatherState> {
 //    BiMap<Block, Block> BLOCK_MAP =  HashBiMap.create(Util.make(new Object2ObjectArrayMap<>(), (map) -> {
 //
 //        map.put(DecorBlocks.COPPER_LANTERN.get(), DecorBlocks.EXPOSED_COPPER_LANTERN.get());
@@ -33,8 +25,12 @@ public interface IWeatheringCopper extends ChangeOverTimeBlock<WeatheringCopper.
 //        BLOCK_MAP.put(block, nextBlock);
 //    }
 
+//    Block getPreviousStage(Block block);
+//    Block getNextStage();
+//    Block getCurrentStage();
+
     static Optional<Block> getPrevious(Block block) {
-        CopperUtil.CopperStage stage = CopperUtil.COPPER_STAGES.get(block);
+        WeatheringUtil.WeatherableStage stage = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(block);
         if (stage != null)
             return Optional.ofNullable(stage.previousStage());
         else return Optional.empty();
@@ -47,7 +43,7 @@ public interface IWeatheringCopper extends ChangeOverTimeBlock<WeatheringCopper.
     static Block getFirst(Block blockIn) {
         Block block = blockIn;
 
-        for (Block block1 = CopperUtil.COPPER_STAGES.get(blockIn).previousStage(); block1 != null; block1 = CopperUtil.COPPER_STAGES.get(block1).previousStage()) {
+        for (Block block1 = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(blockIn).previousStage(); block1 != null; block1 = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(block1).previousStage()) {
             block = block1;
         }
 
@@ -62,7 +58,7 @@ public interface IWeatheringCopper extends ChangeOverTimeBlock<WeatheringCopper.
     }
 
     static Optional<Block> getNext(Block block) {
-        CopperUtil.CopperStage stage = CopperUtil.COPPER_STAGES.get(block);
+        WeatheringUtil.WeatherableStage stage = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(block);
         if (stage != null)
             return Optional.ofNullable(stage.nextStage());
         else return Optional.empty();

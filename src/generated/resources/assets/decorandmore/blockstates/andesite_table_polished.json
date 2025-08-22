@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/andesite_table_polished"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/andesite_table_polished"
+    }
+  }
+}

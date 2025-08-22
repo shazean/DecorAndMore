@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/polished_deepslate_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/polished_deepslate_table"
+    }
+  }
+}

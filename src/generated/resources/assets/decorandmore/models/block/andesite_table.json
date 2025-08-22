@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/andesite",
+    "post_side": "minecraft:block/andesite",
+    "post_bottom": "minecraft:block/andesite"
+  }
+}

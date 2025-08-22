@@ -1,0 +1,8 @@
+{
+  "parent": "decorandmore:block/table",
+  "textures": {
+    "top": "minecraft:block/cut_sandstone",
+    "post_side": "minecraft:block/cut_sandstone",
+    "post_bottom": "minecraft:block/cut_sandstone"
+  }
+}

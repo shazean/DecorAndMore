@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/cut_copper_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/cut_copper_table"
+    }
+  }
+}

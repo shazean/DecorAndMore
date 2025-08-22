@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/red_nether_brick_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/red_nether_brick_table"
+    }
+  }
+}

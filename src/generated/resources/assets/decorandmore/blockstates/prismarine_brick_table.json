@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "model": "decorandmore:block/prismarine_brick_table"
+    },
+    "waterlogged=true": {
+      "model": "decorandmore:block/prismarine_brick_table"
+    }
+  }
+}
