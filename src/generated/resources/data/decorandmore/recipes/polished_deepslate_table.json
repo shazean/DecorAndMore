@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:polished_deepslate"
+    },
+    "x": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "result": {
+    "item": "decorandmore:polished_deepslate_table"
+  }
+}

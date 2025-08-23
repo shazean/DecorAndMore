@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:red_cut_sandstone_table"
+    ]
+  },
+  "criteria": {
+    "cut_red_sandstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cut_red_sandstone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:red_cut_sandstone_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cut_red_sandstone",
+      "has_the_recipe"
+    ]
+  ]
+}

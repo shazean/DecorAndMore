@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:spruce_table_stripped_logs_logs"
+    ]
+  },
+  "criteria": {
+    "stripped_spruce_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stripped_spruce_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:spruce_table_stripped_logs_logs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stripped_spruce_log",
+      "has_the_recipe"
+    ]
+  ]
+}

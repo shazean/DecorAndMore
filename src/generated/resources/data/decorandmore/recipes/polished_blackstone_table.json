@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:polished_blackstone"
+    },
+    "x": {
+      "item": "minecraft:polished_blackstone"
+    }
+  },
+  "result": {
+    "item": "decorandmore:polished_blackstone_table"
+  }
+}

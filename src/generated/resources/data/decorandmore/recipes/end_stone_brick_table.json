@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "x": {
+      "item": "minecraft:end_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "decorandmore:end_stone_brick_table"
+  }
+}

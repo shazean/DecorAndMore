@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:acacia_log"
+    },
+    "x": {
+      "item": "minecraft:acacia_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:acacia_table_log"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:dark_oak_table_planks_stripped_logs"
+    ]
+  },
+  "criteria": {
+    "dark_oak_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dark_oak_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:dark_oak_table_planks_stripped_logs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dark_oak_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

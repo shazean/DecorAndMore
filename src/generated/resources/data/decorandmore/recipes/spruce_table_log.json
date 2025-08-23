@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:spruce_log"
+    },
+    "x": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:spruce_table_log"
+  }
+}

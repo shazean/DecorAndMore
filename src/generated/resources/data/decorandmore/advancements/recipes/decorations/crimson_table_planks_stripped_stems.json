@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:crimson_table_planks_stripped_stems"
+    ]
+  },
+  "criteria": {
+    "crimson_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:crimson_table_planks_stripped_stems"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crimson_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

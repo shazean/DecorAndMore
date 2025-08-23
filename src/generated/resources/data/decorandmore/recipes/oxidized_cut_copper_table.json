@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:oxidized_cut_copper"
+    },
+    "x": {
+      "item": "minecraft:oxidized_cut_copper"
+    }
+  },
+  "result": {
+    "item": "decorandmore:oxidized_cut_copper_table"
+  }
+}

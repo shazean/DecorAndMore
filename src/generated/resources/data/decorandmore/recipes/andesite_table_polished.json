@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:polished_andesite"
+    },
+    "x": {
+      "item": "minecraft:polished_andesite"
+    }
+  },
+  "result": {
+    "item": "decorandmore:andesite_table_polished"
+  }
+}

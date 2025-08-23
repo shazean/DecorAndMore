@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:warped_table_planks_stems"
+    ]
+  },
+  "criteria": {
+    "warped_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:warped_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:warped_table_planks_stems"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "warped_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

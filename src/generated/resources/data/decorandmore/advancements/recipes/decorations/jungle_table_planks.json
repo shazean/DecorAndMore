@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:jungle_table_planks"
+    ]
+  },
+  "criteria": {
+    "jungle_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:jungle_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:jungle_table_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "jungle_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

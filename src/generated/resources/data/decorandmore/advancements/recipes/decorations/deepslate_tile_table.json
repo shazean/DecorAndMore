@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:deepslate_tile_table"
+    ]
+  },
+  "criteria": {
+    "deepslate_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:deepslate_tiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:deepslate_tile_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "deepslate_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

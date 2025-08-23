@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:nether_bricks"
+    },
+    "x": {
+      "item": "minecraft:nether_bricks"
+    }
+  },
+  "result": {
+    "item": "decorandmore:nether_brick_table"
+  }
+}

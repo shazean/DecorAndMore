@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:smooth_quartz"
+    },
+    "x": {
+      "item": "minecraft:smooth_quartz"
+    }
+  },
+  "result": {
+    "item": "decorandmore:smooth_quartz_table"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:red_nether_brick_table"
+    ]
+  },
+  "criteria": {
+    "red_nether_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:red_nether_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:red_nether_brick_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "red_nether_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

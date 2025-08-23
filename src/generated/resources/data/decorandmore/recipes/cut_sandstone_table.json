@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:cut_sandstone"
+    },
+    "x": {
+      "item": "minecraft:cut_sandstone"
+    }
+  },
+  "result": {
+    "item": "decorandmore:cut_sandstone_table"
+  }
+}

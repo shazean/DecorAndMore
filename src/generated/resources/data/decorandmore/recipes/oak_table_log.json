@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:oak_log"
+    },
+    "x": {
+      "item": "minecraft:oak_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:oak_table_log"
+  }
+}

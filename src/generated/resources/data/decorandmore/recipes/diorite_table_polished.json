@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:polished_diorite"
+    },
+    "x": {
+      "item": "minecraft:polished_diorite"
+    }
+  },
+  "result": {
+    "item": "decorandmore:diorite_table_polished"
+  }
+}

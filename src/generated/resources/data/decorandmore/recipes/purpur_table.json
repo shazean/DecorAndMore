@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:purpur_block"
+    },
+    "x": {
+      "item": "minecraft:purpur_block"
+    }
+  },
+  "result": {
+    "item": "decorandmore:purpur_table"
+  }
+}

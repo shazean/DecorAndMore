@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:granite"
+    },
+    "x": {
+      "item": "minecraft:granite"
+    }
+  },
+  "result": {
+    "item": "decorandmore:granite_table"
+  }
+}

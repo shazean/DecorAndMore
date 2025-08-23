@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:andesite_table_polished"
+    ]
+  },
+  "criteria": {
+    "polished_andesite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_andesite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:andesite_table_polished"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "polished_andesite",
+      "has_the_recipe"
+    ]
+  ]
+}

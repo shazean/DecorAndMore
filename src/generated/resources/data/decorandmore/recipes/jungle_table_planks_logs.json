@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:jungle_planks"
+    },
+    "x": {
+      "item": "minecraft:jungle_log"
+    }
+  },
+  "result": {
+    "item": "decorandmore:jungle_table_planks_logs"
+  }
+}

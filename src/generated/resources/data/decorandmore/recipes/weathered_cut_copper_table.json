@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:weathered_cut_copper"
+    },
+    "x": {
+      "item": "minecraft:weathered_cut_copper"
+    }
+  },
+  "result": {
+    "item": "decorandmore:weathered_cut_copper_table"
+  }
+}
