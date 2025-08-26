@@ -1,9 +1,11 @@
 package com.shim.decorandmore.blocks;
 
+import com.shim.decorandmore.util.WeatheringUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
@@ -11,11 +13,13 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
 
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CopperLanternBlock extends LanternBlock implements IWeatheringBlock {
+public class CopperLanternBlock extends LanternBlock implements IRedstoneWeatheringBlock {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;
     private final WeatheringCopper.WeatherState weatherState;
     private final boolean redstonePowered;
@@ -36,7 +40,6 @@ public class CopperLanternBlock extends LanternBlock implements IWeatheringBlock
     }
 
     public boolean isRedstonePowered() {
-
         return redstonePowered;
     }
 
@@ -57,7 +60,7 @@ public class CopperLanternBlock extends LanternBlock implements IWeatheringBlock
             if (direction.getAxis() == Direction.Axis.Y) {
                 BlockState blockstate = this.defaultBlockState().setValue(HANGING, direction == Direction.UP).setValue(LIT, context.getLevel().hasNeighborSignal(context.getClickedPos()));
                 if (blockstate.canSurvive(context.getLevel(), context.getClickedPos())) {
-                    return blockstate.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
+                    return blockstate.setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
                 }
             }
         }
@@ -90,5 +93,14 @@ public class CopperLanternBlock extends LanternBlock implements IWeatheringBlock
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_153490_) {
         p_153490_.add(HANGING, WATERLOGGED, LIT);
+    }
+
+    @Override
+    public @org.jetbrains.annotations.Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+        if (toolAction == ToolActions.AXE_SCRAPE) {
+
+            return IWeatheringBlock.getPrevious(state).orElse(null);
+        }
+        return super.getToolModifiedState(state, context, toolAction, simulate);
     }
 }

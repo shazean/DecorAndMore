@@ -73,6 +73,7 @@ public class DecorBlocks {
     private static final BlockBehaviour.Properties EXPOSED_COPPER = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER);
     private static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.COPPER);
 
+    private static final BlockBehaviour.Properties CHAIN = BlockBehaviour.Properties.of(Material.METAL, MaterialColor.NONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion();
 
     public static final RegistryObject<SlabBlock> OAK_STOOL = registerSlabStool("oak_stool", "Oak Stool", () -> new SlabStoolBlock(OAK), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<SlabBlock> DARK_OAK_STOOL = registerSlabStool("dark_oak_stool", "Dark Oak Stool", () -> new SlabStoolBlock(DARK_OAK), CreativeModeTab.TAB_DECORATIONS);
@@ -281,10 +282,31 @@ public class DecorBlocks {
     public static final RegistryObject<RedstoneLampBlock> LIGHT_GRAY_REDSTONE_LAMP = registerBlock("light_gray_redstone_lamp", "Light Gray Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<RedstoneLampBlock> WHITE_REDSTONE_LAMP = registerBlock("white_redstone_lamp", "White Redstone Lamp", () -> new RedstoneLampBlock(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).isValidSpawn(DecorBlocks::always)), CreativeModeTab.TAB_DECORATIONS, true, true);
 
+    public static final RegistryObject<RedstoneChainBlock> REDSTONE_CHAIN = registerBlock("redstone_chain", "Redstone Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> GOLD_CHAIN = registerBlock("gold_chain", "Gold Chain", () -> new ChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> REDSTONE_GOLD_CHAIN = registerBlock("redstone_gold_chain", "Redstone Gold Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> NETHERITE_CHAIN = registerBlock("netherite_chain", "Netherite Chain", () -> new ChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> REDSTONE_NETHERITE_CHAIN = registerBlock("redstone_netherite_chain", "Redstone Netherite Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
 
-    public static final RegistryObject<Block> RED_PAINTED_WOOD = registerBlock("red_painted_wood", "Red Painted Wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(0.3F).sound(SoundType.WOOD)), CreativeModeTab.TAB_DECORATIONS, true, true);
-    public static final RegistryObject<Block> WORN_RED_PAINTED_WOOD = registerBlock("worn_red_painted_wood", "Worn Red Painted Wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(0.3F).sound(SoundType.WOOD)), CreativeModeTab.TAB_DECORATIONS, true, true);
-    public static final RegistryObject<Block> WEATHERED_RED_PAINTED_WOOD = registerBlock("weathered_red_painted_wood", "Weathered Red Painted Wood", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(0.3F).sound(SoundType.WOOD)), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<ChainBlock> COPPER_CHAIN = registerBlock("copper_chain", "Copper Chain", () -> new CopperChainBlock(WeatheringCopper.WeatherState.UNAFFECTED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> EXPOSED_COPPER_CHAIN = registerBlock("exposed_copper_chain", "Exposed Copper Chain", () -> new CopperChainBlock(WeatheringCopper.WeatherState.EXPOSED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> WEATHERED_COPPER_CHAIN = registerBlock("weathered_copper_chain", "Weathered Copper Chain", () -> new CopperChainBlock(WeatheringCopper.WeatherState.WEATHERED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> OXIDIZED_COPPER_CHAIN = registerBlock("oxidized_copper_chain", "Oxidized Copper Chain", () -> new CopperChainBlock(WeatheringCopper.WeatherState.OXIDIZED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+
+    public static final RegistryObject<RedstoneChainBlock> REDSTONE_COPPER_CHAIN = registerBlock("redstone_copper_chain", "Redstone Copper Chain", () -> new CopperRedstoneChainBlock(WeatheringCopper.WeatherState.UNAFFECTED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> EXPOSED_REDSTONE_COPPER_CHAIN = registerBlock("exposed_redstone_copper_chain", "Exposed Redstone Copper Chain", () -> new CopperRedstoneChainBlock(WeatheringCopper.WeatherState.EXPOSED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> WEATHERED_REDSTONE_COPPER_CHAIN = registerBlock("weathered_redstone_copper_chain", "Weathered Redstone Copper Chain", () -> new CopperRedstoneChainBlock(WeatheringCopper.WeatherState.WEATHERED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> OXIDIZED_REDSTONE_COPPER_CHAIN = registerBlock("oxidized_redstone_copper_chain", "Oxidized Redstone Copper Chain", () -> new CopperRedstoneChainBlock(WeatheringCopper.WeatherState.OXIDIZED, CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+
+    public static final RegistryObject<ChainBlock> WAXED_COPPER_CHAIN = registerBlock("waxed_copper_chain", "Waxed Copper Chain", () -> new ChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> WAXED_EXPOSED_COPPER_CHAIN = registerBlock("waxed_exposed_copper_chain", "Waxed Exposed Copper Chain", () -> new ChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> WAXED_WEATHERED_COPPER_CHAIN = registerBlock("waxed_weathered_copper_chain", "Waxed Weathered Copper Chain", () -> new ChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<ChainBlock> WAXED_OXIDIZED_COPPER_CHAIN = registerBlock("waxed_oxidized_copper_chain", "Waxed Oxidized Copper Chain", () -> new ChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> WAXED_REDSTONE_COPPER_CHAIN = registerBlock("waxed_redstone_copper_chain", "Waxed Redstone Copper Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> WAXED_EXPOSED_REDSTONE_COPPER_CHAIN = registerBlock("waxed_exposed_redstone_copper_chain", "Waxed Exposed Redstone Copper Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> WAXED_WEATHERED_REDSTONE_COPPER_CHAIN = registerBlock("waxed_weathered_redstone_copper_chain", "Waxed Weathered Redstone Copper Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+    public static final RegistryObject<RedstoneChainBlock> WAXED_OXIDIZED_REDSTONE_COPPER_CHAIN = registerBlock("waxed_oxidized_redstone_copper_chain", "Waxed Oxidized Redstone Copper Chain", () -> new RedstoneChainBlock(CHAIN), CreativeModeTab.TAB_DECORATIONS, true, false);
+
 
 
     private static Boolean always(BlockState p_50810_, BlockGetter p_50811_, BlockPos p_50812_, EntityType<?> p_50813_) {

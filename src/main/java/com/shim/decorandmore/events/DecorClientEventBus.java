@@ -1,6 +1,7 @@
 package com.shim.decorandmore.events;
 
 import com.shim.decorandmore.DecorAndMore;
+import com.shim.decorandmore.blocks.RedstoneChainBlock;
 import com.shim.decorandmore.registry.DecorBlocks;
 import net.minecraft.client.RecipeBookCategories;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -11,8 +12,11 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RedStoneWireBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -85,6 +89,30 @@ public class DecorClientEventBus {
         ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_REDSTONE_LANTERN.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.REDSTONE_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.REDSTONE_GOLD_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.REDSTONE_NETHERITE_CHAIN.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_REDSTONE_COPPER_CHAIN.get(), RenderType.cutout());
+
 
         RecipeBookCategories.create("decorandmore:dyed_crafting", new ItemStack(Items.RED_DYE));
 
@@ -99,4 +127,39 @@ public class DecorClientEventBus {
         } catch (NumberFormatException ignored) {}
         return 0.0F;
     }
+
+    @SubscribeEvent
+    public static void registerBlockColors(ColorHandlerEvent.Block event) {
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.REDSTONE_CHAIN.get());
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.REDSTONE_GOLD_CHAIN.get());
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.REDSTONE_NETHERITE_CHAIN.get());
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.REDSTONE_COPPER_CHAIN.get());
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.EXPOSED_REDSTONE_COPPER_CHAIN.get());
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.WEATHERED_REDSTONE_COPPER_CHAIN.get());
+
+        event.getBlockColors().register((state, world, pos, tintIndex) ->
+                        RedstoneChainBlock.getColorForPower(state.getValue(RedstoneChainBlock.POWER)),
+                DecorBlocks.OXIDIZED_REDSTONE_COPPER_CHAIN.get());
+
+
+    }
+
 }

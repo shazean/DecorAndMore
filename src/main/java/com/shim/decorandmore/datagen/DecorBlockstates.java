@@ -235,10 +235,77 @@ public class DecorBlockstates extends BlockStateProvider {
         redstoneLamp(DecorBlocks.LIGHT_GRAY_REDSTONE_LAMP.get());
         redstoneLamp(DecorBlocks.WHITE_REDSTONE_LAMP.get());
 
-        simpleBlock(DecorBlocks.RED_PAINTED_WOOD.get());
-        simpleBlock(DecorBlocks.WORN_RED_PAINTED_WOOD.get());
-        simpleBlock(DecorBlocks.WEATHERED_RED_PAINTED_WOOD.get());
 
+        redstoneChainBlock(DecorBlocks.REDSTONE_CHAIN.get(), (ChainBlock) Blocks.CHAIN);
+        chainBlock(DecorBlocks.GOLD_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.REDSTONE_GOLD_CHAIN.get(), DecorBlocks.GOLD_CHAIN.get());
+        chainBlock(DecorBlocks.NETHERITE_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.REDSTONE_NETHERITE_CHAIN.get(), DecorBlocks.NETHERITE_CHAIN.get());
+
+        chainBlock(DecorBlocks.COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.REDSTONE_COPPER_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
+        chainBlock(DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.EXPOSED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        chainBlock(DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WEATHERED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        chainBlock(DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.OXIDIZED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+
+        chainBlock(DecorBlocks.WAXED_COPPER_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
+        chainBlock(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_EXPOSED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        chainBlock(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_WEATHERED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        chainBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_OXIDIZED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+
+
+    }
+
+    public void chainBlock(ChainBlock block) {
+        ModelFile model = models().withExistingParent(name(block), modLoc("template_chain"))
+                .texture("all", blockTexture(block));
+
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+
+            Direction.Axis axis = state.getValue(ChainBlock.AXIS);
+            int xRot = (axis == Direction.Axis.X || axis == Direction.Axis.Z) ? 90 : 0;
+            int yRot = (axis == Direction.Axis.X) ? 90 : 0;
+
+            return ConfiguredModel.builder().modelFile(model).rotationX(xRot).rotationY(yRot).build();
+
+        }, ChainBlock.WATERLOGGED);
+    }
+
+    public void chainBlock(ChainBlock chain, Block textureBlock) {
+        ModelFile model = models().withExistingParent(name(chain), modLoc("template_chain"))
+                .texture("all", blockTexture(textureBlock));
+
+        getVariantBuilder(chain).forAllStatesExcept(state -> {
+
+            Direction.Axis axis = state.getValue(ChainBlock.AXIS);
+            int xRot = (axis == Direction.Axis.X || axis == Direction.Axis.Z) ? 90 : 0;
+            int yRot = (axis == Direction.Axis.X) ? 90 : 0;
+
+            return ConfiguredModel.builder().modelFile(model).rotationX(xRot).rotationY(yRot).build();
+
+        }, ChainBlock.WATERLOGGED);
+    }
+
+    public void redstoneChainBlock(RedstoneChainBlock block, ChainBlock nonRedstoneBlock) {
+        ModelFile model = models().withExistingParent(name(block), modLoc("template_redstone_chain"))
+                .texture("chain", blockTexture(nonRedstoneBlock));
+
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+
+            Direction.Axis axis = state.getValue(ChainBlock.AXIS);
+            int xRot = (axis == Direction.Axis.X || axis == Direction.Axis.Z) ? 90 : 0;
+            int yRot = (axis == Direction.Axis.X) ? 90 : 0;
+
+            return ConfiguredModel.builder().modelFile(model).rotationX(xRot).rotationY(yRot).build();
+
+        }, ChainBlock.WATERLOGGED, RedstoneChainBlock.POWER);
     }
 
 

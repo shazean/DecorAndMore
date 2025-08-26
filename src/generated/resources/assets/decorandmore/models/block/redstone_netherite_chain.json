@@ -1,0 +1,6 @@
+{
+  "parent": "decorandmore:block/template_redstone_chain",
+  "textures": {
+    "chain": "decorandmore:block/netherite_chain"
+  }
+}

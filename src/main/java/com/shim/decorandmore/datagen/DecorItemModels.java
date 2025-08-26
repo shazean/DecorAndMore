@@ -105,6 +105,33 @@ public class DecorItemModels extends ItemModelProvider {
         generatedItem(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_LANTERN.get(), "weathered_copper_redstone_lantern");
         generatedItem(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get(), "oxidized_copper_redstone_lantern");
 
+        generatedItem(DecorBlocks.REDSTONE_CHAIN.get());
+        generatedItem(DecorBlocks.GOLD_CHAIN.get());
+        generatedItem(DecorBlocks.REDSTONE_GOLD_CHAIN.get());
+        generatedItem(DecorBlocks.NETHERITE_CHAIN.get());
+        generatedItem(DecorBlocks.REDSTONE_NETHERITE_CHAIN.get());
+
+        generatedItem(DecorBlocks.COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.REDSTONE_COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.EXPOSED_REDSTONE_COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.WEATHERED_REDSTONE_COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+        generatedItem(DecorBlocks.OXIDIZED_REDSTONE_COPPER_CHAIN.get());
+
+        generatedItem(DecorBlocks.WAXED_COPPER_CHAIN.get(), "copper_chain");
+        generatedItem(DecorBlocks.WAXED_REDSTONE_COPPER_CHAIN.get(), "redstone_copper_chain");
+        generatedItem(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), "exposed_copper_chain");
+        generatedItem(DecorBlocks.WAXED_EXPOSED_REDSTONE_COPPER_CHAIN.get(), "exposed_redstone_copper_chain");
+        generatedItem(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), "weathered_copper_chain");
+        generatedItem(DecorBlocks.WAXED_WEATHERED_REDSTONE_COPPER_CHAIN.get(), "weathered_redstone_copper_chain");
+        generatedItem(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), "oxidized_copper_chain");
+        generatedItem(DecorBlocks.WAXED_OXIDIZED_REDSTONE_COPPER_CHAIN.get(), "oxidized_redstone_copper_chain");
+
+
+
+
 //        self(DecorBlocks.OAK_TABLE_PLANKS.get());
 //        self(DecorBlocks.OAK_TABLE_LOGS.get());
 //        self(DecorBlocks.OAK_TABLE_STRIPPED_LOGS.get());

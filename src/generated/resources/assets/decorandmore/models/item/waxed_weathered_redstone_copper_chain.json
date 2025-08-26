@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "decorandmore:item/weathered_redstone_copper_chain"
+  }
+}

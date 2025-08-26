@@ -1,0 +1,6 @@
+{
+  "parent": "decorandmore:block/template_chain",
+  "textures": {
+    "all": "decorandmore:block/gold_chain"
+  }
+}
