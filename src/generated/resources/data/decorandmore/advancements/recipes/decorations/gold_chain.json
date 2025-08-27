@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:gold_chain"
+    ]
+  },
+  "criteria": {
+    "gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:gold_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:gold_chain"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gold_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}

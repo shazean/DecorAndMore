@@ -1,6 +1,7 @@
 package com.shim.decorandmore.datagen;
 
 import com.shim.decorandmore.blocks.LogTableBlock;
+import com.shim.decorandmore.blocks.RedstoneChainBlock;
 import com.shim.decorandmore.blocks.TableBlock;
 import com.shim.decorandmore.registry.DecorBlocks;
 import net.minecraft.data.DataGenerator;
@@ -14,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ChainBlock;
 
 import java.util.function.Consumer;
 
@@ -198,6 +200,14 @@ public class DecorRecipeGen extends RecipeProvider {
         simpleTable(DecorBlocks.DARK_PRISMARINE_TABLE.get(), Blocks.DARK_PRISMARINE, consumer);
 
 
+        ShapedRecipeBuilder.shaped(DecorBlocks.REDSTONE_CHAIN.get()).pattern("x ").pattern("XR").pattern("x ").define('x', Items.IRON_NUGGET).define('X', Items.IRON_INGOT).define('R', Items.REDSTONE).unlockedBy(name(Items.IRON_INGOT), has(Items.IRON_INGOT)).save(consumer);
+        ShapelessRecipeBuilder.shapeless(DecorBlocks.REDSTONE_CHAIN.get()).requires(Blocks.CHAIN).requires(Items.REDSTONE).unlockedBy(name(Items.IRON_INGOT), has(Items.IRON_INGOT)).save(consumer, name(DecorBlocks.REDSTONE_CHAIN.get()) + "_from_chain");
+
+        chain(DecorBlocks.GOLD_CHAIN.get(), DecorBlocks.GOLD_REDSTONE_CHAIN.get(), Items.GOLD_NUGGET, Items.GOLD_INGOT, true, consumer);
+        chain(DecorBlocks.COPPER_CHAIN.get(), DecorBlocks.COPPER_REDSTONE_CHAIN.get(), Items.COPPER_INGOT, Items.COPPER_INGOT, false, consumer);
+        chain(DecorBlocks.NETHERITE_CHAIN.get(), DecorBlocks.NETHERITE_REDSTONE_CHAIN.get(), Items.NETHERITE_INGOT, Items.NETHERITE_INGOT, false, consumer);
+
+
     }
 
     private String name(ItemLike block) {
@@ -205,10 +215,21 @@ public class DecorRecipeGen extends RecipeProvider {
     }
 
 
+    public void chain(ChainBlock chain, RedstoneChainBlock redstoneChain, ItemLike nuggetOrIngot, ItemLike ingot, boolean hasNugget, Consumer<FinishedRecipe> consumer) {
+        if (hasNugget) {
+            ShapedRecipeBuilder.shaped(chain).pattern("x").pattern("X").pattern("x").define('x', nuggetOrIngot).define('X', ingot).unlockedBy(name(ingot), has(ingot)).save(consumer);
+            ShapedRecipeBuilder.shaped(redstoneChain).pattern("x ").pattern("XR").pattern("x ").define('x', nuggetOrIngot).define('X', ingot).define('R', Items.REDSTONE).unlockedBy(name(ingot), has(ingot)).save(consumer);
+            ShapelessRecipeBuilder.shapeless(redstoneChain).requires(chain).requires(Items.REDSTONE).unlockedBy(name(ingot), has(ingot)).save(consumer, name(redstoneChain) + "_from_chain");
+        } else {
+            ShapedRecipeBuilder.shaped(chain, 3).pattern("x").pattern("X").define('x', nuggetOrIngot).define('X', ingot).unlockedBy(name(ingot), has(ingot)).save(consumer);
+            ShapedRecipeBuilder.shaped(redstoneChain, 3).pattern("x ").pattern("XR").define('x', nuggetOrIngot).define('X', ingot).define('R', Items.REDSTONE).unlockedBy(name(ingot), has(ingot)).save(consumer);
+            ShapelessRecipeBuilder.shapeless(redstoneChain).requires(chain).requires(Items.REDSTONE).unlockedBy(name(ingot), has(ingot)).save(consumer, name(redstoneChain) + "_from_chain");
+        }
+    }
+
     public void simpleTable(TableBlock table, ItemLike craftingItem, Consumer<FinishedRecipe> consumer) {
         table(table, craftingItem, craftingItem, consumer);
     }
-
 
     public void table(TableBlock table, ItemLike topItem, ItemLike bottomItem, Consumer<FinishedRecipe> consumer) {
         ShapedRecipeBuilder.shaped(table, 4).pattern("XXX").pattern(" x ").pattern(" x ").define('X', topItem).define('x', bottomItem).unlockedBy(name(topItem), has(topItem)).save(consumer);

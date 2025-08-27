@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x ",
+    "XR"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:copper_ingot"
+    },
+    "X": {
+      "item": "minecraft:copper_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "decorandmore:copper_redstone_chain",
+    "count": 3
+  }
+}

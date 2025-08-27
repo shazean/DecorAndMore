@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x ",
+    "XR"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "decorandmore:netherite_redstone_chain",
+    "count": 3
+  }
+}

@@ -226,8 +226,8 @@ public class DecorBlocks {
 //    public static final RegistryObject<TableBlock> DIORITE_TABLE_BOTTOM_POLISHED = registerBlock("diorite_table_bottom_polished", "Diorite Table (Bottom Polished)", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<TableBlock> GRANITE_TABLE = registerBlock("granite_table", "Granite Table", () -> new TableBlock(GRANITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<TableBlock> GRANITE_TABLE_POLISHED = registerBlock("granite_table_polished", "Granite Table (Polished)", () -> new TableBlock(GRANITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
-    public static final RegistryObject<TableBlock> ANDESITE_TABLE = registerBlock("andesite_table", "ndesite Table", () -> new TableBlock(ANDESITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
-    public static final RegistryObject<TableBlock> ANDESITE_TABLE_POLISHED = registerBlock("andesite_table_polished", "ndesite Table (Polished)", () -> new TableBlock(ANDESITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> ANDESITE_TABLE = registerBlock("andesite_table", "Andesite Table", () -> new TableBlock(ANDESITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
+    public static final RegistryObject<TableBlock> ANDESITE_TABLE_POLISHED = registerBlock("andesite_table_polished", "Andesite Table (Polished)", () -> new TableBlock(ANDESITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
 
     public static final RegistryObject<TableBlock> STONE_BRICKS_TABLE = registerBlock("stone_bricks_table", "Stone Brick Table", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);
     public static final RegistryObject<TableBlock> SMOOTH_STONE_TABLE = registerBlock("smooth_stone_table", "Smooth Stone Table (Polished)", () -> new TableBlock(DIORITE.noOcclusion()), CreativeModeTab.TAB_DECORATIONS, true, true);

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x ",
+    "XR",
+    "x "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_nugget"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "decorandmore:gold_redstone_chain"
+  }
+}

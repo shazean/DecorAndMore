@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x",
+    "X",
+    "x"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_nugget"
+    },
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "decorandmore:gold_chain"
+  }
+}
