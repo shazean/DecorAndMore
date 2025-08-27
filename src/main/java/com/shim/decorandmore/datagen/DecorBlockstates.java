@@ -238,27 +238,27 @@ public class DecorBlockstates extends BlockStateProvider {
 
         redstoneChainBlock(DecorBlocks.REDSTONE_CHAIN.get(), (ChainBlock) Blocks.CHAIN);
         chainBlock(DecorBlocks.GOLD_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.REDSTONE_GOLD_CHAIN.get(), DecorBlocks.GOLD_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.GOLD_REDSTONE_CHAIN.get(), DecorBlocks.GOLD_CHAIN.get());
         chainBlock(DecorBlocks.NETHERITE_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.REDSTONE_NETHERITE_CHAIN.get(), DecorBlocks.NETHERITE_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.NETHERITE_REDSTONE_CHAIN.get(), DecorBlocks.NETHERITE_CHAIN.get());
 
         chainBlock(DecorBlocks.COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.REDSTONE_COPPER_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.COPPER_REDSTONE_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
         chainBlock(DecorBlocks.EXPOSED_COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.EXPOSED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.EXPOSED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
         chainBlock(DecorBlocks.WEATHERED_COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.WEATHERED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WEATHERED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
         chainBlock(DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.OXIDIZED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.OXIDIZED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
 
         chainBlock(DecorBlocks.WAXED_COPPER_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.WAXED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.COPPER_CHAIN.get());
         chainBlock(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.WAXED_EXPOSED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.EXPOSED_COPPER_CHAIN.get());
         chainBlock(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.WAXED_WEATHERED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.WEATHERED_COPPER_CHAIN.get());
         chainBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
-        redstoneChainBlock(DecorBlocks.WAXED_OXIDIZED_REDSTONE_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+        redstoneChainBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
 
 
     }

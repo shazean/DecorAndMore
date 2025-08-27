@@ -4,11 +4,14 @@ import com.shim.decorandmore.DecorAndMore;
 import com.shim.decorandmore.blocks.CopperChainBlock;
 import com.shim.decorandmore.blocks.CopperLanternBlock;
 import com.shim.decorandmore.blocks.IWeatheringBlock;
+import com.shim.decorandmore.registry.DecorTags;
 import com.shim.decorandmore.util.WeatheringUtil;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoneycombItem;
@@ -63,54 +66,33 @@ public class DecorForgeEventBus {
                 }
             }
         } else if (itemStack.getItem() instanceof AxeItem) {
-            //de-waxing
 
+            if (state.is(DecorTags.Blocks.WAXED_COPPER)) {
+                Block waxOffBlock = WeatheringUtil.WAX_OFF.get(state.getBlock());
+                if (waxOffBlock == null)
+                    return;
 
+                BlockState waxOff = waxOffBlock.defaultBlockState();
 
-            //de-oxidizing
-//            if (state.getBlock() instanceof CopperLanternBlock lanternBlock) {
-//                WeatheringUtil.WeatherableStage stage = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(lanternBlock);
-//                if (stage != null) {
-//                    Block previous = stage.previousStage();
-//                    if (previous == null)
-//                        return;
-//
-//                    BlockState previousStage = previous.defaultBlockState();
-//
-//                    if (lanternBlock.isRedstonePowered())
-//                        previousStage = previousStage.setValue(CopperLanternBlock.LIT, state.getValue(CopperLanternBlock.LIT));
-//                    level.setBlock(pos, previousStage, 1);
-//                    if (player instanceof ServerPlayer) {
-//                        CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemStack);
-//                    }
-////                    level.levelEvent(player, 3003, pos, 0);
-//                    if (player != null) {
-//                        itemStack.hurtAndBreak(1, player, (p_150686_) -> {
-//                            p_150686_.broadcastBreakEvent(event.getHand());
-//                        });
-//                    }
-//                }
-//            } else if (state.getBlock() instanceof IWeatheringBlock block) {
-//                WeatheringUtil.WeatherableStage stage = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(block);
-//                if (stage != null) {
-//                    Block previous = stage.previousStage();
-//                    if (previous == null)
-//                        return;
-//
-//                    BlockState previousStage = previous.defaultBlockState();
-//                    level.setBlock(pos, previousStage, 1);
-//                    if (player instanceof ServerPlayer) {
-//                        CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemStack);
-//                    }
-////                    level.levelEvent(player, 3003, pos, 0);
-//                    if (player != null) {
-//                        itemStack.hurtAndBreak(1, player, (p_150686_) -> {
-//                            p_150686_.broadcastBreakEvent(event.getHand());
-//                        });
-//                    }
-//
-//                }
-//            }
+                if (waxOffBlock instanceof CopperLanternBlock)
+                    waxOff = waxOff.setValue(CopperLanternBlock.LIT, state.getValue(CopperLanternBlock.LIT));
+
+                level.setBlock(pos, waxOff, 1);
+
+                if (player instanceof ServerPlayer) {
+                    CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger((ServerPlayer) player, pos, itemStack);
+                }
+                if (player != null) {
+                    itemStack.hurtAndBreak(1, player, (p_150686_) -> {
+                        p_150686_.broadcastBreakEvent(event.getHand());
+                    });
+                }
+                level.playSound(player, pos, SoundEvents.AXE_WAX_OFF, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.levelEvent(player, 3004, pos, 0);
+
+                event.setCanceled(true); //otherwise the axe use is still called, and then it removes a layer of oxidization as well
+
+            }
         }
     }
 }

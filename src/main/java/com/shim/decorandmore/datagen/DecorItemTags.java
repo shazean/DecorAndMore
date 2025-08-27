@@ -26,6 +26,7 @@ public class DecorItemTags extends ItemTagsProvider {
         this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
         this.copy(BlockTags.SLABS, ItemTags.SLABS);
 
+        this.copy(DecorTags.Blocks.WAXED_COPPER, DecorTags.Items.WAXED_COPPER);
 
 
     }

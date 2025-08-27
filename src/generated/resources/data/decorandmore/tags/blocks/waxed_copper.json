@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "decorandmore:waxed_copper_lantern",
+    "decorandmore:waxed_exposed_copper_lantern",
+    "decorandmore:waxed_weathered_copper_lantern",
+    "decorandmore:waxed_oxidized_copper_lantern",
+    "decorandmore:waxed_copper_redstone_lantern",
+    "decorandmore:waxed_exposed_copper_redstone_lantern",
+    "decorandmore:waxed_weathered_copper_redstone_lantern",
+    "decorandmore:waxed_oxidized_copper_redstone_lantern",
+    "decorandmore:waxed_copper_soul_lantern",
+    "decorandmore:waxed_exposed_copper_soul_lantern",
+    "decorandmore:waxed_weathered_copper_soul_lantern",
+    "decorandmore:waxed_oxidized_copper_soul_lantern",
+    "decorandmore:waxed_cut_copper_table",
+    "decorandmore:waxed_exposed_cut_copper_table",
+    "decorandmore:waxed_weathered_cut_copper_table",
+    "decorandmore:waxed_oxidized_cut_copper_table",
+    "decorandmore:waxed_copper_chain",
+    "decorandmore:waxed_exposed_copper_chain",
+    "decorandmore:waxed_weathered_copper_chain",
+    "decorandmore:waxed_oxidized_copper_chain",
+    "decorandmore:waxed_copper_redstone_chain",
+    "decorandmore:waxed_exposed_copper_redstone_chain",
+    "decorandmore:waxed_weathered_copper_redstone_chain",
+    "decorandmore:waxed_oxidized_copper_redstone_chain"
+  ]
+}

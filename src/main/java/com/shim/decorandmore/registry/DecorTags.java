@@ -17,6 +17,7 @@ public class DecorTags {
         public static final TagKey<Block> BENCHES = BlockTags.create(modLoc("benches"));
         public static final TagKey<Block> HALF_BENCHES = BlockTags.create(modLoc("half_benches"));
         public static final TagKey<Block> LANTERNS = BlockTags.create(modLoc("lanterns"));
+        public static final TagKey<Block> WAXED_COPPER = BlockTags.create(modLoc("waxed_copper"));
 
     }
 
@@ -26,6 +27,7 @@ public class DecorTags {
         public static final TagKey<Item> BENCHES = ItemTags.create(modLoc("benches"));
         public static final TagKey<Item> HALF_BENCHES = ItemTags.create(modLoc("half_benches"));
         public static final TagKey<Item> LANTERNS = ItemTags.create(modLoc("lanterns"));
+        public static final TagKey<Item> WAXED_COPPER = ItemTags.create(modLoc("waxed_copper"));
 
     }
 

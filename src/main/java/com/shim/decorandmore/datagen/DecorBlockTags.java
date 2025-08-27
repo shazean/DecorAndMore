@@ -54,5 +54,14 @@ public class DecorBlockTags extends BlockTagsProvider {
                 .addTag(DecorTags.Blocks.BENCHES);
 
 
+        tag(DecorTags.Blocks.WAXED_COPPER)
+                .add(DecorBlocks.WAXED_COPPER_LANTERN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_LANTERN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_LANTERN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_LANTERN.get())
+                .add(DecorBlocks.WAXED_COPPER_REDSTONE_LANTERN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_LANTERN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_LANTERN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get())
+                .add(DecorBlocks.WAXED_COPPER_SOUL_LANTERN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_SOUL_LANTERN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_SOUL_LANTERN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_SOUL_LANTERN.get())
+                .add(DecorBlocks.WAXED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_EXPOSED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_WEATHERED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_OXIDIZED_CUT_COPPER_TABLE.get())
+                .add(DecorBlocks.WAXED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get())
+                .add(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get());
+
+
     }
 }

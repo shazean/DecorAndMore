@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "decorandmore:item/redstone_gold_chain"
+    "layer0": "decorandmore:item/gold_redstone_chain"
   }
 }

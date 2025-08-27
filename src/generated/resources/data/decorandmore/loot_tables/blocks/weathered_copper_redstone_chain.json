@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "decorandmore:waxed_oxidized_redstone_copper_chain"
+          "name": "decorandmore:weathered_copper_redstone_chain"
         }
       ],
       "conditions": [

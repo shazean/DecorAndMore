@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "decorandmore:redstone_netherite_chain"
+          "name": "decorandmore:oxidized_copper_redstone_chain"
         }
       ],
       "conditions": [
