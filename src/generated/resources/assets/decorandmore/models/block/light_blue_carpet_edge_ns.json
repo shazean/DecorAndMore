@@ -1,0 +1,6 @@
+{
+  "parent": "decorandmore:block/carpet_edge_ns",
+  "textures": {
+    "carpet": "decorandmore:block/light_blue_carpet_edge_ns"
+  }
+}

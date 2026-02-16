@@ -113,6 +113,23 @@ public class DecorClientEventBus {
         ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.RED_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.ORANGE_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.YELLOW_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIME_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GREEN_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.CYAN_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.BLUE_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIGHT_BLUE_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.PURPLE_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.MAGENTA_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.PINK_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.BROWN_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.BLACK_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GRAY_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WHITE_CARPET_EDGE.get(), RenderType.cutout());
+
 
         RecipeBookCategories.create("decorandmore:dyed_crafting", new ItemStack(Items.RED_DYE));
 

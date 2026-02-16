@@ -1,0 +1,6 @@
+{
+  "parent": "decorandmore:block/carpet_edge_ew",
+  "textures": {
+    "carpet": "decorandmore:block/white_carpet_edge_ew"
+  }
+}

@@ -260,7 +260,79 @@ public class DecorBlockstates extends BlockStateProvider {
         chainBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
         redstoneChainBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get(), DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
 
+        rugBlock(DecorBlocks.RED_RUG.get());
+        rugBlock(DecorBlocks.ORANGE_RUG.get());
+        rugBlock(DecorBlocks.YELLOW_RUG.get());
+        rugBlock(DecorBlocks.LIME_RUG.get());
+        rugBlock(DecorBlocks.GREEN_RUG.get());
+        rugBlock(DecorBlocks.CYAN_RUG.get());
+        rugBlock(DecorBlocks.BLUE_RUG.get());
+        rugBlock(DecorBlocks.LIGHT_BLUE_RUG.get());
+        rugBlock(DecorBlocks.PURPLE_RUG.get());
+        rugBlock(DecorBlocks.MAGENTA_RUG.get());
+        rugBlock(DecorBlocks.PINK_RUG.get());
+        rugBlock(DecorBlocks.BROWN_RUG.get());
+        rugBlock(DecorBlocks.BLACK_RUG.get());
+        rugBlock(DecorBlocks.GRAY_RUG.get());
+        rugBlock(DecorBlocks.LIGHT_GRAY_RUG.get());
+        rugBlock(DecorBlocks.WHITE_RUG.get());
 
+        carpetEdgeBlock(DecorBlocks.RED_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.ORANGE_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.YELLOW_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.LIME_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.GREEN_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.CYAN_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.BLUE_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.LIGHT_BLUE_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.PURPLE_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.MAGENTA_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.PINK_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.BROWN_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.BLACK_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.GRAY_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get());
+        carpetEdgeBlock(DecorBlocks.WHITE_CARPET_EDGE.get());
+
+
+    }
+
+    public void carpetEdgeBlock(RugBlock block) {
+        ModelFile modelEW = models().withExistingParent(name(block) + "_ew", modLoc("carpet_edge_ew"))
+                .texture("carpet", getTextureFromBlock(block, "_ew"));
+        ModelFile modelNS = models().withExistingParent(name(block) + "_ns", modLoc("carpet_edge_ns"))
+                .texture("carpet", getTextureFromBlock(block, "_ns"));
+
+        getVariantBuilder(block).forAllStates(state -> {
+
+            Direction facing = state.getValue(RugBlock.FACING);
+
+            int yRot = facing == Direction.WEST || facing == Direction.NORTH ? 180 : 0;
+
+            return ConfiguredModel.builder().modelFile((facing == Direction.EAST || facing == Direction.WEST) ? modelEW : modelNS).rotationY(yRot).build();
+
+        });
+    }
+
+    public void rugBlock(RugBlock block) {
+        ModelFile model = models().withExistingParent(name(block), mcLoc("carpet"))
+                .texture("wool", blockTexture(block));
+
+        getVariantBuilder(block).forAllStates(state -> {
+
+            Direction facing = state.getValue(RugBlock.FACING);
+
+            int yRot;
+            switch(facing) {
+                case EAST -> yRot = 270;
+                case NORTH -> yRot = 180;
+                case WEST -> yRot = 90;
+                default -> yRot = 0;
+            }
+
+            return ConfiguredModel.builder().modelFile(model).rotationY(yRot).build();
+
+        });
     }
 
     public void chainBlock(ChainBlock block) {
@@ -308,17 +380,13 @@ public class DecorBlockstates extends BlockStateProvider {
         }, ChainBlock.WATERLOGGED, RedstoneChainBlock.POWER);
     }
 
-
     public void redstoneLamp(RedstoneLampBlock lamp) {
         redstoneLamp(lamp, getTextureFromBlock(lamp, "_on"), getTextureFromBlock(lamp));
     }
 
     public void redstoneLamp(RedstoneLampBlock lamp, ResourceLocation lit, ResourceLocation unlit) {
-
         ModelFile litModel = models().withExistingParent(name(lamp) + "_lit", mcLoc("block/cube_all")).texture("all", lit);
-
         ModelFile unlitModel = models().withExistingParent(name(lamp), mcLoc("block/cube_all")).texture("all", unlit);
-
 
         redstoneLamp(lamp, litModel, unlitModel);
     }
@@ -333,7 +401,6 @@ public class DecorBlockstates extends BlockStateProvider {
                     .build();
         }, LanternBlock.WATERLOGGED);
     }
-
 
     public void simpleTable(TableBlock table, Block block) {
         table(table, getTextureFromBlock(block), getTextureFromBlock(block), getTextureFromBlock(block));

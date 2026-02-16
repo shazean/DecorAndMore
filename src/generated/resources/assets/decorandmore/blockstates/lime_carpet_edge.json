@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "decorandmore:block/lime_carpet_edge_ns",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "decorandmore:block/lime_carpet_edge_ns"
+    },
+    "facing=west": {
+      "model": "decorandmore:block/lime_carpet_edge_ew",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "decorandmore:block/lime_carpet_edge_ew"
+    }
+  }
+}

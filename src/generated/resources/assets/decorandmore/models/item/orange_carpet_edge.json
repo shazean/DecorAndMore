@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "decorandmore:block/orange_carpet_edge_ns"
+  }
+}

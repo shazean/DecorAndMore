@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "decorandmore:block/white_rug",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "decorandmore:block/white_rug"
+    },
+    "facing=west": {
+      "model": "decorandmore:block/white_rug",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "decorandmore:block/white_rug",
+      "y": 270
+    }
+  }
+}

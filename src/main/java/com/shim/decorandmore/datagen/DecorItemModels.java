@@ -131,62 +131,23 @@ public class DecorItemModels extends ItemModelProvider {
 
 
 
+        generatedBlockItemSuffix(DecorBlocks.RED_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.ORANGE_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.YELLOW_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.LIME_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.GREEN_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.CYAN_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.BLUE_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.LIGHT_BLUE_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.PURPLE_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.MAGENTA_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.PINK_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.BROWN_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.BLACK_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.GRAY_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get(), "_ns");
+        generatedBlockItemSuffix(DecorBlocks.WHITE_CARPET_EDGE.get(), "_ns");
 
-//        self(DecorBlocks.OAK_TABLE_PLANKS.get());
-//        self(DecorBlocks.OAK_TABLE_LOGS.get());
-//        self(DecorBlocks.OAK_TABLE_STRIPPED_LOGS.get());
-//        self(DecorBlocks.OAK_TABLE_PLANKS_LOGS.get());
-//        self(DecorBlocks.OAK_TABLE_PLANKS_STRIPPED_LOGS.get());
-//        self(DecorBlocks.OAK_TABLE_STRIPPED_LOGS_LOGS.get());
-//
-//        self(DecorBlocks.DARK_OAK_TABLE_PLANKS.get());
-//        self(DecorBlocks.DARK_OAK_TABLE_LOGS.get());
-//        self(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS.get());
-//        self(DecorBlocks.DARK_OAK_TABLE_PLANKS_LOGS.get());
-//        self(DecorBlocks.DARK_OAK_TABLE_PLANKS_STRIPPED_LOGS.get());
-//        self(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS_LOGS.get());
-//
-//        self(DecorBlocks.SPRUCE_TABLE_PLANKS.get());
-//        self(DecorBlocks.SPRUCE_TABLE_LOGS.get());
-//        self(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS.get());
-//        self(DecorBlocks.SPRUCE_TABLE_PLANKS_LOGS.get());
-//        self(DecorBlocks.SPRUCE_TABLE_PLANKS_STRIPPED_LOGS.get());
-//        self(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS_LOGS.get());
-//
-//        self(DecorBlocks.JUNGLE_TABLE_PLANKS.get());
-//        self(DecorBlocks.JUNGLE_TABLE_LOGS.get());
-//        self(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS.get());
-//        self(DecorBlocks.JUNGLE_TABLE_PLANKS_LOGS.get());
-//        self(DecorBlocks.JUNGLE_TABLE_PLANKS_STRIPPED_LOGS.get());
-//        self(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS_LOGS.get());
-//
-//        self(DecorBlocks.ACACIA_TABLE_PLANKS.get());
-//        self(DecorBlocks.ACACIA_TABLE_LOGS.get());
-//        self(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS.get());
-//        self(DecorBlocks.ACACIA_TABLE_PLANKS_LOGS.get());
-//        self(DecorBlocks.ACACIA_TABLE_PLANKS_STRIPPED_LOGS.get());
-//        self(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS_LOGS.get());
-//
-//        self(DecorBlocks.BIRCH_TABLE_PLANKS.get());
-//        self(DecorBlocks.BIRCH_TABLE_LOGS.get());
-//        self(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS.get());
-//        self(DecorBlocks.BIRCH_TABLE_PLANKS_LOGS.get());
-//        self(DecorBlocks.BIRCH_TABLE_PLANKS_STRIPPED_LOGS.get());
-//        self(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS_LOGS.get());
-//
-//        self(DecorBlocks.WARPED_TABLE_PLANKS.get());
-//        self(DecorBlocks.WARPED_TABLE_STEMS.get());
-//        self(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS.get());
-//        self(DecorBlocks.WARPED_TABLE_PLANKS_STEMS.get());
-//        self(DecorBlocks.WARPED_TABLE_PLANKS_STRIPPED_STEMS.get());
-//        self(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS_STEMS.get());
-//
-//        self(DecorBlocks.CRIMSON_TABLE_PLANKS.get());
-//        self(DecorBlocks.CRIMSON_TABLE_STEMS.get());
-//        self(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS.get());
-//        self(DecorBlocks.CRIMSON_TABLE_PLANKS_STEMS.get());
-//        self(DecorBlocks.CRIMSON_TABLE_PLANKS_STRIPPED_STEMS.get());
-//        self(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS_STEMS.get());
 
     }
 
@@ -202,8 +163,17 @@ public class DecorItemModels extends ItemModelProvider {
         this.singleTexture(name(item), new ResourceLocation("item/generated"), "layer0", modLoc("item/" + name(item)));
     }
 
+    public void generatedBlockItemSuffix(ItemLike item, String suffix) {
+        this.singleTexture(name(item), new ResourceLocation("item/generated"), "layer0", modLoc("block/" + name(item) + suffix));
+    }
+
+
     protected void self(Block block) {
         this.withExistingParent(name(block), this.modLoc("block/" + name(block)));
+    }
+
+    protected void self(Block block, String suffix) {
+        this.withExistingParent(name(block), this.modLoc("block/" + name(block) + suffix));
     }
 
     public void slabStool(Block block) {
