@@ -1,15 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XX",
-    "XX"
+    "xxx",
+    "XXX"
   ],
   "key": {
-    "X": {
+    "x": {
       "item": "minecraft:purple_carpet"
+    },
+    "X": {
+      "item": "minecraft:purple_wool"
     }
   },
   "result": {
-    "item": "decorandmore:purple_rug"
+    "item": "decorandmore:purple_rug",
+    "count": 6
   }
 }

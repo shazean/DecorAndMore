@@ -1,15 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XX",
-    "XX"
+    "xxx",
+    "XXX"
   ],
   "key": {
-    "X": {
+    "x": {
       "item": "minecraft:brown_carpet"
+    },
+    "X": {
+      "item": "minecraft:brown_wool"
     }
   },
   "result": {
-    "item": "decorandmore:brown_rug"
+    "item": "decorandmore:brown_rug",
+    "count": 6
   }
 }

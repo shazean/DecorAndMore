@@ -1,15 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XX",
-    "XX"
+    "xxx",
+    "XXX"
   ],
   "key": {
-    "X": {
+    "x": {
       "item": "minecraft:lime_carpet"
+    },
+    "X": {
+      "item": "minecraft:lime_wool"
     }
   },
   "result": {
-    "item": "decorandmore:lime_rug"
+    "item": "decorandmore:lime_rug",
+    "count": 6
   }
 }

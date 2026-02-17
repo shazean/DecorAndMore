@@ -1,15 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XX",
-    "XX"
+    "xxx",
+    "XXX"
   ],
   "key": {
-    "X": {
+    "x": {
       "item": "minecraft:light_gray_carpet"
+    },
+    "X": {
+      "item": "minecraft:light_gray_wool"
     }
   },
   "result": {
-    "item": "decorandmore:light_gray_rug"
+    "item": "decorandmore:light_gray_rug",
+    "count": 6
   }
 }
