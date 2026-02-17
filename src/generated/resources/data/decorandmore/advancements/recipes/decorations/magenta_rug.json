@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:magenta_rug"
+    ]
+  },
+  "criteria": {
+    "magenta_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:magenta_wool"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:magenta_rug"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "magenta_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:light_blue_carpet_edge"
+    ]
+  },
+  "criteria": {
+    "light_blue_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:light_blue_wool"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:light_blue_carpet_edge"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "light_blue_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

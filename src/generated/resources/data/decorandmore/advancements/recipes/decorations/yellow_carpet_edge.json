@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:yellow_carpet_edge"
+    ]
+  },
+  "criteria": {
+    "yellow_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:yellow_wool"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:yellow_carpet_edge"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "yellow_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

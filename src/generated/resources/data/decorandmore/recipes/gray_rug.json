@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:gray_carpet"
+    }
+  },
+  "result": {
+    "item": "decorandmore:gray_rug"
+  }
+}

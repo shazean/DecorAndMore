@@ -207,13 +207,45 @@ public class DecorRecipeGen extends RecipeProvider {
         chain(DecorBlocks.COPPER_CHAIN.get(), DecorBlocks.COPPER_REDSTONE_CHAIN.get(), Items.COPPER_INGOT, Items.COPPER_INGOT, false, consumer);
         chain(DecorBlocks.NETHERITE_CHAIN.get(), DecorBlocks.NETHERITE_REDSTONE_CHAIN.get(), Items.NETHERITE_INGOT, Items.NETHERITE_INGOT, false, consumer);
 
+        ShapedRecipeBuilder.shaped(DecorBlocks.RED_CARPET_EDGE.get()).pattern("XXX").define('X', Items.RED_CARPET).unlockedBy(name(Items.RED_WOOL), has(Items.RED_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.ORANGE_CARPET_EDGE.get()).pattern("XXX").define('X', Items.ORANGE_CARPET).unlockedBy(name(Items.ORANGE_WOOL), has(Items.ORANGE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.YELLOW_CARPET_EDGE.get()).pattern("XXX").define('X', Items.YELLOW_CARPET).unlockedBy(name(Items.YELLOW_WOOL), has(Items.YELLOW_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.LIME_CARPET_EDGE.get()).pattern("XXX").define('X', Items.LIME_CARPET).unlockedBy(name(Items.LIME_WOOL), has(Items.LIME_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.GREEN_CARPET_EDGE.get()).pattern("XXX").define('X', Items.GREEN_CARPET).unlockedBy(name(Items.GREEN_WOOL), has(Items.GREEN_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.CYAN_CARPET_EDGE.get()).pattern("XXX").define('X', Items.CYAN_CARPET).unlockedBy(name(Items.CYAN_WOOL), has(Items.CYAN_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.BLUE_CARPET_EDGE.get()).pattern("XXX").define('X', Items.BLUE_CARPET).unlockedBy(name(Items.BLUE_WOOL), has(Items.BLUE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.LIGHT_BLUE_CARPET_EDGE.get()).pattern("XXX").define('X', Items.LIGHT_BLUE_CARPET).unlockedBy(name(Items.LIGHT_BLUE_WOOL), has(Items.LIGHT_BLUE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.PURPLE_CARPET_EDGE.get()).pattern("XXX").define('X', Items.PURPLE_CARPET).unlockedBy(name(Items.PURPLE_WOOL), has(Items.PURPLE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.MAGENTA_CARPET_EDGE.get()).pattern("XXX").define('X', Items.MAGENTA_CARPET).unlockedBy(name(Items.MAGENTA_WOOL), has(Items.MAGENTA_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.PINK_CARPET_EDGE.get()).pattern("XXX").define('X', Items.PINK_CARPET).unlockedBy(name(Items.PINK_WOOL), has(Items.PINK_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.BROWN_CARPET_EDGE.get()).pattern("XXX").define('X', Items.BROWN_CARPET).unlockedBy(name(Items.BROWN_WOOL), has(Items.BROWN_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.BLACK_CARPET_EDGE.get()).pattern("XXX").define('X', Items.BLACK_CARPET).unlockedBy(name(Items.BLACK_WOOL), has(Items.BLACK_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.GRAY_CARPET_EDGE.get()).pattern("XXX").define('X', Items.GRAY_CARPET).unlockedBy(name(Items.GRAY_WOOL), has(Items.GRAY_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get()).pattern("XXX").define('X', Items.LIGHT_GRAY_CARPET).unlockedBy(name(Items.LIGHT_GRAY_WOOL), has(Items.LIGHT_GRAY_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.WHITE_CARPET_EDGE.get()).pattern("XXX").define('X', Items.WHITE_CARPET).unlockedBy(name(Items.WHITE_WOOL), has(Items.WHITE_WOOL)).save(consumer);
+
+        ShapedRecipeBuilder.shaped(DecorBlocks.RED_RUG.get()).pattern("XX").pattern("XX").define('X', Items.RED_CARPET).unlockedBy(name(Items.RED_WOOL), has(Items.RED_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.ORANGE_RUG.get()).pattern("XX").pattern("XX").define('X', Items.ORANGE_CARPET).unlockedBy(name(Items.ORANGE_WOOL), has(Items.ORANGE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.YELLOW_RUG.get()).pattern("XX").pattern("XX").define('X', Items.YELLOW_CARPET).unlockedBy(name(Items.YELLOW_WOOL), has(Items.YELLOW_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.LIME_RUG.get()).pattern("XX").pattern("XX").define('X', Items.LIME_CARPET).unlockedBy(name(Items.LIME_WOOL), has(Items.LIME_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.GREEN_RUG.get()).pattern("XX").pattern("XX").define('X', Items.GREEN_CARPET).unlockedBy(name(Items.GREEN_WOOL), has(Items.GREEN_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.CYAN_RUG.get()).pattern("XX").pattern("XX").define('X', Items.CYAN_CARPET).unlockedBy(name(Items.CYAN_WOOL), has(Items.CYAN_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.BLUE_RUG.get()).pattern("XX").pattern("XX").define('X', Items.BLUE_CARPET).unlockedBy(name(Items.BLUE_WOOL), has(Items.BLUE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.LIGHT_BLUE_RUG.get()).pattern("XX").pattern("XX").define('X', Items.LIGHT_BLUE_CARPET).unlockedBy(name(Items.LIGHT_BLUE_WOOL), has(Items.LIGHT_BLUE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.PURPLE_RUG.get()).pattern("XX").pattern("XX").define('X', Items.PURPLE_CARPET).unlockedBy(name(Items.PURPLE_WOOL), has(Items.PURPLE_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.MAGENTA_RUG.get()).pattern("XX").pattern("XX").define('X', Items.MAGENTA_CARPET).unlockedBy(name(Items.MAGENTA_WOOL), has(Items.MAGENTA_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.PINK_RUG.get()).pattern("XX").pattern("XX").define('X', Items.PINK_CARPET).unlockedBy(name(Items.PINK_WOOL), has(Items.PINK_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.BROWN_RUG.get()).pattern("XX").pattern("XX").define('X', Items.BROWN_CARPET).unlockedBy(name(Items.BROWN_WOOL), has(Items.BROWN_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.BLACK_RUG.get()).pattern("XX").pattern("XX").define('X', Items.BLACK_CARPET).unlockedBy(name(Items.BLACK_WOOL), has(Items.BLACK_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.GRAY_RUG.get()).pattern("XX").pattern("XX").define('X', Items.GRAY_CARPET).unlockedBy(name(Items.GRAY_WOOL), has(Items.GRAY_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.LIGHT_GRAY_RUG.get()).pattern("XX").pattern("XX").define('X', Items.LIGHT_GRAY_CARPET).unlockedBy(name(Items.LIGHT_GRAY_WOOL), has(Items.LIGHT_GRAY_WOOL)).save(consumer);
+        ShapedRecipeBuilder.shaped(DecorBlocks.WHITE_RUG.get()).pattern("XX").pattern("XX").define('X', Items.WHITE_CARPET).unlockedBy(name(Items.WHITE_WOOL), has(Items.WHITE_WOOL)).save(consumer);
 
     }
 
     private String name(ItemLike block) {
         return block.asItem().getRegistryName().getPath();
     }
-
 
     public void chain(ChainBlock chain, RedstoneChainBlock redstoneChain, ItemLike nuggetOrIngot, ItemLike ingot, boolean hasNugget, Consumer<FinishedRecipe> consumer) {
         if (hasNugget) {

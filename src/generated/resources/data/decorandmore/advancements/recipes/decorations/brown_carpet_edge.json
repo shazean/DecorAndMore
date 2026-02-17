@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:brown_carpet_edge"
+    ]
+  },
+  "criteria": {
+    "brown_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:brown_wool"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:brown_carpet_edge"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "brown_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

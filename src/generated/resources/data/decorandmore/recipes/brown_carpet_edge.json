@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:brown_carpet"
+    }
+  },
+  "result": {
+    "item": "decorandmore:brown_carpet_edge"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:pink_carpet_edge"
+    ]
+  },
+  "criteria": {
+    "pink_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pink_wool"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:pink_carpet_edge"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pink_wool",
+      "has_the_recipe"
+    ]
+  ]
+}
