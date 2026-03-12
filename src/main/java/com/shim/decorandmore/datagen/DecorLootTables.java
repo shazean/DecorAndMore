@@ -3,6 +3,7 @@ package com.shim.decorandmore.datagen;
 import com.shim.decorandmore.registry.DecorBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.RegistryObject;
 
 public class DecorLootTables extends BaseLootTableProvider {
@@ -70,6 +71,23 @@ public class DecorLootTables extends BaseLootTableProvider {
 //        self(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_LANTERN.get());
 //        self(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_LANTERN.get());
 //        self(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get());
+
+        createSilkTouchTable(DecorBlocks.COBBLESTONE_PATH.get(), Blocks.COBBLESTONE, 1 ,1);
+        createSilkTouchTable(DecorBlocks.MOSSY_COBBLESTONE_PATH.get(), Blocks.MOSSY_COBBLESTONE, 1 ,1);
+        createSilkTouchTable(DecorBlocks.STONE_BRICK_PATH.get(), Blocks.STONE_BRICKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.MOSSY_STONE_BRICK_PATH.get(), Blocks.MOSSY_STONE_BRICKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.BRICK_PATH.get(), Blocks.BRICKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.NETHER_BRICK_PATH.get(), Blocks.NETHER_BRICKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.DEEPSLATE_BRICK_PATH.get(), Blocks.DEEPSLATE_BRICKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.END_STONE_BRICK_PATH.get(), Blocks.END_STONE_BRICKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.OAK_PATH.get(), Blocks.OAK_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.DARK_OAK_PATH.get(), Blocks.DARK_OAK_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.ACACIA_PATH.get(), Blocks.ACACIA_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.SPRUCE_PATH.get(), Blocks.SPRUCE_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.BIRCH_PATH.get(), Blocks.BIRCH_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.JUNGLE_PATH.get(), Blocks.JUNGLE_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.CRIMSON_PATH.get(), Blocks.CRIMSON_PLANKS, 1 ,1);
+        createSilkTouchTable(DecorBlocks.WARPED_PATH.get(), Blocks.WARPED_PLANKS, 1 ,1);
 
     }
 

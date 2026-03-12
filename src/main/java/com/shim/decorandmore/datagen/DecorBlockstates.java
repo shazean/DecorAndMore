@@ -294,7 +294,32 @@ public class DecorBlockstates extends BlockStateProvider {
         carpetEdgeBlock(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get());
         carpetEdgeBlock(DecorBlocks.WHITE_CARPET_EDGE.get());
 
+        pathBlock(DecorBlocks.COBBLESTONE_PATH.get(), Blocks.COBBLESTONE);
+        pathBlock(DecorBlocks.MOSSY_COBBLESTONE_PATH.get(), Blocks.MOSSY_COBBLESTONE);
+        pathBlock(DecorBlocks.STONE_BRICK_PATH.get(), Blocks.STONE_BRICKS);
+        pathBlock(DecorBlocks.MOSSY_STONE_BRICK_PATH.get(), Blocks.MOSSY_STONE_BRICKS);
+        pathBlock(DecorBlocks.BRICK_PATH.get(), Blocks.BRICKS);
+        pathBlock(DecorBlocks.NETHER_BRICK_PATH.get(), Blocks.NETHER_BRICKS);
+        pathBlock(DecorBlocks.DEEPSLATE_BRICK_PATH.get(), Blocks.DEEPSLATE_BRICKS);
+        pathBlock(DecorBlocks.END_STONE_BRICK_PATH.get(), Blocks.END_STONE_BRICKS);
+        pathBlock(DecorBlocks.OAK_PATH.get(), Blocks.OAK_PLANKS);
+        pathBlock(DecorBlocks.DARK_OAK_PATH.get(), Blocks.DARK_OAK_PLANKS);
+        pathBlock(DecorBlocks.ACACIA_PATH.get(), Blocks.ACACIA_PLANKS);
+        pathBlock(DecorBlocks.SPRUCE_PATH.get(), Blocks.SPRUCE_PLANKS);
+        pathBlock(DecorBlocks.BIRCH_PATH.get(), Blocks.BIRCH_PLANKS);
+        pathBlock(DecorBlocks.JUNGLE_PATH.get(), Blocks.JUNGLE_PLANKS);
+        pathBlock(DecorBlocks.CRIMSON_PATH.get(), Blocks.CRIMSON_PLANKS);
+        pathBlock(DecorBlocks.WARPED_PATH.get(), Blocks.WARPED_PLANKS);
 
+    }
+
+    public void pathBlock(Block block, Block top) {
+        ModelFile model = models().withExistingParent(name(block), modLoc("template_path"))
+                .texture("top", getTextureFromBlock(top))
+                .texture("bottom", getTextureFromBlock(top))
+                .texture("side", getTextureFromBlock(top));
+
+        getVariantBuilder(block).forAllStates(state -> ConfiguredModel.builder().modelFile(model).build());
     }
 
     public void carpetEdgeBlock(RugBlock block) {
