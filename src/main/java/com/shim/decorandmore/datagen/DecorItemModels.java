@@ -148,6 +148,20 @@ public class DecorItemModels extends ItemModelProvider {
         generatedBlockItemSuffix(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get(), "_ns");
         generatedBlockItemSuffix(DecorBlocks.WHITE_CARPET_EDGE.get(), "_ns");
 
+        self(DecorBlocks.IRON_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.GOLD_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.NETHERITE_GRATE_TRAPDOOR.get(), "_bottom");
+
+        self(DecorBlocks.COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.EXPOSED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.WEATHERED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+
+        self(DecorBlocks.WAXED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+        self(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
+
 
     }
 

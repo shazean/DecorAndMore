@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "decorandmore:cobblestone_path",
+    "decorandmore:mossy_cobblestone_path",
+    "decorandmore:stone_brick_path",
+    "decorandmore:mossy_stone_brick_path",
+    "decorandmore:brick_path",
+    "decorandmore:nether_brick_path",
+    "decorandmore:deepslate_brick_path",
+    "decorandmore:end_stone_brick_path",
+    "decorandmore:oak_path",
+    "decorandmore:dark_oak_path",
+    "decorandmore:acacia_path",
+    "decorandmore:spruce_path",
+    "decorandmore:birch_path",
+    "decorandmore:jungle_path",
+    "decorandmore:crimson_path",
+    "decorandmore:warped_path"
+  ]
+}

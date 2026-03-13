@@ -1,0 +1,7 @@
+{
+  "parent": "decorandmore:block/template_orientable_trapdoor_open",
+  "textures": {
+    "top": "decorandmore:block/exposed_copper_grate",
+    "side": "decorandmore:block/exposed_copper_grate_trapdoor_side"
+  }
+}

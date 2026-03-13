@@ -6,6 +6,7 @@ import com.shim.decorandmore.registry.DecorTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class DecorBlockTags extends BlockTagsProvider {
@@ -43,8 +44,78 @@ public class DecorBlockTags extends BlockTagsProvider {
         tag(DecorTags.Blocks.SEATS)
                 .addTags(DecorTags.Blocks.BENCHES, DecorTags.Blocks.HALF_BENCHES, DecorTags.Blocks.STOOLS);
 
-        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE)
-                .addTag(DecorTags.Blocks.SEATS);
+        tag(DecorTags.Blocks.PATHS)
+                .add(DecorBlocks.COBBLESTONE_PATH.get()).add(DecorBlocks.MOSSY_COBBLESTONE_PATH.get()).add(DecorBlocks.STONE_BRICK_PATH.get())
+                .add(DecorBlocks.MOSSY_STONE_BRICK_PATH.get()).add(DecorBlocks.BRICK_PATH.get()).add(DecorBlocks.NETHER_BRICK_PATH.get())
+                .add(DecorBlocks.DEEPSLATE_BRICK_PATH.get()).add(DecorBlocks.END_STONE_BRICK_PATH.get())
+                
+                .add(DecorBlocks.OAK_PATH.get()).add(DecorBlocks.DARK_OAK_PATH.get()).add(DecorBlocks.ACACIA_PATH.get())
+                .add(DecorBlocks.SPRUCE_PATH.get()).add(DecorBlocks.BIRCH_PATH.get()).add(DecorBlocks.JUNGLE_PATH.get())
+                .add(DecorBlocks.CRIMSON_PATH.get()).add(DecorBlocks.WARPED_PATH.get());
+
+        tag(DecorTags.Blocks.WOODEN_TABLES)
+                .add(DecorBlocks.OAK_TABLE_PLANKS.get()).add(DecorBlocks.OAK_TABLE_LOGS.get()).add(DecorBlocks.OAK_TABLE_STRIPPED_LOGS.get())
+                .add(DecorBlocks.OAK_TABLE_PLANKS_LOGS.get()).add(DecorBlocks.OAK_TABLE_PLANKS_STRIPPED_LOGS.get()).add(DecorBlocks.OAK_TABLE_STRIPPED_LOGS_LOGS.get())
+
+                .add(DecorBlocks.DARK_OAK_TABLE_PLANKS.get()).add(DecorBlocks.DARK_OAK_TABLE_LOGS.get()).add(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS.get())
+                .add(DecorBlocks.DARK_OAK_TABLE_PLANKS_LOGS.get()).add(DecorBlocks.DARK_OAK_TABLE_PLANKS_STRIPPED_LOGS.get()).add(DecorBlocks.DARK_OAK_TABLE_STRIPPED_LOGS_LOGS.get())
+
+                .add(DecorBlocks.SPRUCE_TABLE_PLANKS.get()).add(DecorBlocks.SPRUCE_TABLE_LOGS.get()).add(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS.get())
+                .add(DecorBlocks.SPRUCE_TABLE_PLANKS_LOGS.get()).add(DecorBlocks.SPRUCE_TABLE_PLANKS_STRIPPED_LOGS.get()).add(DecorBlocks.SPRUCE_TABLE_STRIPPED_LOGS_LOGS.get())
+
+                .add(DecorBlocks.JUNGLE_TABLE_PLANKS.get()).add(DecorBlocks.JUNGLE_TABLE_LOGS.get()).add(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS.get())
+                .add(DecorBlocks.JUNGLE_TABLE_PLANKS_LOGS.get()).add(DecorBlocks.JUNGLE_TABLE_PLANKS_STRIPPED_LOGS.get()).add(DecorBlocks.JUNGLE_TABLE_STRIPPED_LOGS_LOGS.get())
+
+                .add(DecorBlocks.ACACIA_TABLE_PLANKS.get()).add(DecorBlocks.ACACIA_TABLE_LOGS.get()).add(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS.get())
+                .add(DecorBlocks.ACACIA_TABLE_PLANKS_LOGS.get()).add(DecorBlocks.ACACIA_TABLE_PLANKS_STRIPPED_LOGS.get()).add(DecorBlocks.ACACIA_TABLE_STRIPPED_LOGS_LOGS.get())
+
+                .add(DecorBlocks.BIRCH_TABLE_PLANKS.get()).add(DecorBlocks.BIRCH_TABLE_LOGS.get()).add(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS.get())
+                .add(DecorBlocks.BIRCH_TABLE_PLANKS_LOGS.get()).add(DecorBlocks.BIRCH_TABLE_PLANKS_STRIPPED_LOGS.get()).add(DecorBlocks.BIRCH_TABLE_STRIPPED_LOGS_LOGS.get())
+
+                .add(DecorBlocks.WARPED_TABLE_PLANKS.get()).add(DecorBlocks.WARPED_TABLE_STEMS.get()).add(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS.get())
+                .add(DecorBlocks.WARPED_TABLE_PLANKS_STEMS.get()).add(DecorBlocks.WARPED_TABLE_PLANKS_STRIPPED_STEMS.get()).add(DecorBlocks.WARPED_TABLE_STRIPPED_STEMS_STEMS.get())
+
+                .add(DecorBlocks.CRIMSON_TABLE_PLANKS.get()).add(DecorBlocks.CRIMSON_TABLE_STEMS.get()).add(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS.get())
+                .add(DecorBlocks.CRIMSON_TABLE_PLANKS_STEMS.get()).add(DecorBlocks.CRIMSON_TABLE_PLANKS_STRIPPED_STEMS.get()).add(DecorBlocks.CRIMSON_TABLE_STRIPPED_STEMS_STEMS.get());
+
+        tag(DecorTags.Blocks.STONE_OR_METAL_TABLES)
+                .add(DecorBlocks.DIORITE_TABLE.get()).add(DecorBlocks.DIORITE_TABLE_POLISHED.get())
+
+                .add(DecorBlocks.GRANITE_TABLE.get()).add(DecorBlocks.GRANITE_TABLE_POLISHED.get())
+                .add(DecorBlocks.ANDESITE_TABLE.get()).add(DecorBlocks.ANDESITE_TABLE_POLISHED.get())
+
+                .add(DecorBlocks.STONE_BRICKS_TABLE.get()).add(DecorBlocks.SMOOTH_STONE_TABLE.get())
+                .add(DecorBlocks.QUARTZ_BRICK_TABLE.get()).add(DecorBlocks.SMOOTH_QUARTZ_TABLE.get())
+                .add(DecorBlocks.NETHER_BRICK_TABLE.get()).add(DecorBlocks.RED_NETHER_BRICK_TABLE.get())
+                .add(DecorBlocks.POLISHED_BLACKSTONE_BRICKS_TABLE.get()).add(DecorBlocks.POLISHED_BLACKSTONE_TABLE.get())
+                .add(DecorBlocks.BRICK_TABLE.get()).add(DecorBlocks.PURPUR_TABLE.get()).add(DecorBlocks.END_STONE_BRICKS_TABLE.get())
+
+                .add(DecorBlocks.CUT_COPPER_TABLE.get()).add(DecorBlocks.EXPOSED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WEATHERED_CUT_COPPER_TABLE.get()).add(DecorBlocks.OXIDIZED_CUT_COPPER_TABLE.get())
+                .add(DecorBlocks.WAXED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_EXPOSED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_WEATHERED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_OXIDIZED_CUT_COPPER_TABLE.get());
+
+        tag(DecorTags.Blocks.TABLES)
+                .addTag(DecorTags.Blocks.WOODEN_TABLES)
+                .addTag(DecorTags.Blocks.STONE_OR_METAL_TABLES);
+
+
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(DecorTags.Blocks.SEATS)
+                .addTag(DecorTags.Blocks.WOODEN_TABLES)
+
+                .add(DecorBlocks.OAK_PATH.get()).add(DecorBlocks.DARK_OAK_PATH.get()).add(DecorBlocks.ACACIA_PATH.get())
+                .add(DecorBlocks.SPRUCE_PATH.get()).add(DecorBlocks.BIRCH_PATH.get()).add(DecorBlocks.JUNGLE_PATH.get())
+                .add(DecorBlocks.CRIMSON_PATH.get()).add(DecorBlocks.WARPED_PATH.get());
+        
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(DecorTags.Blocks.STONE_OR_METAL_TABLES)
+
+                .add(DecorBlocks.COBBLESTONE_PATH.get()).add(DecorBlocks.MOSSY_COBBLESTONE_PATH.get()).add(DecorBlocks.STONE_BRICK_PATH.get())
+                .add(DecorBlocks.MOSSY_STONE_BRICK_PATH.get()).add(DecorBlocks.BRICK_PATH.get()).add(DecorBlocks.NETHER_BRICK_PATH.get())
+                .add(DecorBlocks.DEEPSLATE_BRICK_PATH.get()).add(DecorBlocks.END_STONE_BRICK_PATH.get())
+
+                .add(DecorBlocks.IRON_GRATE.get()).add(DecorBlocks.GOLD_GRATE.get()).add(DecorBlocks.NETHERITE_GRATE.get())
+                .add(DecorBlocks.COPPER_GRATE.get()).add(DecorBlocks.EXPOSED_COPPER_GRATE.get()).add(DecorBlocks.WEATHERED_COPPER_GRATE.get()).add(DecorBlocks.OXIDIZED_COPPER_GRATE.get())
+                .add(DecorBlocks.WAXED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get());
 
         tag(BlockTags.SLABS)
                 .addTag(DecorTags.Blocks.HALF_BENCHES)
@@ -60,7 +131,8 @@ public class DecorBlockTags extends BlockTagsProvider {
                 .add(DecorBlocks.WAXED_COPPER_SOUL_LANTERN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_SOUL_LANTERN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_SOUL_LANTERN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_SOUL_LANTERN.get())
                 .add(DecorBlocks.WAXED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_EXPOSED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_WEATHERED_CUT_COPPER_TABLE.get()).add(DecorBlocks.WAXED_OXIDIZED_CUT_COPPER_TABLE.get())
                 .add(DecorBlocks.WAXED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get())
-                .add(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get());
+                .add(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get())
+                .add(DecorBlocks.WAXED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get());
 
 
     }

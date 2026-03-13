@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "#decorandmore:stone_or_metal_tables",
+    "decorandmore:cobblestone_path",
+    "decorandmore:mossy_cobblestone_path",
+    "decorandmore:stone_brick_path",
+    "decorandmore:mossy_stone_brick_path",
+    "decorandmore:brick_path",
+    "decorandmore:nether_brick_path",
+    "decorandmore:deepslate_brick_path",
+    "decorandmore:end_stone_brick_path",
+    "decorandmore:iron_grate",
+    "decorandmore:gold_grate",
+    "decorandmore:netherite_grate",
+    "decorandmore:copper_grate",
+    "decorandmore:exposed_copper_grate",
+    "decorandmore:weathered_copper_grate",
+    "decorandmore:oxidized_copper_grate",
+    "decorandmore:waxed_copper_grate",
+    "decorandmore:waxed_exposed_copper_grate",
+    "decorandmore:waxed_weathered_copper_grate",
+    "decorandmore:waxed_oxidized_copper_grate"
+  ]
+}

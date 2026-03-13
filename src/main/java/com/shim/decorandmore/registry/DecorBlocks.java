@@ -374,14 +374,51 @@ public class DecorBlocks {
     public static final RegistryObject<PathBlock> CRIMSON_PATH = registerBlock("crimson_path", "Crimson Plank Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.CRIMSON_PLANKS), false, true);
     public static final RegistryObject<PathBlock> WARPED_PATH = registerBlock("warped_path", "Warped Plank Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.WARPED_PLANKS), false, true);
 
+    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
+
+    public static final RegistryObject<Block> IRON_GRATE = registerBlock("iron_grate", "Iron Grate", () -> new GrateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> GOLD_GRATE = registerBlock("gold_grate", "Gold Grate", () -> new GrateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> NETHERITE_GRATE = registerBlock("netherite_grate", "Netherite Grate", () -> new GrateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+
+    public static final RegistryObject<Block> COPPER_GRATE = registerBlock("copper_grate", "Copper Grate", () -> new CopperGrateBlock(WeatheringCopper.WeatherState.UNAFFECTED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> EXPOSED_COPPER_GRATE = registerBlock("exposed_copper_grate", "Exposed Copper Grate", () -> new CopperGrateBlock(WeatheringCopper.WeatherState.EXPOSED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> WEATHERED_COPPER_GRATE = registerBlock("weathered_copper_grate", "Weathered Copper Grate", () -> new CopperGrateBlock(WeatheringCopper.WeatherState.WEATHERED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> OXIDIZED_COPPER_GRATE = registerBlock("oxidized_copper_grate", "Oxidized Copper Grate", () -> new CopperGrateBlock(WeatheringCopper.WeatherState.OXIDIZED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+
+    public static final RegistryObject<Block> WAXED_COPPER_GRATE = registerBlock("waxed_copper_grate", "Waxed Copper Grate", () -> new GrateBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_GRATE = registerBlock("waxed_exposed_copper_grate", "Waxed Exposed Copper Grate", () -> new GrateBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_GRATE = registerBlock("waxed_weathered_copper_grate", "Waxed Weathered Copper Grate", () -> new GrateBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate", "Waxed Oxidized Copper Grate", () -> new GrateBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
+
+    public static final RegistryObject<TrapDoorBlock> IRON_GRATE_TRAPDOOR = registerBlock("iron_grate_trapdoor", "Iron Grate Trapdoor", () -> new GrateTrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> GOLD_GRATE_TRAPDOOR = registerBlock("gold_grate_trapdoor", "Gold Grate Trapdoor", () -> new GrateTrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> NETHERITE_GRATE_TRAPDOOR = registerBlock("netherite_grate_trapdoor", "Netherite Grate Trapdoor", () -> new GrateTrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+
+    public static final RegistryObject<TrapDoorBlock> COPPER_GRATE_TRAPDOOR = registerBlock("copper_grate_trapdoor", "Copper Grate Trapdoor", () -> new CopperTrapdoorBlock(WeatheringCopper.WeatherState.UNAFFECTED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> EXPOSED_COPPER_GRATE_TRAPDOOR = registerBlock("exposed_copper_grate_trapdoor", "Exposed Copper Grate Trapdoor", () -> new CopperTrapdoorBlock(WeatheringCopper.WeatherState.EXPOSED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> WEATHERED_COPPER_GRATE_TRAPDOOR = registerBlock("weathered_copper_grate_trapdoor", "Weathered Copper Grate Trapdoor", () -> new CopperTrapdoorBlock(WeatheringCopper.WeatherState.WEATHERED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> OXIDIZED_COPPER_GRATE_TRAPDOOR = registerBlock("oxidized_copper_grate_trapdoor", "Oxidized Copper Grate Trapdoor", () -> new CopperTrapdoorBlock(WeatheringCopper.WeatherState.OXIDIZED, COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+
+    public static final RegistryObject<TrapDoorBlock> WAXED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_copper_grate_trapdoor", "Waxed Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_exposed_copper_grate_trapdoor", "Waxed Exposed Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_weathered_copper_grate_trapdoor", "Waxed Weathered Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+    public static final RegistryObject<TrapDoorBlock> WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_oxidized_copper_grate_trapdoor", "Waxed Oxidized Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+
 
     private static boolean always(BlockState state, BlockGetter getter, BlockPos pos) {
         return true;
     }
 
+    private static boolean never(BlockState state, BlockGetter getter, BlockPos pos) {
+        return false;
+    }
 
     private static Boolean always(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entity) {
         return true;
+    }
+
+    private static Boolean never(BlockState state, BlockGetter getter, BlockPos pos, EntityType<?> entity) {
+        return false;
     }
 
     private static ToIntFunction<BlockState> litBlockEmission(int lightValue) {

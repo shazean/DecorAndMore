@@ -88,7 +88,6 @@ public class DyedRecipe implements CraftingRecipe, net.minecraftforge.common.cra
     }
 
     public boolean matches(CraftingContainer p_44176_, Level p_44177_) {
-        DecorAndMore.LOGGER.debug("matching…");
         for(int i = 0; i <= p_44176_.getWidth() - this.width; ++i) {
             for(int j = 0; j <= p_44176_.getHeight() - this.height; ++j) {
                 if (this.matches(p_44176_, i, j, true)) {
@@ -105,8 +104,6 @@ public class DyedRecipe implements CraftingRecipe, net.minecraftforge.common.cra
     }
 
     private boolean matches(CraftingContainer p_44171_, int p_44172_, int p_44173_, boolean p_44174_) {
-        DecorAndMore.LOGGER.debug("matching…");
-
         for(int i = 0; i < p_44171_.getWidth(); ++i) {
             for(int j = 0; j < p_44171_.getHeight(); ++j) {
                 int k = i - p_44172_;

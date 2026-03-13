@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "decorandmore:diorite_table",
+    "decorandmore:diorite_table_polished",
+    "decorandmore:granite_table",
+    "decorandmore:granite_table_polished",
+    "decorandmore:andesite_table",
+    "decorandmore:andesite_table_polished",
+    "decorandmore:stone_bricks_table",
+    "decorandmore:smooth_stone_table",
+    "decorandmore:quartz_brick_table",
+    "decorandmore:smooth_quartz_table",
+    "decorandmore:nether_brick_table",
+    "decorandmore:red_nether_brick_table",
+    "decorandmore:polished_blackstone_brick_table",
+    "decorandmore:polished_blackstone_table",
+    "decorandmore:brick_table",
+    "decorandmore:purpur_table",
+    "decorandmore:end_stone_brick_table",
+    "decorandmore:cut_copper_table",
+    "decorandmore:exposed_cut_copper_table",
+    "decorandmore:weathered_cut_copper_table",
+    "decorandmore:oxidized_cut_copper_table",
+    "decorandmore:waxed_cut_copper_table",
+    "decorandmore:waxed_exposed_cut_copper_table",
+    "decorandmore:waxed_weathered_cut_copper_table",
+    "decorandmore:waxed_oxidized_cut_copper_table"
+  ]
+}

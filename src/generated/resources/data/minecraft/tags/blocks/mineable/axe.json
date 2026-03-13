@@ -1,6 +1,15 @@
 {
   "replace": false,
   "values": [
-    "#decorandmore:seats"
+    "#decorandmore:seats",
+    "#decorandmore:wooden_tables",
+    "decorandmore:oak_path",
+    "decorandmore:dark_oak_path",
+    "decorandmore:acacia_path",
+    "decorandmore:spruce_path",
+    "decorandmore:birch_path",
+    "decorandmore:jungle_path",
+    "decorandmore:crimson_path",
+    "decorandmore:warped_path"
   ]
 }

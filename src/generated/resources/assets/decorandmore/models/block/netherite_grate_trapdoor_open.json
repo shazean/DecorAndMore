@@ -1,0 +1,7 @@
+{
+  "parent": "decorandmore:block/template_orientable_trapdoor_open",
+  "textures": {
+    "top": "decorandmore:block/netherite_grate",
+    "side": "decorandmore:block/netherite_grate_trapdoor_side"
+  }
+}

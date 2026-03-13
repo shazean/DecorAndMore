@@ -24,6 +24,10 @@
     "decorandmore:waxed_copper_redstone_chain",
     "decorandmore:waxed_exposed_copper_redstone_chain",
     "decorandmore:waxed_weathered_copper_redstone_chain",
-    "decorandmore:waxed_oxidized_copper_redstone_chain"
+    "decorandmore:waxed_oxidized_copper_redstone_chain",
+    "decorandmore:waxed_copper_grate",
+    "decorandmore:waxed_exposed_copper_grate",
+    "decorandmore:waxed_weathered_copper_grate",
+    "decorandmore:waxed_oxidized_copper_grate"
   ]
 }

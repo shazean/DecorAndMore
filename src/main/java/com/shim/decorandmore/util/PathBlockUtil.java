@@ -19,7 +19,6 @@ public class PathBlockUtil {
         map.put(Blocks.NETHER_BRICKS, DecorBlocks.NETHER_BRICK_PATH.get());
         map.put(Blocks.DEEPSLATE_BRICKS, DecorBlocks.DEEPSLATE_BRICK_PATH.get());
         map.put(Blocks.END_STONE_BRICKS, DecorBlocks.END_STONE_BRICK_PATH.get());
-
     });
     public static Map<Block, Block> AXE_PATHS = Util.make(new HashMap<>(), (map) -> {
         map.put(Blocks.OAK_PLANKS, DecorBlocks.OAK_PATH.get());
@@ -30,7 +29,6 @@ public class PathBlockUtil {
         map.put(Blocks.JUNGLE_PLANKS, DecorBlocks.JUNGLE_PATH.get());
         map.put(Blocks.CRIMSON_PLANKS, DecorBlocks.CRIMSON_PATH.get());
         map.put(Blocks.WARPED_PLANKS, DecorBlocks.WARPED_PATH.get());
-
     });
     public static Map<Block, Block> SHOVEL_PATHS = new HashMap<>();
 
@@ -43,6 +41,4 @@ public class PathBlockUtil {
     public void addShovelPath(Block block, Block path) {
         SHOVEL_PATHS.put(block, path);
     }
-
-
 }

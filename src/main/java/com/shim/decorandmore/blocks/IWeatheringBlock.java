@@ -1,36 +1,25 @@
 package com.shim.decorandmore.blocks;
 
-import com.shim.decorandmore.DecorAndMore;
-import com.shim.decorandmore.registry.DecorBlocks;
 import com.shim.decorandmore.util.WeatheringUtil;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ChangeOverTimeBlock;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ToolAction;
-import net.minecraftforge.common.ToolActions;
-import net.minecraftforge.common.extensions.IForgeBlock;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-
 public interface IWeatheringBlock extends ChangeOverTimeBlock<WeatheringCopper.WeatherState> {
-
-
 
     static Block getFirst(Block blockIn) {
         Block block = blockIn;
 
-        for (Block block1 = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(blockIn).previousStage(); block1 != null; block1 = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(block1).previousStage()) {
-            block = block1;
+        for (Block previousBlock = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(blockIn).previousStage(); previousBlock != null; previousBlock = WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(previousBlock).previousStage()) {
+            block = previousBlock;
         }
         return block;
     }
 
     static Optional<BlockState> getPrevious(BlockState state) {
-//        DecorAndMore.LOGGER.debug("state: " + state + " previous: " + getPrevious(state.getBlock()) + ", previous from map: " + WeatheringUtil.WEATHERABLE_BLOCK_STAGES.get(state.getBlock()).previousStage());
         return getPrevious(state.getBlock()).map((block) -> block.withPropertiesOf(state));
     }
 

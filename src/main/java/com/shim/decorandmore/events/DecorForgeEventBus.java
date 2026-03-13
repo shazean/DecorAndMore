@@ -103,12 +103,10 @@ public class DecorForgeEventBus {
             }
 
         } else if (event.getItemStack().getItem() instanceof PickaxeItem) {
-
             if (PathBlockUtil.PICKAXE_PATHS.containsKey(state.getBlock())) {
                 level.setBlock(pos, PathBlockUtil.PICKAXE_PATHS.get(state.getBlock()).defaultBlockState(), 1);
             }
         } else if (event.getItemStack().getItem() instanceof ShovelItem) {
-
             if (PathBlockUtil.SHOVEL_PATHS.containsKey(state.getBlock())) {
                 level.setBlock(pos, PathBlockUtil.SHOVEL_PATHS.get(state.getBlock()).defaultBlockState(), 1);
             }

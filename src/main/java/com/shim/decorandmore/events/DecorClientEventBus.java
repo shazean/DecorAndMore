@@ -130,6 +130,34 @@ public class DecorClientEventBus {
         ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WHITE_CARPET_EDGE.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.IRON_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_GRATE.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_GRATE.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.IRON_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_GRATE_TRAPDOOR.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+
 
         RecipeBookCategories.create("decorandmore:dyed_crafting", new ItemStack(Items.RED_DYE));
 

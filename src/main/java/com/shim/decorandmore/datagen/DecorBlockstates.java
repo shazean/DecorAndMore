@@ -20,6 +20,8 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.function.Function;
+
 public class DecorBlockstates extends BlockStateProvider {
 
     public DecorBlockstates(DataGenerator gen, ExistingFileHelper helper) {
@@ -173,28 +175,28 @@ public class DecorBlockstates extends BlockStateProvider {
 //        simpleTwoBlockTable(DecorBlocks.DIORITE_TABLE_TOP_POLISHED.get(), Blocks.POLISHED_DIORITE, Blocks.DIORITE);
 //        simpleTwoBlockTable(DecorBlocks.DIORITE_TABLE_BOTTOM_POLISHED.get(), Blocks.DIORITE, Blocks.POLISHED_DIORITE);
 
-       simpleTable(DecorBlocks.GRANITE_TABLE.get(), Blocks.GRANITE);
-       simpleTable(DecorBlocks.GRANITE_TABLE_POLISHED.get(), Blocks.POLISHED_GRANITE);
-       simpleTable(DecorBlocks.ANDESITE_TABLE.get(), Blocks.ANDESITE);
-       simpleTable(DecorBlocks.ANDESITE_TABLE_POLISHED.get(), Blocks.POLISHED_ANDESITE);
+        simpleTable(DecorBlocks.GRANITE_TABLE.get(), Blocks.GRANITE);
+        simpleTable(DecorBlocks.GRANITE_TABLE_POLISHED.get(), Blocks.POLISHED_GRANITE);
+        simpleTable(DecorBlocks.ANDESITE_TABLE.get(), Blocks.ANDESITE);
+        simpleTable(DecorBlocks.ANDESITE_TABLE_POLISHED.get(), Blocks.POLISHED_ANDESITE);
 
-       simpleTable(DecorBlocks.STONE_BRICKS_TABLE.get(), Blocks.STONE_BRICKS);
-       simpleTable(DecorBlocks.SMOOTH_STONE_TABLE.get(), Blocks.SMOOTH_STONE);
+        simpleTable(DecorBlocks.STONE_BRICKS_TABLE.get(), Blocks.STONE_BRICKS);
+        simpleTable(DecorBlocks.SMOOTH_STONE_TABLE.get(), Blocks.SMOOTH_STONE);
 
-       simpleTable(DecorBlocks.QUARTZ_BRICK_TABLE.get(), Blocks.QUARTZ_BRICKS);
+        simpleTable(DecorBlocks.QUARTZ_BRICK_TABLE.get(), Blocks.QUARTZ_BRICKS);
         table(DecorBlocks.SMOOTH_QUARTZ_TABLE.get(), getTextureFromBlock(Blocks.QUARTZ_BLOCK, "_bottom"), getTextureFromBlock(Blocks.QUARTZ_BLOCK, "_bottom"), getTextureFromBlock(Blocks.QUARTZ_BLOCK, "_bottom"));
 
-       simpleTable(DecorBlocks.NETHER_BRICK_TABLE.get(), Blocks.NETHER_BRICKS);
-       simpleTable(DecorBlocks.RED_NETHER_BRICK_TABLE.get(), Blocks.RED_NETHER_BRICKS);
+        simpleTable(DecorBlocks.NETHER_BRICK_TABLE.get(), Blocks.NETHER_BRICKS);
+        simpleTable(DecorBlocks.RED_NETHER_BRICK_TABLE.get(), Blocks.RED_NETHER_BRICKS);
 
-       simpleTable(DecorBlocks.POLISHED_BLACKSTONE_BRICKS_TABLE.get(), Blocks.POLISHED_BLACKSTONE_BRICKS);
-       simpleTable(DecorBlocks.POLISHED_BLACKSTONE_TABLE.get(), Blocks.POLISHED_BLACKSTONE);
+        simpleTable(DecorBlocks.POLISHED_BLACKSTONE_BRICKS_TABLE.get(), Blocks.POLISHED_BLACKSTONE_BRICKS);
+        simpleTable(DecorBlocks.POLISHED_BLACKSTONE_TABLE.get(), Blocks.POLISHED_BLACKSTONE);
 
-       simpleTable(DecorBlocks.BRICK_TABLE.get(), Blocks.BRICKS);
-       simpleTable(DecorBlocks.PURPUR_TABLE.get(), Blocks.PURPUR_BLOCK);
-       simpleTable(DecorBlocks.END_STONE_BRICKS_TABLE.get(), Blocks.END_STONE_BRICKS);
+        simpleTable(DecorBlocks.BRICK_TABLE.get(), Blocks.BRICKS);
+        simpleTable(DecorBlocks.PURPUR_TABLE.get(), Blocks.PURPUR_BLOCK);
+        simpleTable(DecorBlocks.END_STONE_BRICKS_TABLE.get(), Blocks.END_STONE_BRICKS);
 
-       simpleTable(DecorBlocks.CUT_COPPER_TABLE.get(), Blocks.CUT_COPPER);
+        simpleTable(DecorBlocks.CUT_COPPER_TABLE.get(), Blocks.CUT_COPPER);
         simpleTable(DecorBlocks.EXPOSED_CUT_COPPER_TABLE.get(), Blocks.EXPOSED_CUT_COPPER);
         simpleTable(DecorBlocks.WEATHERED_CUT_COPPER_TABLE.get(), Blocks.WEATHERED_CUT_COPPER);
         simpleTable(DecorBlocks.OXIDIZED_CUT_COPPER_TABLE.get(), Blocks.OXIDIZED_CUT_COPPER);
@@ -205,17 +207,16 @@ public class DecorBlockstates extends BlockStateProvider {
         simpleTable(DecorBlocks.WAXED_OXIDIZED_CUT_COPPER_TABLE.get(), Blocks.OXIDIZED_CUT_COPPER);
 
         simpleTable(DecorBlocks.CUT_SANDSTONE_TABLE.get(), Blocks.CUT_SANDSTONE);
-       table(DecorBlocks.SMOOTH_SANDSTONE_TABLE.get(), getTextureFromBlock(Blocks.SANDSTONE, "_top"), getTextureFromBlock(Blocks.SANDSTONE, "_top"), getTextureFromBlock(Blocks.SANDSTONE, "_top"));
-       simpleTable(DecorBlocks.RED_CUT_SANDSTONE_TABLE.get(), Blocks.CUT_RED_SANDSTONE);
+        table(DecorBlocks.SMOOTH_SANDSTONE_TABLE.get(), getTextureFromBlock(Blocks.SANDSTONE, "_top"), getTextureFromBlock(Blocks.SANDSTONE, "_top"), getTextureFromBlock(Blocks.SANDSTONE, "_top"));
+        simpleTable(DecorBlocks.RED_CUT_SANDSTONE_TABLE.get(), Blocks.CUT_RED_SANDSTONE);
         table(DecorBlocks.SMOOTH_RED_SANDSTONE_TABLE.get(), getTextureFromBlock(Blocks.RED_SANDSTONE, "_top"), getTextureFromBlock(Blocks.RED_SANDSTONE, "_top"), getTextureFromBlock(Blocks.RED_SANDSTONE, "_top"));
 
-       simpleTable(DecorBlocks.POLISHED_DEEPSLATE_TABLE.get(), Blocks.POLISHED_DEEPSLATE);
-       simpleTable(DecorBlocks.DEEPSLATE_BRICK_TABLE.get(), Blocks.DEEPSLATE_BRICKS);
-       simpleTable(DecorBlocks.DEEPSLATE_TILE_TABLE.get(), Blocks.DEEPSLATE_TILES);
+        simpleTable(DecorBlocks.POLISHED_DEEPSLATE_TABLE.get(), Blocks.POLISHED_DEEPSLATE);
+        simpleTable(DecorBlocks.DEEPSLATE_BRICK_TABLE.get(), Blocks.DEEPSLATE_BRICKS);
+        simpleTable(DecorBlocks.DEEPSLATE_TILE_TABLE.get(), Blocks.DEEPSLATE_TILES);
 
-       simpleTable(DecorBlocks.PRISMARINE_BRICK_TABLE.get(), Blocks.PRISMARINE_BRICKS);
-       simpleTable(DecorBlocks.DARK_PRISMARINE_TABLE.get(), Blocks.DARK_PRISMARINE);
-
+        simpleTable(DecorBlocks.PRISMARINE_BRICK_TABLE.get(), Blocks.PRISMARINE_BRICKS);
+        simpleTable(DecorBlocks.DARK_PRISMARINE_TABLE.get(), Blocks.DARK_PRISMARINE);
 
 
         redstoneLamp(DecorBlocks.RED_REDSTONE_LAMP.get());
@@ -302,6 +303,7 @@ public class DecorBlockstates extends BlockStateProvider {
         pathBlock(DecorBlocks.NETHER_BRICK_PATH.get(), Blocks.NETHER_BRICKS);
         pathBlock(DecorBlocks.DEEPSLATE_BRICK_PATH.get(), Blocks.DEEPSLATE_BRICKS);
         pathBlock(DecorBlocks.END_STONE_BRICK_PATH.get(), Blocks.END_STONE_BRICKS);
+
         pathBlock(DecorBlocks.OAK_PATH.get(), Blocks.OAK_PLANKS);
         pathBlock(DecorBlocks.DARK_OAK_PATH.get(), Blocks.DARK_OAK_PLANKS);
         pathBlock(DecorBlocks.ACACIA_PATH.get(), Blocks.ACACIA_PLANKS);
@@ -311,6 +313,73 @@ public class DecorBlockstates extends BlockStateProvider {
         pathBlock(DecorBlocks.CRIMSON_PATH.get(), Blocks.CRIMSON_PLANKS);
         pathBlock(DecorBlocks.WARPED_PATH.get(), Blocks.WARPED_PLANKS);
 
+        simpleBlock(DecorBlocks.BUTCHER_BLOCK.get());
+
+        simpleBlock(DecorBlocks.IRON_GRATE.get());
+        simpleBlock(DecorBlocks.GOLD_GRATE.get());
+        simpleBlock(DecorBlocks.NETHERITE_GRATE.get());
+
+        simpleBlock(DecorBlocks.COPPER_GRATE.get());
+        simpleBlock(DecorBlocks.EXPOSED_COPPER_GRATE.get());
+        simpleBlock(DecorBlocks.WEATHERED_COPPER_GRATE.get());
+        simpleBlock(DecorBlocks.OXIDIZED_COPPER_GRATE.get());
+
+        waxedSimpleBlock(DecorBlocks.WAXED_COPPER_GRATE.get(), DecorBlocks.COPPER_GRATE.get());
+        waxedSimpleBlock(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get(), DecorBlocks.EXPOSED_COPPER_GRATE.get());
+        waxedSimpleBlock(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get(), DecorBlocks.WEATHERED_COPPER_GRATE.get());
+        waxedSimpleBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get(), DecorBlocks.OXIDIZED_COPPER_GRATE.get());
+
+        trapdoorBlock(DecorBlocks.IRON_GRATE_TRAPDOOR.get(), DecorBlocks.IRON_GRATE.get());
+        trapdoorBlock(DecorBlocks.GOLD_GRATE_TRAPDOOR.get(), DecorBlocks.GOLD_GRATE.get());
+        trapdoorBlock(DecorBlocks.NETHERITE_GRATE_TRAPDOOR.get(), DecorBlocks.NETHERITE_GRATE.get());
+
+        trapdoorBlock(DecorBlocks.COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.COPPER_GRATE.get());
+        trapdoorBlock(DecorBlocks.EXPOSED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.EXPOSED_COPPER_GRATE.get());
+        trapdoorBlock(DecorBlocks.WEATHERED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.WEATHERED_COPPER_GRATE.get());
+        trapdoorBlock(DecorBlocks.OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.OXIDIZED_COPPER_GRATE.get());
+
+        waxedTrapdoorBlock(DecorBlocks.WAXED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.COPPER_GRATE.get());
+        waxedTrapdoorBlock(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.EXPOSED_COPPER_GRATE.get());
+        waxedTrapdoorBlock(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.WEATHERED_COPPER_GRATE.get());
+        waxedTrapdoorBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.OXIDIZED_COPPER_GRATE.get());
+
+    }
+
+    public void waxedTrapdoorBlock(TrapDoorBlock block, Block blockForTexture) {
+        ModelFile bottom = models().withExistingParent(name(block) + "_bottom", modLoc("template_orientable_trapdoor_bottom"))
+                .texture("top", getTextureFromBlock(blockForTexture))
+                .texture("side", getTextureFromBlock(blockForTexture, "_trapdoor_side"));
+
+        ModelFile top = models().withExistingParent(name(block) + "_top", modLoc("template_orientable_trapdoor_top"))
+                .texture("top", getTextureFromBlock(blockForTexture))
+                .texture("side", getTextureFromBlock(blockForTexture, "_trapdoor_side"));
+
+        ModelFile open = models().withExistingParent(name(block) + "_side", modLoc("template_orientable_trapdoor_open"))
+                .texture("top", getTextureFromBlock(blockForTexture))
+                .texture("side", getTextureFromBlock(blockForTexture, "_trapdoor_side"));
+
+        trapdoorBlock(block, bottom, top, open, true);
+    }
+
+    public void trapdoorBlock(TrapDoorBlock block, Block blockForTexture) {
+        ModelFile bottom = models().withExistingParent(name(block) + "_bottom", modLoc("template_orientable_trapdoor_bottom"))
+                .texture("top", getTextureFromBlock(blockForTexture))
+                .texture("side", getTextureFromBlock(block, "_side"));
+
+        ModelFile top = models().withExistingParent(name(block) + "_top", modLoc("template_orientable_trapdoor_top"))
+                .texture("top", getTextureFromBlock(blockForTexture))
+                .texture("side", getTextureFromBlock(block, "_side"));
+
+        ModelFile open = models().withExistingParent(name(block)  + "_open", modLoc("template_orientable_trapdoor_open"))
+                .texture("top", getTextureFromBlock(blockForTexture))
+                .texture("side", getTextureFromBlock(block, "_side"));
+
+        trapdoorBlock(block, bottom, top, open, true);
+    }
+
+    public void waxedSimpleBlock(Block block, Block nonWaxedBlock) {
+        BlockModelBuilder model = models().cubeAll(name(block), blockTexture(nonWaxedBlock));
+        simpleBlock(block, new ConfiguredModel(model));
     }
 
     public void pathBlock(Block block, Block top) {
@@ -348,7 +417,7 @@ public class DecorBlockstates extends BlockStateProvider {
             Direction facing = state.getValue(RugBlock.FACING);
 
             int yRot;
-            switch(facing) {
+            switch (facing) {
                 case EAST -> yRot = 270;
                 case NORTH -> yRot = 180;
                 case WEST -> yRot = 90;
@@ -699,28 +768,28 @@ public class DecorBlockstates extends BlockStateProvider {
             for (DyeColor dye : DyeColor.values()) {
                 if (slabType == SlabType.TOP) {
                     model = models().withExistingParent(dye.getName() + "_" + name(block) + "_top", modLoc("block/slab_stool_top"))
-                        .texture("wool_side", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_side"))
-                        .texture("plank_side", plankSide)
-                        .texture("bottom", bottom)
-                        .texture("top", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_top"));
+                            .texture("wool_side", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_side"))
+                            .texture("plank_side", plankSide)
+                            .texture("bottom", bottom)
+                            .texture("top", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_top"));
 
                     neededModel = (dye == color) ? model : neededModel;
 
                 } else if (slabType == SlabType.DOUBLE) {
                     model = models().withExistingParent(dye.getName() + "_" + name(block) + "_double", modLoc("block/slab_stool_double"))
-                        .texture("wool_side", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_side"))
-                        .texture("plank_side", doublePlankSide)
-                        .texture("bottom", bottom)
-                        .texture("top", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_top"));
+                            .texture("wool_side", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_side"))
+                            .texture("plank_side", doublePlankSide)
+                            .texture("bottom", bottom)
+                            .texture("top", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_top"));
 
                     neededModel = (dye == color) ? model : neededModel;
 
                 } else { //bottom slab
                     model = models().withExistingParent(dye.getName() + "_" + name(block), modLoc("block/slab_stool"))
-                        .texture("wool_side", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_side"))
-                        .texture("plank_side", plankSide)
-                        .texture("bottom", bottom)
-                        .texture("top", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_top"));
+                            .texture("wool_side", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_side"))
+                            .texture("plank_side", plankSide)
+                            .texture("bottom", bottom)
+                            .texture("top", new ResourceLocation(namespace(block), "block/" + dye.getName() + "_slab_stool_top"));
 
                     neededModel = (dye == color) ? model : neededModel;
 

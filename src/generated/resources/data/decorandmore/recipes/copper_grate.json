@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    " x ",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "decorandmore:copper_grate",
+    "count": 4
+  }
+}

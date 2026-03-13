@@ -1,0 +1,7 @@
+{
+  "parent": "decorandmore:block/template_orientable_trapdoor_open",
+  "textures": {
+    "top": "decorandmore:block/gold_grate",
+    "side": "decorandmore:block/gold_grate_trapdoor_side"
+  }
+}

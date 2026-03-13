@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    " x ",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "decorandmore:gold_grate",
+    "count": 4
+  }
+}

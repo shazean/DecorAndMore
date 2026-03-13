@@ -23,6 +23,10 @@ public class DecorItemTags extends ItemTagsProvider {
         this.copy(DecorTags.Blocks.HALF_BENCHES, DecorTags.Items.HALF_BENCHES);
         this.copy(DecorTags.Blocks.STOOLS, DecorTags.Items.STOOLS);
         this.copy(DecorTags.Blocks.SEATS, DecorTags.Items.SEATS);
+        this.copy(DecorTags.Blocks.PATHS, DecorTags.Items.PATHS);
+        this.copy(DecorTags.Blocks.WOODEN_TABLES, DecorTags.Items.WOODEN_TABLES);
+        this.copy(DecorTags.Blocks.STONE_OR_METAL_TABLES, DecorTags.Items.STONE_OR_METAL_TABLES);
+        this.copy(DecorTags.Blocks.TABLES, DecorTags.Items.TABLES);
 
         this.copy(BlockTags.STAIRS, ItemTags.STAIRS);
         this.copy(BlockTags.SLABS, ItemTags.SLABS);
