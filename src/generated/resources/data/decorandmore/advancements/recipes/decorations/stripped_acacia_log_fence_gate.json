@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:stripped_acacia_log_fence_gate"
+    ]
+  },
+  "criteria": {
+    "stripped_acacia_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stripped_acacia_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:stripped_acacia_log_fence_gate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "stripped_acacia_log",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XxX",
+    "XxX"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:stripped_dark_oak_log"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "decorandmore:stripped_dark_oak_log_fence_gate"
+  }
+}

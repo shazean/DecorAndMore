@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xXx",
+    "xXx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:stripped_warped_stem"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "decorandmore:stripped_warped_stem_fence",
+    "count": 3
+  }
+}

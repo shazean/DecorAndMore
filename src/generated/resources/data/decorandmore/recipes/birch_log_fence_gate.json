@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XxX",
+    "XxX"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:birch_log"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "decorandmore:birch_log_fence_gate"
+  }
+}

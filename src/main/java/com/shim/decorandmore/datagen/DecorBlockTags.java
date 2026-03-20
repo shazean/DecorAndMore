@@ -134,6 +134,39 @@ public class DecorBlockTags extends BlockTagsProvider {
                 .add(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get())
                 .add(DecorBlocks.WAXED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get());
 
+        tag(BlockTags.WOODEN_FENCES)
+                .add(DecorBlocks.OAK_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get())
+                .add(DecorBlocks.JUNGLE_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get())
+                .add(DecorBlocks.BIRCH_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get())
+                .add(DecorBlocks.WARPED_STEM_FENCE.get()).add(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get())
+
+                .add(DecorBlocks.STRIPPED_OAK_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get())
+                .add(DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get())
+                .add(DecorBlocks.STRIPPED_BIRCH_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get())
+                .add(DecorBlocks.STRIPPED_WARPED_STEM_FENCE.get()).add(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get());
+
+
+        tag(BlockTags.FENCES)
+                .add(DecorBlocks.OAK_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get())
+                .add(DecorBlocks.JUNGLE_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get())
+                .add(DecorBlocks.BIRCH_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get())
+                .add(DecorBlocks.WARPED_STEM_FENCE.get()).add(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get())
+
+                .add(DecorBlocks.STRIPPED_OAK_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get())
+                .add(DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get())
+                .add(DecorBlocks.STRIPPED_BIRCH_LOG_FENCE.get()).add(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get())
+                .add(DecorBlocks.STRIPPED_WARPED_STEM_FENCE.get()).add(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(DecorBlocks.OAK_LOG_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE_GATE.get())
+                .add(DecorBlocks.JUNGLE_LOG_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE_GATE.get())
+                .add(DecorBlocks.BIRCH_LOG_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE_GATE.get())
+                .add(DecorBlocks.WARPED_STEM_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE_GATE.get())
+
+                .add(DecorBlocks.STRIPPED_OAK_LOG_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE_GATE.get())
+                .add(DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE_GATE.get())
+                .add(DecorBlocks.STRIPPED_BIRCH_LOG_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE_GATE.get())
+                .add(DecorBlocks.STRIPPED_WARPED_STEM_FENCE_GATE.get()).add(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE_GATE.get());
 
     }
 }

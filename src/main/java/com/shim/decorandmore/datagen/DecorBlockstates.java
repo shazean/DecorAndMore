@@ -13,10 +13,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.properties.StairsShape;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -343,6 +340,32 @@ public class DecorBlockstates extends BlockStateProvider {
         waxedTrapdoorBlock(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.WEATHERED_COPPER_GRATE.get());
         waxedTrapdoorBlock(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), DecorBlocks.OXIDIZED_COPPER_GRATE.get());
 
+        fenceBlock(DecorBlocks.OAK_LOG_FENCE.get(), DecorBlocks.OAK_LOG_FENCE_GATE.get(), Blocks.OAK_LOG);
+        fenceBlock(DecorBlocks.DARK_OAK_LOG_FENCE.get(), DecorBlocks.DARK_OAK_LOG_FENCE_GATE.get(), Blocks.DARK_OAK_LOG);
+        fenceBlock(DecorBlocks.JUNGLE_LOG_FENCE.get(), DecorBlocks.JUNGLE_LOG_FENCE_GATE.get(), Blocks.JUNGLE_LOG);
+        fenceBlock(DecorBlocks.ACACIA_LOG_FENCE.get(), DecorBlocks.ACACIA_LOG_FENCE_GATE.get(), Blocks.ACACIA_LOG);
+        fenceBlock(DecorBlocks.BIRCH_LOG_FENCE.get(), DecorBlocks.BIRCH_LOG_FENCE_GATE.get(), Blocks.BIRCH_LOG);
+        fenceBlock(DecorBlocks.SPRUCE_LOG_FENCE.get(), DecorBlocks.SPRUCE_LOG_FENCE_GATE.get(), Blocks.SPRUCE_LOG);
+        fenceBlock(DecorBlocks.WARPED_STEM_FENCE.get(), DecorBlocks.WARPED_STEM_FENCE_GATE.get(), Blocks.WARPED_STEM);
+        fenceBlock(DecorBlocks.CRIMSON_STEM_FENCE.get(), DecorBlocks.CRIMSON_STEM_FENCE_GATE.get(), Blocks.CRIMSON_STEM);
+
+        fenceBlock(DecorBlocks.STRIPPED_OAK_LOG_FENCE.get(), DecorBlocks.STRIPPED_OAK_LOG_FENCE_GATE.get(), Blocks.STRIPPED_OAK_LOG);
+        fenceBlock(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get(), DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE_GATE.get(), Blocks.STRIPPED_DARK_OAK_LOG);
+        fenceBlock(DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE.get(), DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE_GATE.get(), Blocks.STRIPPED_JUNGLE_LOG);
+        fenceBlock(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get(), DecorBlocks.STRIPPED_ACACIA_LOG_FENCE_GATE.get(), Blocks.STRIPPED_ACACIA_LOG);
+        fenceBlock(DecorBlocks.STRIPPED_BIRCH_LOG_FENCE.get(), DecorBlocks.STRIPPED_BIRCH_LOG_FENCE_GATE.get(), Blocks.STRIPPED_BIRCH_LOG);
+        fenceBlock(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get(), DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE_GATE.get(), Blocks.STRIPPED_SPRUCE_LOG);
+        fenceBlock(DecorBlocks.STRIPPED_WARPED_STEM_FENCE.get(), DecorBlocks.STRIPPED_WARPED_STEM_FENCE_GATE.get(), Blocks.STRIPPED_WARPED_STEM);
+        fenceBlock(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get(), DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE_GATE.get(), Blocks.STRIPPED_CRIMSON_STEM);
+
+    }
+
+
+    public void fenceBlock(FenceBlock block, FenceGateBlock gate, Block textureBlock) {
+
+        fenceBlock(block, getTextureFromBlock(textureBlock));
+        ModelFile fenceInventory = models().fenceInventory(name(block) + "_inventory", getTextureFromBlock(textureBlock));
+        fenceGateBlock(gate, getTextureFromBlock(textureBlock));
     }
 
     public void waxedTrapdoorBlock(TrapDoorBlock block, Block blockForTexture) {

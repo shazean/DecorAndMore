@@ -229,7 +229,32 @@ public class DecorRecipeGen extends RecipeProvider {
         grate(DecorBlocks.COPPER_GRATE.get(), DecorBlocks.COPPER_GRATE_TRAPDOOR.get(), Items.COPPER_INGOT, consumer);
         grate(DecorBlocks.NETHERITE_GRATE.get(), DecorBlocks.NETHERITE_GRATE_TRAPDOOR.get(), Items.NETHERITE_INGOT, consumer);
 
+        fence(DecorBlocks.OAK_LOG_FENCE.get(), DecorBlocks.OAK_LOG_FENCE_GATE.get(), Blocks.OAK_LOG, consumer);
+        fence(DecorBlocks.DARK_OAK_LOG_FENCE.get(), DecorBlocks.DARK_OAK_LOG_FENCE_GATE.get(), Blocks.DARK_OAK_LOG, consumer);
+        fence(DecorBlocks.JUNGLE_LOG_FENCE.get(), DecorBlocks.JUNGLE_LOG_FENCE_GATE.get(), Blocks.JUNGLE_LOG, consumer);
+        fence(DecorBlocks.BIRCH_LOG_FENCE.get(), DecorBlocks.BIRCH_LOG_FENCE_GATE.get(), Blocks.BIRCH_LOG, consumer);
+        fence(DecorBlocks.ACACIA_LOG_FENCE.get(), DecorBlocks.ACACIA_LOG_FENCE_GATE.get(), Blocks.ACACIA_LOG, consumer);
+        fence(DecorBlocks.SPRUCE_LOG_FENCE.get(), DecorBlocks.SPRUCE_LOG_FENCE_GATE.get(), Blocks.SPRUCE_LOG, consumer);
+        fence(DecorBlocks.CRIMSON_STEM_FENCE.get(), DecorBlocks.CRIMSON_STEM_FENCE_GATE.get(), Blocks.CRIMSON_STEM, consumer);
+        fence(DecorBlocks.WARPED_STEM_FENCE.get(), DecorBlocks.WARPED_STEM_FENCE_GATE.get(), Blocks.WARPED_STEM, consumer);
+
+        fence(DecorBlocks.STRIPPED_OAK_LOG_FENCE.get(), DecorBlocks.STRIPPED_OAK_LOG_FENCE_GATE.get(), Blocks.STRIPPED_OAK_LOG, consumer);
+        fence(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get(), DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE_GATE.get(), Blocks.STRIPPED_DARK_OAK_LOG, consumer);
+        fence(DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE.get(), DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE_GATE.get(), Blocks.STRIPPED_JUNGLE_LOG, consumer);
+        fence(DecorBlocks.STRIPPED_BIRCH_LOG_FENCE.get(), DecorBlocks.STRIPPED_BIRCH_LOG_FENCE_GATE.get(), Blocks.STRIPPED_BIRCH_LOG, consumer);
+        fence(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get(), DecorBlocks.STRIPPED_ACACIA_LOG_FENCE_GATE.get(), Blocks.STRIPPED_ACACIA_LOG, consumer);
+        fence(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get(), DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE_GATE.get(), Blocks.STRIPPED_SPRUCE_LOG, consumer);
+        fence(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get(), DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE_GATE.get(), Blocks.STRIPPED_CRIMSON_STEM, consumer);
+        fence(DecorBlocks.STRIPPED_WARPED_STEM_FENCE.get(), DecorBlocks.STRIPPED_WARPED_STEM_FENCE_GATE.get(), Blocks.STRIPPED_WARPED_STEM, consumer);
+
     }
+
+
+    public void fence(Block fence, Block gate, ItemLike log, Consumer<FinishedRecipe> consumer) {
+        ShapedRecipeBuilder.shaped(fence, 3).pattern("xXx").pattern("xXx").define('x', log).define('X', Items.STICK).unlockedBy(name(log), has(log)).save(consumer);
+        ShapedRecipeBuilder.shaped(gate).pattern("XxX").pattern("XxX").define('x', log).define('X', Items.STICK).unlockedBy(name(log), has(log)).save(consumer);
+    }
+
 
     private String name(ItemLike block) {
         return block.asItem().getRegistryName().getPath();

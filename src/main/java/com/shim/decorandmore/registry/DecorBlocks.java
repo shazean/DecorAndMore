@@ -375,6 +375,8 @@ public class DecorBlocks {
     public static final RegistryObject<PathBlock> WARPED_PATH = registerBlock("warped_path", "Warped Plank Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.WARPED_PLANKS), false, true);
 
     public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
+//    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new StairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
+//    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
 
     public static final RegistryObject<Block> IRON_GRATE = registerBlock("iron_grate", "Iron Grate", () -> new GrateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
     public static final RegistryObject<Block> GOLD_GRATE = registerBlock("gold_grate", "Gold Grate", () -> new GrateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5.0F).sound(SoundType.METAL).isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, true);
@@ -403,6 +405,44 @@ public class DecorBlocks {
     public static final RegistryObject<TrapDoorBlock> WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_exposed_copper_grate_trapdoor", "Waxed Exposed Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
     public static final RegistryObject<TrapDoorBlock> WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_weathered_copper_grate_trapdoor", "Waxed Weathered Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
     public static final RegistryObject<TrapDoorBlock> WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR = registerBlock("waxed_oxidized_copper_grate_trapdoor", "Waxed Oxidized Copper Grate Trapdoor", () -> new GrateTrapDoorBlock(COPPER.isViewBlocking(DecorBlocks::never).isSuffocating(DecorBlocks::never).isValidSpawn(DecorBlocks::never).noOcclusion()), true, false);
+
+
+    public static final RegistryObject<FenceBlock> OAK_LOG_FENCE = registerBlock("oak_log_fence", "Oak Log Fence", () -> new FenceBlock(OAK.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> DARK_OAK_LOG_FENCE = registerBlock("dark_oak_log_fence", "Dark Oak Log Fence", () -> new FenceBlock(DARK_OAK.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> JUNGLE_LOG_FENCE = registerBlock("jungle_log_fence", "Jungle Log Fence", () -> new FenceBlock(JUNGLE.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> SPRUCE_LOG_FENCE = registerBlock("spruce_log_fence", "Spruce Log Fence", () -> new FenceBlock(SPRUCE.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> ACACIA_LOG_FENCE = registerBlock("acacia_log_fence", "Acacia Log Fence", () -> new FenceBlock(ACACIA.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> BIRCH_LOG_FENCE = registerBlock("birch_log_fence", "Birch Log Fence", () -> new FenceBlock(BIRCH.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> WARPED_STEM_FENCE = registerBlock("warped_stem_fence", "Warped Stem Fence", () -> new FenceBlock(WARPED.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> CRIMSON_STEM_FENCE = registerBlock("crimson_stem_fence", "Crimson Stem Fence", () -> new FenceBlock(CRIMSON.strength(2.0F, 3.0F)), true, false);
+
+    public static final RegistryObject<FenceGateBlock> OAK_LOG_FENCE_GATE = registerBlock("oak_log_fence_gate", "Oak Log Fence Gate", () -> new FenceGateBlock(OAK.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> DARK_OAK_LOG_FENCE_GATE = registerBlock("dark_oak_log_fence_gate", "Dark Oak Log Fence Gate", () -> new FenceGateBlock(DARK_OAK.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> JUNGLE_LOG_FENCE_GATE = registerBlock("jungle_log_fence_gate", "Jungle Log Fence Gate", () -> new FenceGateBlock(JUNGLE.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> SPRUCE_LOG_FENCE_GATE = registerBlock("spruce_log_fence_gate", "Spruce Log Fence Gate", () -> new FenceGateBlock(SPRUCE.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> ACACIA_LOG_FENCE_GATE = registerBlock("acacia_log_fence_gate", "Acacia Log Fence Gate", () -> new FenceGateBlock(ACACIA.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> BIRCH_LOG_FENCE_GATE = registerBlock("birch_log_fence_gate", "Birch Log Fence Gate", () -> new FenceGateBlock(BIRCH.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> WARPED_STEM_FENCE_GATE = registerBlock("warped_stem_fence_gate", "Warped Stem Fence Gate", () -> new FenceGateBlock(WARPED.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> CRIMSON_STEM_FENCE_GATE = registerBlock("crimson_stem_fence_gate", "Crimson Stem Fence Gate", () -> new FenceGateBlock(CRIMSON.strength(2.0F, 3.0F)), true, true);
+
+    public static final RegistryObject<FenceBlock> STRIPPED_OAK_LOG_FENCE = registerBlock("stripped_oak_log_fence", "Stripped Oak Log Fence", () -> new FenceBlock(OAK.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_DARK_OAK_LOG_FENCE = registerBlock("stripped_dark_oak_log_fence", "Stripped Dark Oak Log Fence", () -> new FenceBlock(DARK_OAK.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_JUNGLE_LOG_FENCE = registerBlock("stripped_jungle_log_fence", "Stripped Jungle Log Fence", () -> new FenceBlock(JUNGLE.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_SPRUCE_LOG_FENCE = registerBlock("stripped_spruce_log_fence", "Stripped Spruce Log Fence", () -> new FenceBlock(SPRUCE.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_ACACIA_LOG_FENCE = registerBlock("stripped_acacia_log_fence", "Stripped Acacia Log Fence", () -> new FenceBlock(ACACIA.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_BIRCH_LOG_FENCE = registerBlock("stripped_birch_log_fence", "Stripped Birch Log Fence", () -> new FenceBlock(BIRCH.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_WARPED_STEM_FENCE = registerBlock("stripped_warped_stem_fence", "Stripped Warped Stem Fence", () -> new FenceBlock(WARPED.strength(2.0F, 3.0F)), true, false);
+    public static final RegistryObject<FenceBlock> STRIPPED_CRIMSON_STEM_FENCE = registerBlock("stripped_crimson_stem_fence", "Stripped Crimson Stem Fence", () -> new FenceBlock(CRIMSON.strength(2.0F, 3.0F)), true, false);
+
+    public static final RegistryObject<FenceGateBlock> STRIPPED_OAK_LOG_FENCE_GATE = registerBlock("stripped_oak_log_fence_gate", "Stripped Oak Log Fence Gate", () -> new FenceGateBlock(OAK.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_DARK_OAK_LOG_FENCE_GATE = registerBlock("stripped_dark_oak_log_fence_gate", "Stripped Dark Oak Log Fence Gate", () -> new FenceGateBlock(DARK_OAK.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_JUNGLE_LOG_FENCE_GATE = registerBlock("stripped_jungle_log_fence_gate", "Stripped Jungle Log Fence Gate", () -> new FenceGateBlock(JUNGLE.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_SPRUCE_LOG_FENCE_GATE = registerBlock("stripped_spruce_log_fence_gate", "Stripped Spruce Log Fence Gate", () -> new FenceGateBlock(SPRUCE.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_ACACIA_LOG_FENCE_GATE = registerBlock("stripped_acacia_log_fence_gate", "Stripped Acacia Log Fence Gate", () -> new FenceGateBlock(ACACIA.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_BIRCH_LOG_FENCE_GATE = registerBlock("stripped_birch_log_fence_gate", "Stripped Birch Log Fence Gate", () -> new FenceGateBlock(BIRCH.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_WARPED_STEM_FENCE_GATE = registerBlock("stripped_warped_stem_fence_gate", "Stripped Warped Stem Fence Gate", () -> new FenceGateBlock(WARPED.strength(2.0F, 3.0F)), true, true);
+    public static final RegistryObject<FenceGateBlock> STRIPPED_CRIMSON_STEM_FENCE_GATE = registerBlock("stripped_crimson_stem_fence_gate", "Stripped Crimson Stem Fence Gate", () -> new FenceGateBlock(CRIMSON.strength(2.0F, 3.0F)), true, true);
+
 
 
     private static boolean always(BlockState state, BlockGetter getter, BlockPos pos) {

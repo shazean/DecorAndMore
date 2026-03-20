@@ -129,8 +129,6 @@ public class DecorItemModels extends ItemModelProvider {
         generatedItem(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), "oxidized_copper_chain");
         generatedItem(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get(), "oxidized_copper_redstone_chain");
 
-
-
         generatedBlockItemSuffix(DecorBlocks.RED_CARPET_EDGE.get(), "_ns");
         generatedBlockItemSuffix(DecorBlocks.ORANGE_CARPET_EDGE.get(), "_ns");
         generatedBlockItemSuffix(DecorBlocks.YELLOW_CARPET_EDGE.get(), "_ns");
@@ -162,6 +160,24 @@ public class DecorItemModels extends ItemModelProvider {
         self(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
         self(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), "_bottom");
 
+        self(DecorBlocks.OAK_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.DARK_OAK_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.JUNGLE_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.ACACIA_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.BIRCH_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.SPRUCE_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.CRIMSON_STEM_FENCE.get(), "_inventory");
+        self(DecorBlocks.WARPED_STEM_FENCE.get(), "_inventory");
+
+        self(DecorBlocks.STRIPPED_OAK_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_DARK_OAK_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_JUNGLE_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_ACACIA_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_BIRCH_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_SPRUCE_LOG_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_WARPED_STEM_FENCE.get(), "_inventory");
+        self(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get(), "_inventory");
+
 
     }
 
@@ -180,7 +196,6 @@ public class DecorItemModels extends ItemModelProvider {
     public void generatedBlockItemSuffix(ItemLike item, String suffix) {
         this.singleTexture(name(item), new ResourceLocation("item/generated"), "layer0", modLoc("block/" + name(item) + suffix));
     }
-
 
     protected void self(Block block) {
         this.withExistingParent(name(block), this.modLoc("block/" + name(block)));

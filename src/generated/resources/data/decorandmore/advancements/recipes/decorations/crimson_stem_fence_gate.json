@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "decorandmore:crimson_stem_fence_gate"
+    ]
+  },
+  "criteria": {
+    "crimson_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "decorandmore:crimson_stem_fence_gate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crimson_stem",
+      "has_the_recipe"
+    ]
+  ]
+}

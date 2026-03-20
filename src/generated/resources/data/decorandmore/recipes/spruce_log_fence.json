@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xXx",
+    "xXx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:spruce_log"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "decorandmore:spruce_log_fence",
+    "count": 3
+  }
+}

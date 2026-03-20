@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xXx",
+    "xXx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:crimson_stem"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "decorandmore:crimson_stem_fence",
+    "count": 3
+  }
+}
