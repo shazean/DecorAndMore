@@ -113,6 +113,15 @@ public class DecorBlockTags extends BlockTagsProvider {
                 .add(DecorBlocks.MOSSY_STONE_BRICK_PATH.get()).add(DecorBlocks.BRICK_PATH.get()).add(DecorBlocks.NETHER_BRICK_PATH.get())
                 .add(DecorBlocks.DEEPSLATE_BRICK_PATH.get()).add(DecorBlocks.END_STONE_BRICK_PATH.get())
 
+                .add(DecorBlocks.GOLD_CHAIN.get()).add(DecorBlocks.NETHERITE_CHAIN.get())
+                .add(DecorBlocks.COPPER_CHAIN.get()).add(DecorBlocks.EXPOSED_COPPER_CHAIN.get()).add(DecorBlocks.WEATHERED_COPPER_CHAIN.get()).add(DecorBlocks.OXIDIZED_COPPER_CHAIN.get())
+                .add(DecorBlocks.WAXED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get())
+
+                .add(DecorBlocks.GOLD_LANTERN.get()).add(DecorBlocks.NETHERITE_LANTERN.get())
+                .add(DecorBlocks.COPPER_LANTERN.get()).add(DecorBlocks.EXPOSED_COPPER_LANTERN.get()).add(DecorBlocks.WEATHERED_COPPER_LANTERN.get()).add(DecorBlocks.OXIDIZED_COPPER_LANTERN.get())
+                .add(DecorBlocks.WAXED_COPPER_LANTERN.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_LANTERN.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_LANTERN.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_LANTERN.get())
+
+
                 .add(DecorBlocks.IRON_GRATE.get()).add(DecorBlocks.GOLD_GRATE.get()).add(DecorBlocks.NETHERITE_GRATE.get())
                 .add(DecorBlocks.COPPER_GRATE.get()).add(DecorBlocks.EXPOSED_COPPER_GRATE.get()).add(DecorBlocks.WEATHERED_COPPER_GRATE.get()).add(DecorBlocks.OXIDIZED_COPPER_GRATE.get())
                 .add(DecorBlocks.WAXED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get()).add(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get());

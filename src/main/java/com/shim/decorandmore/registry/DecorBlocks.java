@@ -357,7 +357,7 @@ public class DecorBlocks {
     public static final RegistryObject<RugBlock> WHITE_CARPET_EDGE = registerBlock("white_carpet_edge", "White Carpet Edge", () -> new RugBlock(DyeColor.WHITE, BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).strength(0.1F).sound(SoundType.WOOL).noOcclusion()), true, false);
 
 
-    public static final RegistryObject<PathBlock> COBBLESTONE_PATH = registerBlock("cobblestone_path", "Cobblestone Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.COBBLESTONE), false, true);
+    public static final RegistryObject<PathBlock> COBBLESTONE_PATH = registerBlock("cobblestone_path", "Cobblestone Path", () -> new StonePathBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.COBBLESTONE), false, true);
     public static final RegistryObject<PathBlock> MOSSY_COBBLESTONE_PATH = registerBlock("mossy_cobblestone_path", "Mossy Cobblestone Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.MOSSY_COBBLESTONE), false, true);
     public static final RegistryObject<PathBlock> STONE_BRICK_PATH = registerBlock("stone_brick_path", "Stone Brick Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.STONE_BRICKS), false, true);
     public static final RegistryObject<PathBlock> BRICK_PATH = registerBlock("brick_path", "Brick Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.STONE).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.BRICKS), false, true);
@@ -374,7 +374,7 @@ public class DecorBlocks {
     public static final RegistryObject<PathBlock> CRIMSON_PATH = registerBlock("crimson_path", "Crimson Plank Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.CRIMSON_PLANKS), false, true);
     public static final RegistryObject<PathBlock> WARPED_PATH = registerBlock("warped_path", "Warped Plank Path", () -> new PathBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.65F).sound(SoundType.STONE).isViewBlocking(DecorBlocks::always).isSuffocating(DecorBlocks::always), Blocks.WARPED_PLANKS), false, true);
 
-    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
+//    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
 //    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new StairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
 //    public static final RegistryObject<Block> BUTCHER_BLOCK = registerBlock("butcher_block", "Butcher Block", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), true, true);
 

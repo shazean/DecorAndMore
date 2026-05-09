@@ -310,7 +310,7 @@ public class DecorBlockstates extends BlockStateProvider {
         pathBlock(DecorBlocks.CRIMSON_PATH.get(), Blocks.CRIMSON_PLANKS);
         pathBlock(DecorBlocks.WARPED_PATH.get(), Blocks.WARPED_PLANKS);
 
-        simpleBlock(DecorBlocks.BUTCHER_BLOCK.get());
+//        simpleBlock(DecorBlocks.BUTCHER_BLOCK.get());
 
         simpleBlock(DecorBlocks.IRON_GRATE.get());
         simpleBlock(DecorBlocks.GOLD_GRATE.get());
@@ -359,7 +359,6 @@ public class DecorBlockstates extends BlockStateProvider {
         fenceBlock(DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE.get(), DecorBlocks.STRIPPED_CRIMSON_STEM_FENCE_GATE.get(), Blocks.STRIPPED_CRIMSON_STEM);
 
     }
-
 
     public void fenceBlock(FenceBlock block, FenceGateBlock gate, Block textureBlock) {
 

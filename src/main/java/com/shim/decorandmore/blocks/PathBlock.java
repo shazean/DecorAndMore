@@ -1,5 +1,6 @@
 package com.shim.decorandmore.blocks;
 
+import com.shim.decorandmore.util.PathBlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;

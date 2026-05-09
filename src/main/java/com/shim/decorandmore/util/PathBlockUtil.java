@@ -32,13 +32,13 @@ public class PathBlockUtil {
     });
     public static Map<Block, Block> SHOVEL_PATHS = new HashMap<>();
 
-    public void addPickaxePath(Block block, Block path) {
+    public static void addPickaxePath(Block block, Block path) {
         PICKAXE_PATHS.put(block, path);
     }
-    public void addAxePath(Block block, Block path) {
+    public static void addAxePath(Block block, Block path) {
         AXE_PATHS.put(block, path);
     }
-    public void addShovelPath(Block block, Block path) {
+    public static void addShovelPath(Block block, Block path) {
         SHOVEL_PATHS.put(block, path);
     }
 }

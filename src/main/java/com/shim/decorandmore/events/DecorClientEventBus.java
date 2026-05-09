@@ -12,8 +12,7 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RedStoneWireBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ColorHandlerEvent;
@@ -28,140 +27,153 @@ public class DecorClientEventBus {
     @SubscribeEvent
     public static void clientSetup(final FMLClientSetupEvent event) {
 
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.OAK_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.DARK_OAK_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.SPRUCE_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.JUNGLE_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.ACACIA_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.BIRCH_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.CRIMSON_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.WARPED_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
+        event.enqueueWork(() -> {
+            registerColor(DecorBlocks.OAK_STOOL.get());
+            registerColor(DecorBlocks.DARK_OAK_STOOL.get());
+            registerColor(DecorBlocks.SPRUCE_STOOL.get());
+            registerColor(DecorBlocks.JUNGLE_STOOL.get());
+            registerColor(DecorBlocks.ACACIA_STOOL.get());
+            registerColor(DecorBlocks.BIRCH_STOOL.get());
+            registerColor(DecorBlocks.CRIMSON_STOOL.get());
+            registerColor(DecorBlocks.WARPED_STOOL.get());
 
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.OAK_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.DARK_OAK_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.SPRUCE_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.JUNGLE_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.ACACIA_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.BIRCH_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.CRIMSON_STEM_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.WARPED_STEM_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
+            registerColor(DecorBlocks.OAK_LOG_STOOL.get());
+            registerColor(DecorBlocks.DARK_OAK_LOG_STOOL.get());
+            registerColor(DecorBlocks.SPRUCE_LOG_STOOL.get());
+            registerColor(DecorBlocks.JUNGLE_LOG_STOOL.get());
+            registerColor(DecorBlocks.ACACIA_LOG_STOOL.get());
+            registerColor(DecorBlocks.BIRCH_LOG_STOOL.get());
+            registerColor(DecorBlocks.CRIMSON_STEM_STOOL.get());
+            registerColor(DecorBlocks.WARPED_STEM_STOOL.get());
 
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_OAK_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_DARK_OAK_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_SPRUCE_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_JUNGLE_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_ACACIA_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_BIRCH_LOG_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_CRIMSON_STEM_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
-        event.enqueueWork(() -> ItemProperties.register(DecorBlocks.STRIPPED_WARPED_STEM_STOOL.get().asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack)));
+            registerColor(DecorBlocks.STRIPPED_OAK_LOG_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_DARK_OAK_LOG_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_SPRUCE_LOG_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_JUNGLE_LOG_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_ACACIA_LOG_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_BIRCH_LOG_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_CRIMSON_STEM_STOOL.get());
+            registerColor(DecorBlocks.STRIPPED_WARPED_STEM_STOOL.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_SOUL_LANTERN.get(), RenderType.cutout());
+        });
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_SOUL_LANTERN.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_REDSTONE_LANTERN.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.GOLD_LANTERN.get());
+        renderCutout(DecorBlocks.GOLD_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.NETHERITE_LANTERN.get());
+        renderCutout(DecorBlocks.NETHERITE_SOUL_LANTERN.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_REDSTONE_CHAIN.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.WAXED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_SOUL_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_SOUL_LANTERN.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.GOLD_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_LANTERN.get());
+        renderCutout(DecorBlocks.NETHERITE_REDSTONE_LANTERN.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.GOLD_CHAIN.get());
+        renderCutout(DecorBlocks.GOLD_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.NETHERITE_CHAIN.get());
+        renderCutout(DecorBlocks.NETHERITE_REDSTONE_CHAIN.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.RED_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.ORANGE_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.YELLOW_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIME_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GREEN_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.CYAN_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.BLUE_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIGHT_BLUE_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.PURPLE_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.MAGENTA_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.PINK_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.BROWN_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.BLACK_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GRAY_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WHITE_CARPET_EDGE.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.COPPER_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_REDSTONE_CHAIN.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.IRON_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_GRATE.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.WAXED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_COPPER_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_REDSTONE_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_REDSTONE_CHAIN.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_GRATE.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.RED_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.ORANGE_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.YELLOW_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.LIME_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.GREEN_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.CYAN_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.BLUE_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.LIGHT_BLUE_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.PURPLE_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.MAGENTA_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.PINK_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.BROWN_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.BLACK_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.GRAY_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.LIGHT_GRAY_CARPET_EDGE.get());
+        renderCutout(DecorBlocks.WHITE_CARPET_EDGE.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.IRON_GRATE.get());
+        renderCutout(DecorBlocks.GOLD_GRATE.get());
+        renderCutout(DecorBlocks.NETHERITE_GRATE.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.IRON_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.GOLD_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.NETHERITE_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.COPPER_GRATE.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_GRATE.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_GRATE.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_GRATE.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.EXPOSED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WEATHERED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.WAXED_COPPER_GRATE.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE.get());
 
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get(), RenderType.cutout());
+        renderCutout(DecorBlocks.IRON_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.GOLD_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.NETHERITE_GRATE_TRAPDOOR.get());
+
+        renderCutout(DecorBlocks.COPPER_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.EXPOSED_COPPER_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.WEATHERED_COPPER_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.OXIDIZED_COPPER_GRATE_TRAPDOOR.get());
+
+        renderCutout(DecorBlocks.WAXED_COPPER_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.WAXED_EXPOSED_COPPER_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.WAXED_WEATHERED_COPPER_GRATE_TRAPDOOR.get());
+        renderCutout(DecorBlocks.WAXED_OXIDIZED_COPPER_GRATE_TRAPDOOR.get());
 
 
         RecipeBookCategories.create("decorandmore:dyed_crafting", new ItemStack(Items.RED_DYE));
 
     }
+
+    public static void registerColor(Block block) {
+        ItemProperties.register(block.asItem(), new ResourceLocation("color"), (stack, level, living, id) -> getDyeColor(stack));
+    }
+
+    public static void renderCutout(Block block) {
+        ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
+    }
+
 
     public static float getDyeColor(ItemStack stack) {
         CompoundTag nbt = stack.getOrCreateTag().getCompound("BlockStateTag");
@@ -222,5 +234,4 @@ public class DecorClientEventBus {
 
 
     }
-
 }
